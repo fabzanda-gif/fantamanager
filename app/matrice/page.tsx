@@ -1,7 +1,6 @@
 "use client";
 import { ArrowLeft, Check, CircleDot, Loader2, Sparkles, X } from "lucide-react";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { createClient } from "@supabase/supabase-js";
 
@@ -14,7 +13,8 @@ function strength(p:Player){return Number(p.fvm_fc??(p.quotazione_fc?Number(p.qu
 function pickWeighted(pool:Player[]){const ranked=[...pool].sort((a,b)=>strength(b)-strength(a)).map((p,i)=>({...p,strength:strength(p),rank:i+1}));const total=ranked.reduce((s,p)=>s+(p.rank??1),0);let r=Math.random()*total;for(const p of ranked){r-=p.rank??1;if(r<=0)return p}return ranked.at(-1)!}
 
 export default function Matrix(){
- const params=useSearchParams(); const code=params.get("club")&&names[params.get("club")!]?params.get("club")!:"CAG";
+ const [code,setCode]=useState("CAG");
+ useEffect(()=>{const c=new URLSearchParams(window.location.search).get("club");if(c&&names[c])setCode(c)},[]);
  const [runId,setRunId]=useState<string|null>(null),[pool,setPool]=useState<Player[]>([]),[draw,setDraw]=useState<Draw|null>(null),[accepted,setAccepted]=useState<Player[]>([]),[removed,setRemoved]=useState<string[]>([]),[busy,setBusy]=useState(true),[error,setError]=useState("");
  const counts=useMemo(()=>({P:accepted.filter(p=>p.role==="P").length,D:accepted.filter(p=>p.role==="D").length,C:accepted.filter(p=>p.role==="C").length,A:accepted.filter(p=>p.role==="A").length}),[accepted]);
  const role=(Object.keys(targets) as Role[]).find(r=>counts[r]<targets[r])??null;
