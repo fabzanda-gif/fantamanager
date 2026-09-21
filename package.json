@@ -14,7 +14,7 @@
     "next": "^16.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "@fontsource/dseg7": "4.5.4"
+    "@fontsource-variable/orbitron": "5.2.8"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
