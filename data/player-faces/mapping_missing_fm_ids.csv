@@ -1,13 +1,10 @@
 player_id,name,club,fm_id,face_file,status,role,fantacalcio_pid
 4722d0a5-edac-4e5f-959e-bbf03a972c4a,RODRIGUEZ,COM,,,needs_review,A,
 d7bd0748-37f6-4ead-b67c-a943c7f10154,NJIE,FIO,,,needs_review,C,6827
-a08083ee-5e0d-47b6-8f07-ec46ad9d710a,AMORIM,GEN,,,needs_review,C,7341
 f6405fd8-494a-456c-be7a-124566eda398,SARR,JUV,,,needs_review,C,
-437982c3-f037-48e9-a036-2a6e61478ebf,LEITE,LAZ,,,needs_review,D,6319
 a79633ad-db03-4e32-b0df-9a1b4e46f75b,GANDELMAN,LEC,,,needs_review,C,7318
 f1756a14-f96a-429b-9336-84f3ffa82543,ILIC,LEC,,,needs_review,C,5007
 8215ce34-a786-48ca-83ab-f14d92a63bb6,NGOM,LEC,,,needs_review,C,7322
 b469215a-2dec-4862-bca5-63c745b8bc3f,TOURÉ,MON,,,needs_review,C,7146
 0fe6c8f2-f860-47c2-a5bf-a7c7d74cc766,ZIOLKOWSKI,MON,,,needs_review,D,7260
-812a4e2c-ae6f-47b5-b3cc-9329352bd82e,KEITA,PAR,,,needs_review,C,6898
 cd7866b6-4ca9-4e6c-8665-df1582c1fd74,LEYSEN,SAS,,,needs_review,D,7564
