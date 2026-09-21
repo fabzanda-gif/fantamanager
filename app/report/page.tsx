@@ -48,6 +48,6 @@ export default function Report(){
    {!done?<div className="confidenceGate"><p>Risultato e prestazione entrano nello spogliatoio. La Fiducia reagisce, ma il valore accumulato fa da cuscinetto.</p><button onClick={apply}>AGGIORNA FIDUCIA</button></div>:
    <div className="confidenceRows">{changes.slice().sort((a,b)=>b.delta-a.delta).map(c=><article key={c.player_id}><div>{c.delta>0?<TrendingUp/>:c.delta<0?<TrendingDown/>:<Minus/>}</div><strong>{c.player_name}</strong><span>{c.reason}</span><b>{c.before_value} → {c.after_value}</b><em>{c.delta>0?"+":""}{c.delta}</em></article>)}</div>}
   </section>
-  {done&&<div className="returnHub"><Home size={18}/><div><strong>Giornata 1 archiviata.</strong><span>La squadra porta con se quello che e successo.</span></div><Link href="/">TORNA ALL HUB →</Link></div>}
+  {done&&<div className="returnHub"><Home size={18}/><div><strong>Giornata 1 archiviata.</strong><span>La squadra porta con se quello che e successo.</span></div><Link href={"/stagione?run="+run}>TORNA ALL HUB →</Link></div>}
  </main>;
 }
