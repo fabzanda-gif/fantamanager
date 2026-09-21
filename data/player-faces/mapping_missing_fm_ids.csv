@@ -1,11 +1,7 @@
 player_id,name,club,fm_id,face_file,status,role,fantacalcio_pid
-f60b47e1-1322-4985-8395-167b4b16772a,AMONDARAIN,BOL,,,needs_review,C,7528
-86978213-946e-4493-983f-9e085a9e6039,LIBRA,BOL,,,needs_review,C,7629
 4722d0a5-edac-4e5f-959e-bbf03a972c4a,RODRIGUEZ,COM,,,needs_review,A,
 d7bd0748-37f6-4ead-b67c-a943c7f10154,NJIE,FIO,,,needs_review,C,6827
-f84916dc-acd2-4843-be33-fe94d8f1c842,CICHELLA,FRO,,,needs_review,C,7473
 c63df1bb-e897-4987-8228-79333a99b63d,MONTERISI,FRO,,,needs_review,D,4952
-c9209306-ece2-4ef5-b621-b2e7f99b1c14,TCHATO,FRO,,,needs_review,D,7605
 49cd9a61-6afa-49c6-b840-6144cda8e440,TERZIC,FRO,,,needs_review,D,4375
 fd171f19-2e4f-4b7d-be50-ece0913aa280,ZERBIN,FRO,,,needs_review,C,5998
 a08083ee-5e0d-47b6-8f07-ec46ad9d710a,AMORIM,GEN,,,needs_review,C,7341
@@ -26,35 +22,19 @@ f1756a14-f96a-429b-9336-84f3ffa82543,ILIC,LEC,,,needs_review,C,5007
 e28ec9d7-cc5d-4210-ac86-2305c218729d,PIEROTTI,LEC,,,needs_review,C,6549
 37ac1217-c6cb-44ec-a430-5fc82e64bcdf,VEIGA,LEC,,,needs_review,D,6990
 1cbbe794-d95e-4756-88b6-513d0933467b,GABBIA,MIL,,,needs_review,D,4401
-0ffa0949-c590-432e-8070-d2e53ea4e6f7,AKINSANMIRO,MON,,,needs_review,C,6593
-03953def-6785-4d42-9c7b-f5a35bc731b3,CARBONI,MON,,,needs_review,D,4925
-d3c3eae8-6833-44fb-a3d8-f7099b394864,FOLORUNSHO,MON,,,needs_review,C,6252
 83873363-d925-41b3-a8a3-65e5b69e79e7,KOUADIO,MON,,,needs_review,D,7238
-14b0af6b-a40d-4ede-8d12-09d5c5d53eaf,LUCCHESI,MON,,,needs_review,D,6659
-9007d255-037d-4e6b-b94d-0e0a33465519,MOUT,MON,,,needs_review,C,7575
 b469215a-2dec-4862-bca5-63c745b8bc3f,TOURÉ,MON,,,needs_review,C,7146
 0fe6c8f2-f860-47c2-a5bf-a7c7d74cc766,ZIOLKOWSKI,MON,,,needs_review,D,7260
 6d5294e5-48b0-4b45-b3a5-a4f82b9c4d2f,ANGUISSA,NAP,,,needs_review,C,
 4114c21d-0c4e-4ff8-b577-49e6b0bc0072,SANTOS,NAP,,,needs_review,C,
-33205ede-5a90-4416-983c-b4f8cb075311,BRITSCHGI,PAR,,,needs_review,D,7255
-17aa8112-c44b-4294-9bbd-ea8c349b8b28,DAFFARA,PAR,,,needs_review,P,7411
 812a4e2c-ae6f-47b5-b3cc-9329352bd82e,KEITA,PAR,,,needs_review,C,6898
-45623753-df33-44b6-8149-c111ea311fa9,ORDONEZ,PAR,,,needs_review,C,7138
 38f5c722-22f0-4dde-b984-e1732577e9b8,CALETA-CAR,SAS,,,needs_review,D,4147
 cd7866b6-4ca9-4e6c-8665-df1582c1fd74,LEYSEN,SAS,,,needs_review,D,7564
 d95b9880-9e1f-4714-87a6-56e8437a27d0,VAN DER BREMPT,SAS,,,needs_review,D,6896
-0fa040ad-bb29-40e9-9164-dfc9eb79f716,BRAGANCA,TOR,,,needs_review,C,7624
 d620cb8a-99d7-4d58-a49d-e9076a9d55d2,COMERT,TOR,,,needs_review,D,7526
 0412cac9-ade6-4a42-aaad-56bc427a1ead,FORTINI,TOR,,,needs_review,D,7069
-50891fc2-871d-4b77-87de-8370d820b258,PATTERSON,TOR,,,needs_review,D,5751
 c5e3026e-bd90-4bf1-97ed-4a6deb108d0e,MILLER,UDI,,,needs_review,C,7208
 e698cfb8-eb9c-4009-9bd0-6eef2cb26aa5,PALMA,UDI,,,needs_review,D,6925
-4c6c58be-f54e-4b9c-a67d-fced2b04df51,PIOTROWSKI,UDI,,,needs_review,C,7198
-093665d2-5fe8-4f55-95c7-8e2de48a51c5,AKOR ADAMS,VEN,,,needs_review,A,
-8d5079ec-483e-4ae8-9738-917097549bc6,BASIC,VEN,,,needs_review,C,5674
-47265d3b-2e80-40a6-8f28-177adb973c8c,BELLA-KOTCHAP,VEN,,,needs_review,D,7253
 3555b0c6-b1c6-4438-bc59-2c66dc296436,CORREIA,VEN,,,needs_review,D,4845
 86f4c037-db1a-4d09-9241-1d5a415ca134,HALHAL,VEN,,,needs_review,D,7538
 3c1fa8d2-95d3-4a46-a63d-cdfa8f51c640,PEREZ,VEN,,,needs_review,C,6994
-88ef3904-11a0-4569-adc0-53cebf47b028,SCHINGTIENNE,VEN,,,needs_review,D,6892
-3a6537fa-76f5-416f-afd9-db674baac507,SOHM,VEN,,,needs_review,C,5319
