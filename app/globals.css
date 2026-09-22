@@ -143,3 +143,7 @@
 .halfStyles button.active{border-color:var(--green);color:var(--green)}
 .resumeButton{width:100%;border:1px solid #2c5a4b;background:var(--green);color:#06110d;padding:9px;font-size:8px;font-weight:900;display:flex;align-items:center;justify-content:center;gap:6px;margin-top:12px}
 @media(max-width:700px){.liveTabs{grid-template-columns:1fr 1fr}.liveTabs button:nth-child(2){border-right:0}.liveTabs button:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+
+
+/* 90 MINUTES branding */
+.brand90{padding:0 6px 26px;display:block}.brand90Logo{display:block;width:100%;max-width:172px;height:auto;object-fit:contain;object-position:left center;mix-blend-mode:screen}.sidebar .brand90{min-height:42px;align-items:center}.sidebar .brand90Logo{filter:contrast(1.03) saturate(1.04)}@media(max-width:760px){.brand90{padding-bottom:18px}.brand90Logo{max-width:155px;margin:auto}}
