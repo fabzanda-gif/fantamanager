@@ -13,7 +13,8 @@ const MUSIC = [
 ];
 
 const SFX = {
-  click: "/assets/audio/Pulsante.mp3",
+  click: "/assets/audio/Pulsante premuto.mp3",
+  pressRelease: "/assets/audio/Press-Release.mp3",
   hover: "/assets/audio/Passaggio del cursore.mp3",
   confirm: "/assets/audio/Conferma.mp3",
   report: "/assets/audio/Apri Report.mp3",
@@ -112,8 +113,8 @@ export default function AudioSystem() {
       const href = target instanceof HTMLAnchorElement ? target.getAttribute("href") || "" : "";
       if (href.includes("/report") || label.includes("report")) return playSfx("report", .72);
       if (label.includes("annulla") || label.includes("passa") || label.includes("indietro")) return playSfx("cancel", .66);
-      if (label.includes("conferma") || label.includes("salva") || label.includes("gioca") || label.includes("avvia")) return playSfx("confirm", .72);
-      playSfx("click", .52);
+      if (label.includes("conferma") || label.includes("salva") || label.includes("gioca") || label.includes("avvia")) return playSfx("pressRelease", .68);
+      playSfx("click", .56);
     };
 
     const onHover = (event: MouseEvent) => {
