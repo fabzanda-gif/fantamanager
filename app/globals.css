@@ -150,3 +150,19 @@
 .brand90Num{font-family:Orbitron,Inter,ui-sans-serif,sans-serif;font-size:28px;font-weight:900;color:var(--green);line-height:1}
 .brand90Minutes{font-family:Orbitron,Inter,ui-sans-serif,sans-serif;font-size:19px;font-weight:850;color:#eef7f3;letter-spacing:1.4px;line-height:1}
 @media(max-width:760px){.brand90{justify-content:center;padding-bottom:18px}.brand90Num{font-size:25px}.brand90Minutes{font-size:17px}}
+
+/* Halftime tactical phase — dedicated view and formation lanes */
+.halfPhase .liveTabs{display:none}
+.halfPhase .commentary{display:none}
+.halfPhase .scoreboard{opacity:.62;filter:saturate(.72);max-width:760px}
+.halfPhase .liveGrid{grid-template-columns:1fr;max-width:1100px;margin:0 auto}
+.halfPhase .liveSide{width:100%;max-width:none;margin:0;background:rgba(5,14,11,.93);border:1px solid #31584b;backdrop-filter:blur(8px)}
+.halfPhase .halfTime{margin-top:8px}
+.tacticalPitch{min-height:500px;display:flex;flex-direction:column;justify-content:space-between;gap:16px;padding:24px 18px;background:linear-gradient(90deg,transparent 49.7%,rgba(126,198,168,.22) 50%,transparent 50.3%),repeating-linear-gradient(0deg,rgba(12,54,38,.82) 0,rgba(12,54,38,.82) 72px,rgba(14,63,44,.82) 73px,rgba(14,63,44,.82) 144px)}
+.pitchBand{display:grid;grid-template-columns:78px 1fr;align-items:center;gap:10px;min-height:96px}
+.pitchBandLabel{font-size:7px;letter-spacing:1.3px;color:rgba(187,220,207,.62);writing-mode:vertical-rl;transform:rotate(180deg);justify-self:center}
+.pitchBandPlayers{display:flex;align-items:center;justify-content:space-around;gap:10px;flex-wrap:wrap}
+.pitchBand .faceToken{width:112px;min-height:94px}
+.halfPhase .faceWrap{width:58px;height:58px}
+.bestPlayersCard .faceStat small{display:block;color:var(--muted);font-size:7px;margin-top:4px}
+@media(max-width:700px){.pitchBand{grid-template-columns:1fr}.pitchBandLabel{writing-mode:horizontal-tb;transform:none;justify-self:start}.pitchBandPlayers{justify-content:center}.pitchBand .faceToken{width:96px}}
