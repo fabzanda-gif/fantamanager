@@ -8,10 +8,10 @@ const sb=createClient("https://fqngllsmfqatgwzezuus.supabase.co","sb_publishable
 type Stat={player_id:string;player_name:string;rating:number;goals:number;chances:number;recoveries:number;duels:number;progressions:number;dangerous_errors:number};
 
 export default function Report(){
- const[run,setRun]=useState(""); const[match,setMatch]=useState<any>(null); const[stats,setStats]=useState<Stat[]>([]);
+ const[run,setRun]=useState(""); const[round,setRound]=useState(1); const[match,setMatch]=useState<any>(null); const[stats,setStats]=useState<Stat[]>([]);
  const[changes,setChanges]=useState<any[]>([]); const[done,setDone]=useState(false);
- useEffect(()=>{(async()=>{const id=new URLSearchParams(location.search).get("run")||"";setRun(id);
-  const m=await sb.from("game_matches").select("*").eq("run_id",id).eq("round",1).single(); if(!m.data)return; setMatch(m.data);
+ useEffect(()=>{(async()=>{const q=new URLSearchParams(location.search),id=q.get("run")||"",rn=Number(q.get("round")||1);setRun(id);setRound(rn);
+  const m=await sb.from("game_matches").select("*").eq("run_id",id).eq("round",rn).single(); if(!m.data)return; setMatch(m.data);
   const s=await sb.from("game_match_player_stats").select("*").eq("match_id",m.data.id).order("rating",{ascending:false}); setStats((s.data||[]) as Stat[]);
   const old=await sb.from("game_confidence_changes").select("*").eq("match_id",m.data.id); if(old.data?.length){setChanges(old.data);setDone(true)}
  })()},[]);
@@ -33,7 +33,7 @@ export default function Report(){
  if(!match)return <main className="reportPage"><p>Caricamento report...</p></main>;
  const best=stats[0], recovery=[...stats].sort((a,b)=>b.recoveries-a.recoveries)[0], prog=[...stats].sort((a,b)=>b.progressions-a.progressions)[0], err=stats.find(s=>s.dangerous_errors>0);
  return <main className="reportPage">
-  <div className="newTop"><Link href={"/partita?run="+run} className="back"><ArrowLeft size={17}/> Partita</Link><span className="matrixRun">POST // GIORNATA 01</span></div>
+  <div className="newTop"><Link href={"/partita?run="+run+"&round="+round} className="back"><ArrowLeft size={17}/> Partita</Link><span className="matrixRun">POST // GIORNATA {String(round).padStart(2,"0")}</span></div>
   <header className="reportHero"><p className="eyebrow">TRIPLICE FISCHIO</p><h1>{match.user_goals} - {match.opponent_goals}</h1><p>Il risultato e finito. Adesso comincia l interpretazione.</p></header>
   <div className="reportGrid"><section className="ratings"><div className="sectionTitle">PAGELLE <span>{stats.length} titolari</span></div>
    {stats.map(s=><article key={s.player_id}><b className={"rating "+(s.rating>=7?"good":s.rating<6?"bad":"")}>{Number(s.rating).toFixed(1)}</b><div><strong>{s.player_name}</strong><span>{s.goals?s.goals+" gol · ":""}{s.recoveries} rec · {s.duels} duelli · {s.progressions} prog.</span></div>{s.dangerous_errors>0&&<em>ERRORE</em>}</article>)}
@@ -48,6 +48,6 @@ export default function Report(){
    {!done?<div className="confidenceGate"><p>Risultato e prestazione entrano nello spogliatoio. La Fiducia reagisce, ma il valore accumulato fa da cuscinetto.</p><button onClick={apply}>AGGIORNA FIDUCIA</button></div>:
    <div className="confidenceRows">{changes.slice().sort((a,b)=>b.delta-a.delta).map(c=><article key={c.player_id}><div>{c.delta>0?<TrendingUp/>:c.delta<0?<TrendingDown/>:<Minus/>}</div><strong>{c.player_name}</strong><span>{c.reason}</span><b>{c.before_value} → {c.after_value}</b><em>{c.delta>0?"+":""}{c.delta}</em></article>)}</div>}
   </section>
-  {done&&<div className="returnHub"><Home size={18}/><div><strong>Giornata 1 archiviata.</strong><span>La squadra porta con se quello che e successo.</span></div><Link href={"/stagione?run="+run}>TORNA ALL HUB →</Link></div>}
+  {done&&<div className="returnHub"><Home size={18}/><div><strong>Giornata {round} archiviata.</strong><span>La squadra porta con se quello che e successo.</span></div><Link href={"/stagione?run="+run}>TORNA ALL HUB →</Link></div>}
  </main>;
 }
