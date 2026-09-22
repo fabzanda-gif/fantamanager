@@ -38,5 +38,52 @@ export default function AudioSystem(){
  function slider(label:string,value:number,onChange:(v:number)=>void,enabled:boolean,toggle:()=>void){return <div className="audioRow"><button type="button" className={enabled?"on":""} onClick={toggle} aria-label={"Mute "+label}>{enabled?<Volume2 size={13}/>:<VolumeX size={13}/>}</button><span>{label}</span><input type="range" min="0" max="1" step=".05" value={value} onChange={e=>onChange(Number(e.target.value))}/><b>{Math.round(value*100)}</b></div>}
  function nextTrack(){setTrack(i=>(i+1)%MUSIC.length)}function previousTrack(){const a=musicRef.current;if(a&&a.currentTime>5){a.currentTime=0;if(prefs.music)a.play().catch(()=>{});return}setTrack(i=>(i-1+MUSIC.length)%MUSIC.length)}
 
- return <div className={"audioDock "+(open?"expanded":"")} aria-label="Mixer audio"><div className="audioCompact"><button type="button" onClick={previousTrack}><SkipBack size={14}/></button><button type="button" className={prefs.music?"on":""} onClick={()=>setPrefs(p=>({...p,music:!p.music}))}>{prefs.music?<Pause size={14}/>:<Play size={14}/>}</button><button type="button" onClick={nextTrack}><SkipForward size={14}/></button><span className="audioLabel">AUDIO</span><button type="button" className="audioExpand" onClick={()=>setOpen(v=>!v)}>{open?<ChevronDown size={14}/>:<ChevronUp size={14}/>}</button></div>{open&&<div className="audioMixer">{slider("MASTER",prefs.master,v=>setPrefs(p=>({...p,master:v})),prefs.master>0,()=>setPrefs(p=>({...p,master:p.master>0?0:DEFAULT_PREFS.master}))}{slider("MUSICA",prefs.musicVolume,v=>setPrefs(p=>({...p,musicVolume:v})),prefs.music,()=>setPrefs(p=>({...p,music:!p.music}))}{slider("UI / GIOCO",prefs.sfxVolume,v=>setPrefs(p=>({...p,sfxVolume:v})),prefs.sfx,()=>setPrefs(p=>({...p,sfx:!p.sfx}))}{slider("STADIO / PARTITA",prefs.ambienceVolume,v=>setPrefs(p=>({...p,ambienceVolume:v})),prefs.ambience,()=>setPrefs(p=>({...p,ambience:!p.ambience}))}</div>}</div>
+ return (
+  <div className={"audioDock "+(open?"expanded":"")} aria-label="Mixer audio">
+    <div className="audioCompact">
+      <button type="button" onClick={previousTrack}><SkipBack size={14}/></button>
+      <button type="button" className={prefs.music?"on":""} onClick={()=>setPrefs(p=>({...p,music:!p.music}))}>
+        {prefs.music?<Pause size={14}/>:<Play size={14}/>}
+      </button>
+      <button type="button" onClick={nextTrack}><SkipForward size={14}/></button>
+      <span className="audioLabel">AUDIO</span>
+      <button type="button" className="audioExpand" onClick={()=>setOpen(v=>!v)}>
+        {open?<ChevronDown size={14}/>:<ChevronUp size={14}/>}
+      </button>
+    </div>
+    {open&&(
+      <div className="audioMixer">
+        {slider(
+          "MASTER",
+          prefs.master,
+          v=>setPrefs(p=>({...p,master:v})),
+          prefs.master>0,
+          ()=>setPrefs(p=>({...p,master:p.master>0?0:DEFAULT_PREFS.master}))
+        )}
+        {slider(
+          "MUSICA",
+          prefs.musicVolume,
+          v=>setPrefs(p=>({...p,musicVolume:v})),
+          prefs.music,
+          ()=>setPrefs(p=>({...p,music:!p.music}))
+        )}
+        {slider(
+          "UI / GIOCO",
+          prefs.sfxVolume,
+          v=>setPrefs(p=>({...p,sfxVolume:v})),
+          prefs.sfx,
+          ()=>setPrefs(p=>({...p,sfx:!p.sfx}))
+        )}
+        {slider(
+          "STADIO / PARTITA",
+          prefs.ambienceVolume,
+          v=>setPrefs(p=>({...p,ambienceVolume:v})),
+          prefs.ambience,
+          ()=>setPrefs(p=>({...p,ambience:!p.ambience}))
+        )}
+      </div>
+    )}
+  </div>
+ )
+
 }
