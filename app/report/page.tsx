@@ -22,10 +22,10 @@ export default function Report(){
   const win=match.user_goals>match.opponent_goals,loss=match.user_goals<match.opponent_goals;
   const rows=(p.data||[]).map((x:any)=>{const s=stats.find(z=>z.player_id===x.player_id)!;let d=0;const rating=Number(s.rating);
    if(rating>=7.5)d+=3;else if(rating>=6.8)d+=2;else if(rating>=6.3)d+=1;else if(rating<5.7)d-=2;else if(rating<6)d-=1;
-   if(win)d+=1;if(loss)d-=1;if(s.goals)d+=Math.min(2,s.goals);if(s.dangerous_errors)d-=1;
+   if(win)d+=1;if(loss)d-=1;if(s.goals)d+=Math.min(2,s.goals);if(s.assists)d+=1;if(s.saves>=4)d+=1;if(s.dangerous_errors)d-=1;
    if(x.confidence>=80&&d>0)d=Math.min(d,2);if(x.confidence<=30&&d<0)d=Math.max(d,-2);d=Math.max(-4,Math.min(4,d));
    const after=Math.max(0,Math.min(100,x.confidence+d));let reason=rating>=7?"Prestazione convincente":rating<6?"Serata difficile":"Prestazione solida";
-   if(s.goals)reason+=" · gol";if(s.dangerous_errors)reason+=" · errore pericoloso";
+   if(s.goals)reason+=" · gol";if(s.assists)reason+=" · assist";if(s.saves>=4)reason+=" · decisivo tra i pali";if(s.dangerous_errors)reason+=" · errore pericoloso";
    return{match_id:match.id,run_id:run,player_id:x.player_id,player_name:x.player_name,before_value:x.confidence,delta:d,after_value:after,reason};
   });
   const ins=await sb.from("game_confidence_changes").insert(rows).select();if(ins.error)return;
