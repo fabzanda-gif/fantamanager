@@ -75,7 +75,6 @@ export default function AudioSystem() {
     audio.onended = () => setTrack((i) => (i + 1) % MUSIC.length);
     if (prefs.music && !inMatch && !inPreMatch) audio.play().catch(() => {});
     else audio.pause();
-    else audio.pause();
     return () => { audio.onended = null; };
   }, [ready, prefs.music, track, inMatch, inPreMatch]);
 
