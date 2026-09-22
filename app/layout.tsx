@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import AudioSystem from "./components/AudioSystem";
 
 export const metadata: Metadata = {
   title: "FantaManager",
@@ -9,7 +10,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="it">
-      <body>{children}</body>
+      <body>
+        {children}
+        <AudioSystem />
+      </body>
     </html>
   );
 }
