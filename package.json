@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "predev": "node scripts/sync-player-faces.mjs",
+    "prebuild": "node scripts/sync-player-faces.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "2.57.4",
