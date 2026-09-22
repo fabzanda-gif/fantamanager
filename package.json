@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "predev": "node scripts/sync-player-faces.mjs && node scripts/sync-audio.mjs",
+    "predev": "node scripts/sync-player-faces.mjs && node scripts/sync-audio.mjs && node scripts/sync-club-logos.mjs",
     "prebuild": "node scripts/sync-player-faces.mjs && node scripts/sync-audio.mjs"
   },
   "dependencies": {
