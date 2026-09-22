@@ -379,4 +379,8 @@ export const PLAYER_PHOTOS: Record<string,string> = {
   "fm_83111501": "/assets/players/venezia/fm_83111501__CORREIA.png",
   "fm_84151691": "/assets/players/venezia/fm_84151691__SOHM.png",
   "fm_92102718": "/assets/players/venezia/fm_92102718__BELLA-KOTCHAP.png"
+  "58e23fec-852f-404b-b2ed-8546214713e2": "/assets/players/genoa/fm_39056943__ELLERTSSON.png",
+  "a79633ad-db03-4e32-b0df-9a1b4e46f75b": "/assets/players/lecce/fm_42094193__GANDELMAN.png",
+  "33205ede-5a90-4416-983c-b4f8cb075311": "/assets/players/parma/fm_2000214745__BRITSCHGI.png",
+  "c6f4bf21-939b-435e-809f-476b1009b25e": "/assets/players/como/fm_24061267__SMOLCIC.png",
 };
