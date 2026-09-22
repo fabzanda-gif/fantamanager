@@ -29,7 +29,8 @@ const DEFAULT_PREFS: AudioPrefs = { music: true, sfx: true, volume: 0.34 };
 export default function AudioSystem() {
   const pathname=usePathname();
   const inMatch=pathname==="/partita";
-  const inPreMatch=pathname==="/vigilia";
+  const inPostMatch=["/statistiche","/report"].includes(pathname);
+  const inPreMatch=pathname==="/vigilia"||inPostMatch;
   const [prefs, setPrefs] = useState<AudioPrefs>(DEFAULT_PREFS);
   const [ready, setReady] = useState(false);
   const [track, setTrack] = useState(0);
