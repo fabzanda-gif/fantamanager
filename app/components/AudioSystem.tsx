@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import { Pause, Play, SkipBack, SkipForward, Volume2, VolumeX } from "lucide-react";
 
 const MUSIC = [
@@ -21,15 +22,20 @@ const SFX = {
   interaction: "/assets/audio/Nuova Interazione.mp3",
 };
 
+const MATCH_AUDIO={pre:"/assets/audio/match/Pre-Match.mp3",stadium:"/assets/audio/match/Match.mp3",start:"/assets/audio/match/StartOfTheMatch.mp3",end:"/assets/audio/match/EndOfTheMatch.mp3",whistle:"/assets/audio/match/Whistle.mp3",homeGoal:"/assets/audio/match/GolSegnatoCasa.mp3",awayGoal:"/assets/audio/match/Gol against.mp3"};
 type AudioPrefs = { music: boolean; sfx: boolean; volume: number };
 const DEFAULT_PREFS: AudioPrefs = { music: true, sfx: true, volume: 0.34 };
 
 export default function AudioSystem() {
+  const pathname=usePathname();
+  const inMatch=pathname==="/partita";
+  const inPreMatch=pathname==="/vigilia";
   const [prefs, setPrefs] = useState<AudioPrefs>(DEFAULT_PREFS);
   const [ready, setReady] = useState(false);
   const [track, setTrack] = useState(0);
   const musicRef = useRef<HTMLAudioElement | null>(null);
   const sfxRefs = useMemo(() => new Map<string, HTMLAudioElement>(), []);
+  const ambienceRef=useRef<HTMLAudioElement|null>(null);
 
   useEffect(() => {
     try {
@@ -67,10 +73,11 @@ export default function AudioSystem() {
     }
     audio.volume = prefs.volume;
     audio.onended = () => setTrack((i) => (i + 1) % MUSIC.length);
-    if (prefs.music) audio.play().catch(() => {});
+    if (prefs.music && !inMatch && !inPreMatch) audio.play().catch(() => {});
+    else audio.pause();
     else audio.pause();
     return () => { audio.onended = null; };
-  }, [ready, prefs.music, track]);
+  }, [ready, prefs.music, track, inMatch, inPreMatch]);
 
   function toggleMusic() {
     setPrefs((p) => ({ ...p, music: !p.music }));
@@ -90,6 +97,10 @@ export default function AudioSystem() {
     setTrack((i) => (i - 1 + MUSIC.length) % MUSIC.length);
   }
 
+  useEffect(()=>{if(!ready)return;const src=inMatch?MATCH_AUDIO.stadium:inPreMatch?MATCH_AUDIO.pre:null;if(!src){ambienceRef.current?.pause();return}const a=ambienceRef.current??new Audio();ambienceRef.current=a;a.src=encodeURI(src);a.loop=true;a.volume=Math.min(.72,Math.max(.38,prefs.volume*1.45));a.play().catch(()=>{});return()=>a.pause()},[ready,inMatch,inPreMatch,prefs.volume]);
+
+  useEffect(()=>{const fade=(target:number,ms:number)=>{const a=ambienceRef.current;if(!a)return;const from=a.volume,start=performance.now();const tick=(t:number)=>{const p=Math.min(1,(t-start)/ms);a.volume=from+(target-from)*p;if(p<1)requestAnimationFrame(tick)};requestAnimationFrame(tick)};const play=(src:string,vol=.95)=>{if(!prefs.sfx)return;const a=new Audio(encodeURI(src));a.volume=vol;a.play().catch(()=>{});return a};const handler=(e:Event)=>{const d=(e as CustomEvent).detail||{};if(d.type==="whistle")play(MATCH_AUDIO.whistle,1);if(d.type==="start"){play(MATCH_AUDIO.start,1);play(MATCH_AUDIO.whistle,.95)}if(d.type==="end"){play(MATCH_AUDIO.end,1);play(MATCH_AUDIO.whistle,.95)}if(d.type==="goal"){const home=!!d.home;const fx=play(home?MATCH_AUDIO.homeGoal:MATCH_AUDIO.awayGoal,1);if(!home&&ambienceRef.current){const base=Math.min(.72,Math.max(.38,prefs.volume*1.45));fade(base*.2,350);const restore=()=>fade(base,900);if(fx)fx.addEventListener("ended",restore,{once:true});else setTimeout(restore,2200)}}};window.addEventListener("fm-match-audio",handler);return()=>window.removeEventListener("fm-match-audio",handler)},[prefs.sfx,prefs.volume]);
+
   useEffect(() => {
     const playSfx = (name: keyof typeof SFX, volume = 0.62) => {
       if (!prefs.sfx) return;
@@ -99,7 +110,7 @@ export default function AudioSystem() {
         audio.preload = "auto";
         sfxRefs.set(name, audio);
       }
-      audio.volume = Math.min(1, volume * Math.max(0.25, prefs.volume / DEFAULT_PREFS.volume));
+      audio.volume = Math.min(1, volume * 1.35 * Math.max(0.65, prefs.volume / DEFAULT_PREFS.volume));
       audio.currentTime = 0;
       audio.play().catch(() => {});
     };
