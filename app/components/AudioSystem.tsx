@@ -15,7 +15,6 @@ const MUSIC = [
 const SFX = {
   click: "/assets/audio/Pulsante premuto.mp3",
   pressRelease: "/assets/audio/Press-Release.mp3",
-  hover: "/assets/audio/Passaggio del cursore.mp3",
   confirm: "/assets/audio/Conferma.mp3",
   report: "/assets/audio/Apri Report.mp3",
   cancel: "/assets/audio/Errore:Annulla.mp3",
@@ -30,7 +29,6 @@ export default function AudioSystem() {
   const [ready, setReady] = useState(false);
   const [track, setTrack] = useState(0);
   const musicRef = useRef<HTMLAudioElement | null>(null);
-  const lastHoverRef = useRef(0);
   const sfxRefs = useMemo(() => new Map<string, HTMLAudioElement>(), []);
 
   useEffect(() => {
@@ -117,20 +115,9 @@ export default function AudioSystem() {
       playSfx("click", .56);
     };
 
-    const onHover = (event: MouseEvent) => {
-      const target = (event.target as HTMLElement | null)?.closest("a,button,[role='button']");
-      if (!target || target.closest(".audioDock")) return;
-      const now = Date.now();
-      if (now - lastHoverRef.current < 140) return;
-      lastHoverRef.current = now;
-      playSfx("hover", .25);
-    };
-
     window.addEventListener("click", onClick);
-    window.addEventListener("mouseover", onHover);
     return () => {
       window.removeEventListener("click", onClick);
-      window.removeEventListener("mouseover", onHover);
     };
   }, [prefs.sfx, prefs.volume, sfxRefs]);
 
