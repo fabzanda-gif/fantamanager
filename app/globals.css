@@ -36,3 +36,12 @@
 @media(max-width:700px){.liveTabs{grid-template-columns:1fr 1fr}.liveTabs button:nth-child(2){border-right:0}.liveTabs button:nth-child(-n+2){border-bottom:1px solid var(--line)}}
 
 .possessionLive{padding:11px 14px 12px;border-bottom:1px solid var(--line);background:#091410}.possessionLabels{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px;margin-bottom:7px}.possessionLabels b{font-size:9px;color:#d9e8e2}.possessionLabels b:last-child{text-align:right}.possessionLabels span{font-size:7px;letter-spacing:1px;color:#6f817a}.possessionTrack{height:6px;display:flex;overflow:hidden;background:#18221f}.possessionTrack i,.possessionTrack em{height:100%;display:block;transition:width .7s ease}.possessionTrack i{background:var(--green)}.possessionTrack em{background:#52615c}.statsPoss{margin:-7px 0 10px;height:5px}
+
+/* Live formations: prevent overlapping names/confidence on narrow or dense lineups */
+.liveXI>div{grid-template-columns:32px minmax(0,1fr);align-items:start}
+.liveXI>div>b{padding-top:5px}
+.liveXI>div>span{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;column-gap:14px;min-width:0;padding:7px 4px;border-bottom:1px solid rgba(43,65,58,.45);line-height:1.25}
+.liveXI>div>span:last-child{border-bottom:0}
+.liveXI>div>span em{float:none;white-space:nowrap;justify-self:end}
+.liveXI>div>span{overflow-wrap:anywhere}
+@media(max-width:520px){.liveXI>div{grid-template-columns:24px minmax(0,1fr)}.liveXI>div>span{column-gap:8px;font-size:8px}.liveXI>div>span em{font-size:8px}}
