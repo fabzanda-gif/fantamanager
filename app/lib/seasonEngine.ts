@@ -25,14 +25,13 @@ export function simulateCpuFixture(run:string,round:number,f:Fixture,strength:Re
 }
 
 export function buildPlayerStats(run:string,round:number,starters:Starter[],events:MatchEvent[]){
- const rnd=seeded(`${run}|g${round}|player-stats`);
+ const rnd=seeded(`${run}|g${round}|player-stats`),oppGoals=events.filter(e=>e.side==='opp'&&e.type==='goal').length,oppSaves=events.filter(e=>e.side==='opp'&&e.type==='save').length;
  return starters.map(p=>{
-  const pe=events.filter(e=>e.side==='user'&&e.player?.player_id===p.player_id),goals=pe.filter(e=>e.type==='goal').length,chances=pe.filter(e=>e.type==='chance').length;
-  const roleBase=p.role==='P'?{rec:1,duel:2,prog:0}:p.role==='D'?{rec:5,duel:6,prog:2}:p.role==='C'?{rec:5,duel:5,prog:5}:{rec:2,duel:3,prog:4};
-  const cf=confidenceFactor(p.confidence),recoveries=Math.max(0,Math.round((roleBase.rec+rnd()*4)*cf)),duels=Math.max(0,Math.round((roleBase.duel+rnd()*5)*cf)),progressions=Math.max(0,Math.round((roleBase.prog+rnd()*5)*cf));
-  const dangerous_errors=rnd()<(p.confidence<35?.12:.045)?1:0;
-  const activity=goals*1.05+chances*.18+recoveries*.035+duels*.025+progressions*.035-dangerous_errors*.65;
-  const rating=clamp(5.55+activity+(rnd()-.5)*.55+(p.confidence-50)*.006,4.5,9.3);
-  return{player_id:p.player_id,player_name:p.player_name,rating:Number(rating.toFixed(1)),goals,chances,recoveries,duels,progressions,dangerous_errors};
+  const pe=events.filter(e=>e.side==='user'&&e.player?.player_id===p.player_id),goals=pe.filter(e=>e.type==='goal').length,chances=pe.filter(e=>e.type==='chance'||e.type==='save').length,errors=pe.filter(e=>e.type==='error').length,duelEvents=pe.filter(e=>e.type==='duel').length,progressEvents=pe.filter(e=>['transition','possession','action'].includes(e.type)).length,pressEvents=pe.filter(e=>e.type==='press').length;
+  const cf=confidenceFactor(p.confidence);
+  if(p.role==='P'){const saves=oppSaves,interventions=Math.max(saves,Math.round((2+rnd()*4)*cf)),dangerous_errors=errors;const rating=clamp(6+saves*.18+(oppGoals===0?.35:0)-oppGoals*.16-dangerous_errors*.65+(rnd()-.5)*.3,4.5,9.2);return{player_id:p.player_id,player_name:p.player_name,rating:Number(rating.toFixed(1)),goals:0,chances:0,recoveries:0,duels:0,progressions:0,dangerous_errors,saves,goals_conceded:oppGoals,interventions}}
+  const base=p.role==='D'?{rec:5,duel:5,prog:1}:p.role==='C'?{rec:4,duel:4,prog:4}:{rec:1,duel:2,prog:3},recoveries=Math.max(0,Math.round((base.rec+pressEvents*1.5+rnd()*2)*cf)),duels=Math.max(0,Math.round((base.duel+duelEvents*2+rnd()*2)*cf)),progressions=Math.max(0,Math.round((base.prog+progressEvents*1.4+rnd()*2)*cf)),dangerous_errors=errors;
+  const activity=goals*1.05+chances*.2+recoveries*.035+duels*.03+progressions*.04-dangerous_errors*.7,rating=clamp(5.65+activity+(rnd()-.5)*.4+(p.confidence-50)*.006,4.5,9.3);
+  return{player_id:p.player_id,player_name:p.player_name,rating:Number(rating.toFixed(1)),goals,chances,recoveries,duels,progressions,dangerous_errors,saves:0,goals_conceded:0,interventions:0}
  })
 }
