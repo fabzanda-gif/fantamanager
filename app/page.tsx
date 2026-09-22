@@ -1,5 +1,5 @@
 "use client";
-import brandWordmark from"./assets/logos/Off-white + luminous mint (#62FF9E) version of the wordmarkjpg";
+import brandWordmark from"./assets/logos/Full horizontal 90 MINUTES wordmark.jpg";
 import Link from "next/link";
 import {useEffect,useMemo,useState} from "react";
 import {BarChart3,CalendarDays,ChevronRight,ClipboardList,HeartPulse,LayoutDashboard,MessageSquareText,Shield,Sparkles,Trophy,UsersRound,UserRoundCog} from "lucide-react";
