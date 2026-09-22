@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import { Pause, Play, SkipBack, SkipForward, Volume2, VolumeX } from "lucide-react";
 
 const MUSIC = [
   "/assets/audio/ES_Inferadise - Lupus Nocte.mp3",
@@ -21,7 +22,6 @@ const SFX = {
 };
 
 type AudioPrefs = { music: boolean; sfx: boolean; volume: number };
-
 const DEFAULT_PREFS: AudioPrefs = { music: true, sfx: true, volume: 0.34 };
 
 export default function AudioSystem() {
@@ -41,8 +41,11 @@ export default function AudioSystem() {
 
   useEffect(() => {
     try { localStorage.setItem("fm_audio_prefs", JSON.stringify(prefs)); } catch {}
-    if (musicRef.current) musicRef.current.volume = prefs.volume;
   }, [prefs]);
+
+  useEffect(() => {
+    if (musicRef.current) musicRef.current.volume = prefs.volume;
+  }, [prefs.volume]);
 
   useEffect(() => {
     const unlock = () => setReady(true);
@@ -55,19 +58,38 @@ export default function AudioSystem() {
   }, []);
 
   useEffect(() => {
-    if (!ready || !prefs.music) {
-      musicRef.current?.pause();
-      return;
-    }
+    if (!ready) return;
     const audio = musicRef.current ?? new Audio();
     musicRef.current = audio;
-    audio.src = encodeURI(MUSIC[track]);
+    const wanted = encodeURI(MUSIC[track]);
+    if (!audio.src.endsWith(wanted)) {
+      audio.src = wanted;
+      audio.preload = "auto";
+    }
     audio.volume = prefs.volume;
-    audio.preload = "auto";
     audio.onended = () => setTrack((i) => (i + 1) % MUSIC.length);
-    audio.play().catch(() => {});
+    if (prefs.music) audio.play().catch(() => {});
+    else audio.pause();
     return () => { audio.onended = null; };
-  }, [ready, prefs.music, prefs.volume, track]);
+  }, [ready, prefs.music, track]);
+
+  function toggleMusic() {
+    setPrefs((p) => ({ ...p, music: !p.music }));
+  }
+
+  function nextTrack() {
+    setTrack((i) => (i + 1) % MUSIC.length);
+  }
+
+  function previousTrack() {
+    const audio = musicRef.current;
+    if (audio && audio.currentTime > 5) {
+      audio.currentTime = 0;
+      if (prefs.music) audio.play().catch(() => {});
+      return;
+    }
+    setTrack((i) => (i - 1 + MUSIC.length) % MUSIC.length);
+  }
 
   useEffect(() => {
     const playSfx = (name: keyof typeof SFX, volume = 0.62) => {
@@ -85,7 +107,7 @@ export default function AudioSystem() {
 
     const onClick = (event: MouseEvent) => {
       const target = (event.target as HTMLElement | null)?.closest("a,button,[role='button']");
-      if (!target) return;
+      if (!target || target.closest(".audioDock")) return;
       const label = (target.textContent || "").toLowerCase();
       const href = target instanceof HTMLAnchorElement ? target.getAttribute("href") || "" : "";
       if (href.includes("/report") || label.includes("report")) return playSfx("report", .72);
@@ -96,7 +118,7 @@ export default function AudioSystem() {
 
     const onHover = (event: MouseEvent) => {
       const target = (event.target as HTMLElement | null)?.closest("a,button,[role='button']");
-      if (!target) return;
+      if (!target || target.closest(".audioDock")) return;
       const now = Date.now();
       if (now - lastHoverRef.current < 140) return;
       lastHoverRef.current = now;
@@ -112,33 +134,15 @@ export default function AudioSystem() {
   }, [prefs.sfx, prefs.volume, sfxRefs]);
 
   return (
-    <div className="audioDock" aria-label="Controlli audio">
-      <button
-        type="button"
-        className={prefs.music ? "on" : ""}
-        onClick={() => setPrefs((p) => ({ ...p, music: !p.music }))}
-        title={prefs.music ? "Disattiva musica" : "Attiva musica"}
-      >
-        MUS {prefs.music ? "ON" : "OFF"}
+    <div className="audioDock" aria-label="Controlli musica">
+      <button type="button" onClick={previousTrack} title="Brano precedente" aria-label="Brano precedente"><SkipBack size={14}/></button>
+      <button type="button" className={prefs.music ? "on" : ""} onClick={toggleMusic} title={prefs.music ? "Pausa" : "Play"} aria-label={prefs.music ? "Pausa" : "Play"}>
+        {prefs.music ? <Pause size={14}/> : <Play size={14}/>}
       </button>
-      <button
-        type="button"
-        className={prefs.sfx ? "on" : ""}
-        onClick={() => setPrefs((p) => ({ ...p, sfx: !p.sfx }))}
-        title={prefs.sfx ? "Disattiva effetti" : "Attiva effetti"}
-      >
-        FX {prefs.sfx ? "ON" : "OFF"}
-      </button>
-      <input
-        aria-label="Volume audio"
-        type="range"
-        min="0"
-        max="1"
-        step="0.05"
-        value={prefs.volume}
-        onChange={(e) => setPrefs((p) => ({ ...p, volume: Number(e.target.value) }))}
-      />
-      <button type="button" onClick={() => setTrack((i) => (i + 1) % MUSIC.length)} title="Brano successivo">››</button>
+      <button type="button" onClick={nextTrack} title="Brano successivo" aria-label="Brano successivo"><SkipForward size={14}/></button>
+      {prefs.volume > 0 ? <Volume2 size={13}/> : <VolumeX size={13}/>}
+      <input aria-label="Volume musica" type="range" min="0" max="1" step="0.05" value={prefs.volume}
+        onChange={(e) => setPrefs((p) => ({ ...p, volume: Number(e.target.value) }))}/>
     </div>
   );
 }
