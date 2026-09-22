@@ -45,3 +45,29 @@
 .liveXI>div>span em{float:none;white-space:nowrap;justify-self:end}
 .liveXI>div>span{overflow-wrap:anywhere}
 @media(max-width:520px){.liveXI>div{grid-template-columns:24px minmax(0,1fr)}.liveXI>div>span{column-gap:8px;font-size:8px}.liveXI>div>span em{font-size:8px}}
+
+/* Match ambience */
+.livePage{background-size:cover!important;background-position:center!important;background-attachment:fixed!important}
+.livePage.matchPhase:before,.livePage.halfPhase:before{content:"";position:absolute;inset:0;pointer-events:none}
+.scoreboard,.liveTabs,.liveGrid,.newTop{position:relative;z-index:1}
+
+/* Dedicated halftime locker-room */
+.halfPhase .scoreboard,.halfPhase .liveTabs,.halfPhase .commentary{opacity:.28;filter:saturate(.5)}
+.halfPhase .liveGrid{grid-template-columns:1fr}
+.halfPhase .liveSide{width:100%;max-width:none;background:rgba(7,17,14,.9);backdrop-filter:blur(5px)}
+.lockerGrid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(260px,.7fr);gap:16px;margin-top:14px}
+.tacticalPitch{min-height:420px;border:1px solid #31564a;background:linear-gradient(90deg,transparent 49.7%,rgba(126,198,168,.16) 50%,transparent 50.3%),repeating-linear-gradient(0deg,rgba(12,54,38,.78) 0,rgba(12,54,38,.78) 70px,rgba(14,63,44,.78) 71px,rgba(14,63,44,.78) 140px);display:grid;grid-template-columns:repeat(4,minmax(80px,1fr));gap:12px;align-content:space-around;padding:20px;position:relative}
+.faceToken{border:1px solid #31564a;background:rgba(8,22,17,.92);color:#e6f4ef;padding:8px;display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0;cursor:grab}
+.faceToken.selected{border-color:var(--green);box-shadow:inset 0 0 0 1px var(--green)}
+.faceWrap{width:54px;height:54px;border-radius:50%;overflow:hidden;border:1px solid #3b6a59;background:#10261e;display:grid;place-items:center}
+.faceWrap img{width:100%;height:100%;object-fit:cover}
+.faceWrap i{font-style:normal;color:var(--green);font-weight:900;font-size:14px}
+.faceToken b{font-size:8px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.faceToken small{font-size:7px;color:var(--muted)}
+.benchFaces{display:flex;flex-wrap:wrap;gap:8px;padding-top:7px}
+.benchFace{width:92px}
+.halfControls{border-left:1px solid var(--line);padding-left:16px}
+.talkChoices{display:grid;gap:6px}.talkChoices button{border:1px solid var(--line);background:#0d1c17;color:#9baba5;padding:9px;display:flex;align-items:center;gap:7px;font-size:8px}.talkChoices button svg{width:14px}.talkChoices button.active{border-color:var(--green);color:var(--green);background:#10271f}
+.halfControls>small{display:block;color:var(--muted);font-size:7px;line-height:1.5;margin-top:8px}
+@media(max-width:900px){.lockerGrid{grid-template-columns:1fr}.halfControls{border-left:0;border-top:1px solid var(--line);padding:14px 0 0}.tacticalPitch{grid-template-columns:repeat(3,minmax(72px,1fr));min-height:520px}}
+@media(max-width:520px){.tacticalPitch{grid-template-columns:repeat(2,minmax(0,1fr));padding:12px}.faceWrap{width:46px;height:46px}.benchFace{width:82px}}
