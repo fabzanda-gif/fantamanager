@@ -627,3 +627,25 @@ radial-gradient(circle at 50% 50%,transparent 0 13.9%,rgba(232,250,242,.22) 14.1
 .matrixAcceptButton>span:last-child{display:grid;gap:2px;text-align:left}
 .matrixAcceptButton b{font-size:8px;letter-spacing:1px;color:#f1f8f5}
 .matrixAcceptButton small{font-size:6px;letter-spacing:1.4px;color:var(--green)}
+
+
+/* 90M end-season cleanup + Spogliatoio card layout */
+.squadPlayerCard.psychology{grid-template-columns:52px minmax(0,1fr) 72px!important;grid-auto-rows:auto;align-items:center}
+.squadPlayerCard.psychology .playerTalkButton{grid-column:2/4;width:100%;justify-content:center;margin-top:2px;min-height:28px}
+.squadPlayerCard.psychology .squadMind{align-self:stretch;display:grid;align-content:center;gap:7px}
+.squadPlayerCard.psychology .squadMind>div{min-width:0}
+.squadPlayerCard.psychology .squadMind small{font-size:5.5px!important;letter-spacing:.7px!important}
+.squadPlayerCard.psychology .squadMind b{display:block;font-size:10px!important;margin:2px 0 4px}
+.squadPlayerCard.psychology .squadMind i{display:block;height:2px;background:#172822;overflow:hidden}
+.squadPlayerCard.psychology .squadMind i span{display:block;height:100%;background:var(--green)}
+.completeSeason{grid-template-columns:repeat(2,minmax(0,1fr))!important;align-items:start!important}
+.completeSeason .staffHub,.completeSeason .draftCallout,.completeSeason .seasonBrief{display:none!important}
+.completeSeason .seasonRecap{order:-4;grid-column:1/-1!important}
+.completeSeason .nextMatchCard{order:-3;grid-column:1/-1!important;grid-row:auto!important;display:grid;grid-template-columns:minmax(0,1fr) 260px;column-gap:22px;align-items:end}
+.completeSeason .nextMatchCard>small,.completeSeason .nextMatchCard>h2,.completeSeason .nextMatchCard>p,.completeSeason .nextMatchCard>em{grid-column:1}
+.completeSeason .nextMatchCard .newSeasonButton{grid-column:2;grid-row:1/6;align-self:center;margin:0!important}
+.completeSeason .seasonMetric{order:-2}
+.completeSeason .seasonSquad{order:-1;grid-column:1/-1!important}
+.completeSeason .playerPulse{grid-column:1/-1!important}
+.completeSeason .seasonMetric,.completeSeason .seasonSquad,.completeSeason .playerPulse{min-width:0}
+@media(max-width:800px){.squadPlayerCard.psychology{grid-template-columns:48px minmax(0,1fr) 66px!important}.completeSeason{grid-template-columns:1fr!important}.completeSeason .nextMatchCard{grid-template-columns:1fr!important}.completeSeason .nextMatchCard .newSeasonButton{grid-column:1;grid-row:auto;margin-top:14px!important}}
