@@ -1,15 +1,23 @@
 player_id,name,club,fm_id,status,role,fantacalcio_pid,face_file,source
+0fca9629-c953-4c78-a17f-980fef723d5e,AHANOR *,ATA,2000400123,verified_sortitoutsi,D,6916,face_2000400123.png,sortitoutsi_verified_2026-09
+4d77668f-f2b6-4d81-bd22-1e3527fc9aad,BAKKER,ATA,37063645,verified_sortitoutsi,D,,face_37063645.png,sortitoutsi_verified_2026-09
 42038f7f-3809-4c53-90a6-4f6592cc947f,BELLANOVA,ATA,43295110,verified,D,4887,face_43295110.png,historical_mapping
 43d0137b-9c6b-4405-9fdb-3feb3a0606d5,BERNASCONI,ATA,2000019039,verified,D,7219,face_2000019039.png,historical_mapping
 267f70f9-02b7-408c-b3f0-c80cbde55159,CARNESECCHI,ATA,43298002,verified,P,4431,face_43298002.png,historical_mapping
+cb837765-a93b-400c-a402-62916c19940b,CASSA,ATA,2000241431,verified_sortitoutsi,C,,face_2000241431.png,sortitoutsi_verified_2026-09
+c72492ec-ede1-4d5b-81dc-28e0762cbb00,COMI,ATA,2000145296,verified_sortitoutsi,D,,face_2000145296.png,sortitoutsi_verified_2026-09
 72356330-8516-4b8b-b5ca-a0ccd187303c,DE KETELAERE,ATA,18110528,verified,A,5995,face_18110528.png,historical_mapping
 53f86cfa-95bc-4446-a151-ee4f03fe5fce,EDERSON,ATA,19326796,verified,C,5792,face_19326796.png,historical_mapping
+96454fd1-359f-45c5-92ea-39b24c858f0a,ELMAS,ATA,47064795,verified_sortitoutsi,C,4479,face_47064795.png,sortitoutsi_verified_2026-09
 4ba20e81-987c-46dd-802c-9741bb251a65,GAETANO,ATA,43317758,verified,C,4364,face_43317758.png,historical_mapping
 048edaee-81b5-4ee4-ad2f-a6f4fe4146f7,HIEN,ATA,93083839,verified,D,6046,face_93083839.png,historical_mapping
 e8e2b7e5-92fd-44f0-a6cc-941a28159f2a,KESSIÈ,ATA,13136664,verified,C,1850,face_13136664.png,historical_mapping
 4ba57c06-aef5-4929-ab84-7edee5360c41,KRISTENSEN,ATA,2000005988,verified,D,6485,face_2000005988.png,historical_mapping
 cc3659b1-7e30-4931-9774-b7d3e5cf41b4,KRSTOVIC,ATA,62195758,verified,A,6435,face_62195758.png,historical_mapping
+60877fa3-8612-46df-9571-c1d362903f85,MANZONI,ATA,2000145297,verified_sortitoutsi,C,,face_2000145297.png,sortitoutsi_verified_2026-09
+34674bee-227d-44a3-8d93-1fbe2da4a305,PARDEL,ATA,2000123796,verified_sortitoutsi,P,,face_2000123796.png,sortitoutsi_verified_2026-09
 785e5112-fb7d-4f39-9ee2-fad7840611dc,RASPADORI,ATA,43316850,verified,A,4371,face_43316850.png,historical_mapping
+ab7fd7af-928b-437c-b8f0-7388ff592348,ROSSI,ATA,43039784,verified_sortitoutsi,P,,face_43039784.png,sortitoutsi_verified_2026-09
 34bedc2a-82ed-4862-b97e-98e7624d0068,ROWE,ATA,28127273,verified,C,6844,face_28127273.png,historical_mapping
 113a3e88-aa00-46cb-9fcd-3eb9b4725977,SAMARDZIC,ATA,91182849,verified,C,5119,face_91182849.png,historical_mapping
 c9c3c592-1a6a-4cd0-ac1f-a98761c19f1a,SCALVINI,ATA,43500755,verified,D,5526,face_43500755.png,historical_mapping
@@ -18,118 +26,226 @@ fc73eb10-faa1-40c4-b870-afeb58f2d76d,ZAPPACOSTA,ATA,43061433,verified,D,554,face
 f60b47e1-1322-4985-8395-167b4b16772a,AMONDARAIN,BOL,2000267567,verified,C,7528,face_2000267567.png,historical_mapping
 d8ea44bb-0fbe-45c5-ad28-e70dbd59c8a4,BERNARDESCHI,BOL,43093476,verified,C,184,face_43093476.png,historical_mapping
 5c4d2999-3a86-47a9-82a7-aac891b2104c,CAMBIAGHI,BOL,43295822,verified,C,4436,face_43295822.png,historical_mapping
+053b6cc4-4c98-478a-b397-ef1e1062393a,CASALE,BOL,43206174,verified_sortitoutsi,D,5498,face_43206174.png,sortitoutsi_verified_2026-09
+a1eb174a-ba59-4c73-bc27-283bc92d5fe3,DE SILVESTRI,BOL,1401054,verified_sortitoutsi,D,487,face_1401054.png,sortitoutsi_verified_2026-09
 44757c0b-87b3-4d68-b690-c1ae15ceaaa0,DOVBYK,BOL,71099066,verified,A,6675,face_71099066.png,historical_mapping
+7e40f5c3-b971-4869-b8b6-13be63bd3412,EL AZZOUZI,BOL,37076232,verified_sortitoutsi,C,6225,face_37076232.png,sortitoutsi_verified_2026-09
+de645d30-09c1-4a0f-b6e5-b3c16b4069d7,ENEM,BOL,37084989,verified_sortitoutsi,A,7627,face_37084989.png,sortitoutsi_verified_2026-09
 a6be2cf3-2f8a-43b2-a67f-70787feab555,FERGUSON,BOL,61078132,verified,C,5858,face_61078132.png,historical_mapping
+552ddc77-3110-4218-b817-3b123df5894e,HAPPONEN,BOL,2000274049,verified_sortitoutsi,P,7533,face_2000274049.png,sortitoutsi_verified_2026-09
 071b298d-f16d-4ac1-919d-b5e8f4983df9,HEGGEM,BOL,53138523,verified,D,7212,face_53138523.png,historical_mapping
-86978213-946e-4493-983f-9e085a9e6039,LIBRA,BOL,2000394909,verified,C,7629,face_2000394909.png,historical_mapping
+2c2ca8d7-5179-4dba-a3dd-d2a49385f361,HELLAND,BOL,2000282595,verified_sortitoutsi,D,7326,face_2000282595.png,sortitoutsi_verified_2026-09
+0242c572-7736-48a0-93b9-da3176773171,HOLM,BOL,93085044,verified_sortitoutsi,D,5678,face_93085044.png,sortitoutsi_verified_2026-09
+27358ccd-d88d-4db7-8988-59aa1217e0c6,KARLSSON,BOL,93070929,verified_sortitoutsi,A,,face_93070929.png,sortitoutsi_verified_2026-09
+86978213-946e-4493-983f-9e085a9e6039,LIBRA,BOL,2000394909,verified_sortitoutsi,C,7629,face_2000394909.png,sortitoutsi_verified_2026-09
 ba8586ec-ee42-4fee-9471-9a1076e5c0ec,MBANGULA,BOL,18115008,verified,C,6833,face_18115008.png,historical_mapping
 47c63f30-ca7f-46eb-bd1e-590392cef27b,MIRANDA,BOL,67258411,verified,D,4734,face_67258411.png,historical_mapping
 18dac7d6-419d-4751-8c6d-fa1bd724b8aa,MORO,BOL,24046418,verified,C,,face_24046418.png,historical_mapping
+29943cc1-c5aa-4005-a29e-7bf7360cc55d,MORO N.,BOL,24046418,verified_sortitoutsi,C,6054,face_24046418.png,sortitoutsi_verified_2026-09
 a27d29d6-7f17-47a4-be93-197f714e1db9,ODGAARD,BOL,27119480,verified,C,2765,face_27119480.png,historical_mapping
 65bd361d-480f-4767-a960-295bc1130fe2,ORSOLINI,BOL,43162321,verified,C,2167,face_43162321.png,historical_mapping
+70b7ad61-76d0-481a-8033-c37f9b4fa61d,PESSINA,BOL,2000336212,verified_sortitoutsi,P,,face_2000336212.png,sortitoutsi_verified_2026-09
+f8f63ece-b20c-4feb-b3b1-5baa60effd32,PESSINA MAS.,BOL,2000336212,verified_sortitoutsi,P,7172,face_2000336212.png,sortitoutsi_verified_2026-09
 cc338da5-86c9-4a4b-aad2-0dd555654c8c,PICCOLI,BOL,43372280,verified,A,4359,face_43372280.png,historical_mapping
 0f34e3c7-31cc-480c-aa6c-8c380efe2ee2,POBEGA,BOL,43269242,verified,C,5298,face_43269242.png,historical_mapping
 a1318eed-ea5b-4f72-9026-9979c1bb3294,SKORUPSKI,BOL,54009099,verified,P,133,face_54009099.png,historical_mapping
 4adc073b-413c-49c8-a99d-179a6118d862,THEATE,BOL,18105815,verified,D,5675,face_18105815.png,historical_mapping
+43b0a203-577d-495a-b573-2cfed6dcd582,VITIK,BOL,2000014205,verified_sortitoutsi,D,7068,face_2000014205.png,sortitoutsi_verified_2026-09
 b1ed2db3-db84-40f2-905f-37b061766a36,ZORTEA,BOL,43252462,verified,D,4433,face_43252462.png,historical_mapping
 eccf0679-5895-4147-8b92-3095e8aee018,ADOPO,CAG,43459075,verified,C,4870,face_43459075.png,historical_mapping
+2b092ea2-55c5-43c9-b6fe-cfc75fb89ee1,AKARAKIRI,CAG,2000411487,verified_sortitoutsi,C,,face_2000411487.png,sortitoutsi_verified_2026-09
+c1ef344f-3d7d-4ec4-99ce-32f7d9ae4ce2,AURELIO,CAG,43323039,verified_sortitoutsi,D,7548,face_43323039.png,sortitoutsi_verified_2026-09
+e8c1d0f9-6a6d-47e4-8412-bf0f20f34910,BORRELLI *,CAG,43298994,verified_sortitoutsi,A,6243,face_43298994.png,sortitoutsi_verified_2026-09
 4de505a0-351b-483b-9f49-7edcfb8e9513,CAPRILE,CAG,43391659,verified,P,4360,face_43391659.png,historical_mapping
+449cc42f-c4b3-46fe-9d74-a5e6b9f5205d,CARLOS,CAG,2000056828,verified_duplicate_identity,A,,face_2000056828.png,sortitoutsi_verified_2026-09
+dfc7ad74-90a9-44bd-8358-2efd209e0d4c,CIERVO,CAG,43424868,verified_sortitoutsi,C,5462,face_43424868.png,sortitoutsi_verified_2026-09
+5959db3c-4fa0-4352-825d-56c30cf3e723,DEIOLA,CAG,43093890,verified_sortitoutsi,C,1871,face_43093890.png,sortitoutsi_verified_2026-09
 a21d277e-cc82-46eb-840a-4310bf01b266,FADERA,CAG,13227290,verified,C,6815,face_13227290.png,historical_mapping
 02043a79-c3c9-46e6-9c04-cd061e1f3224,FAZZINI,CAG,43591640,verified,C,6010,face_43591640.png,historical_mapping
+caea7308-27d4-4d05-8a02-d2116e3eb6c0,FELICI,CAG,43458488,verified_sortitoutsi,A,6640,face_43458488.png,sortitoutsi_verified_2026-09
+0413395a-4115-49a4-9445-f8c7cca99c6e,GAGLIARDINI,CAG,43081390,verified_sortitoutsi,C,801,face_43081390.png,sortitoutsi_verified_2026-09
+98816cf9-d904-4761-86b3-107f8b2fd618,GRANDU,CAG,2000222291,verified_sortitoutsi,C,,face_2000222291.png,sortitoutsi_verified_2026-09
+aaff91ac-f1d7-4ef2-9d16-b07298999209,IDRISSI,CAG,2000103852,verified_sortitoutsi,D,7125,face_2000103852.png,sortitoutsi_verified_2026-09
 ecbdc266-3595-411b-bb79-148d1b1bbc18,KEVIN CARLOS,CAG,2000056828,verified,A,7547,face_2000056828.png,historical_mapping
+27bfd079-bda0-46db-8a61-696a51f00840,KOFLER,CAG,2000164358,verified_sortitoutsi,D,7532,face_2000164358.png,sortitoutsi_verified_2026-09
+5448a89a-a53a-43ab-a1fd-dca08ea5819f,LITETA,CAG,2000241198,verified_sortitoutsi,C,7165,face_2000241198.png,sortitoutsi_verified_2026-09
 6eeee11f-c5b5-45b4-b6a9-0a1587bbdf5f,MALDINI,CAG,43371896,verified,A,4896,face_43371896.png,historical_mapping
+d3ce25ec-2580-420c-8296-c03c68139691,MASSOLIN,CAG,2000188625,verified_sortitoutsi,C,7579,face_2000188625.png,sortitoutsi_verified_2026-09
 f393f61c-3cc7-45c5-830a-5b6e257c12c3,MINA,CAG,76037151,verified,D,4210,face_76037151.png,historical_mapping
+10949c7b-c8c7-47c3-8116-e872955d9d32,MUTANDWA *,CAG,2000165890,verified_sortitoutsi,A,6598,face_2000165890.png,sortitoutsi_verified_2026-09
 f4eedf2b-4ad5-46c0-9b55-404ce6ba5ab5,NZOLA,CAG,83103196,verified,A,5336,face_83103196.png,historical_mapping
 05a6c458-4bae-4673-9b64-1e2462285446,OBERT,CAG,43461908,verified,D,5701,face_43461908.png,historical_mapping
+ef00da06-bf73-4312-ade0-4d7f47f1957f,RADUNOVIC,CAG,62113784,verified_sortitoutsi,P,3,face_62113784.png,sortitoutsi_verified_2026-09
 1ae12845-cc5d-405b-b52b-8a70f03ec2b1,RODRIGUEZ,CAG,2000253187,verified,D,7268,face_2000253187.png,historical_mapping
 04295fdc-f920-4e44-bea4-988edca58cd0,ROMANO,CAG,2000197769,verified,C,7311,face_2000197769.png,historical_mapping
+cc4ecae8-1521-4bd0-b621-48585ec31cbc,SHERRI,CAG,11025626,verified_sortitoutsi,P,6650,face_11025626.png,sortitoutsi_verified_2026-09
 47bec44d-c12e-4be5-a5f8-da6d800a4313,SUGAWARA,CAG,45111317,verified,D,7621,face_45111317.png,historical_mapping
+231493b5-afe3-420e-ac16-89bbc2bb3bfa,TREPY,CAG,2000245964,verified_sortitoutsi,A,7317,face_2000245964.png,sortitoutsi_verified_2026-09
 09395328-80b9-4626-a6e7-2eabdbe9bbd8,WINKS,CAG,28088513,verified,C,4260,face_28088513.png,historical_mapping
+db0501b2-00f9-483b-af09-7ebc34fb9b94,ZAPPA *,CAG,43272248,verified_sortitoutsi,D,4461,face_43272248.png,sortitoutsi_verified_2026-09
 167283e8-1295-4e02-8b35-2c6c988050d3,ZÈ PEDRO,CAG,83115694,verified,D,7274,face_83115694.png,historical_mapping
+a43ed297-3276-4aad-b19c-b486bafb0af5,ADDAI,COM,2000129012,verified_sortitoutsi,A,7127,face_2000129012.png,sortitoutsi_verified_2026-09
+50a5b6df-f062-4090-b051-2c6c6f44a86c,AUDERO,COM,43152255,verified_sortitoutsi,P,,face_43152255.png,sortitoutsi_verified_2026-09
+5f8d9a99-f17b-4414-804d-1084c7f9d497,AZON *,COM,95078290,verified_sortitoutsi,A,7027,face_95078290.png,sortitoutsi_verified_2026-09
 07e3e2f7-f74c-4c80-b2af-98815bb2e575,BATURINA,COM,24065108,verified,C,7126,face_24065108.png,historical_mapping
 5bb8174d-2f00-452b-80de-9924ad05c622,BUTEZ,COM,48030298,verified,P,6966,face_48030298.png,historical_mapping
+31facd0d-a953-4337-b02c-db78b5222611,CAQUERET,COM,48044737,verified_sortitoutsi,C,5036,face_48044737.png,sortitoutsi_verified_2026-09
+2dc4ee74-efc8-44ba-96f5-125ab5f62ebd,CASSANO,COM,43500069,verified_sortitoutsi,C,,face_43500069.png,sortitoutsi_verified_2026-09
 36e76b09-7736-4ac0-b38f-b2ea4f18de81,CHALOBAH,COM,28103591,verified,D,5641,face_28103591.png,historical_mapping
 065bbb31-7a46-4817-8e1e-ceeee0519118,COUTO,COM,19383257,verified,D,6727,face_19383257.png,historical_mapping
 898c845b-3a81-40a7-9536-76e219f05b0d,DA CUNHA,COM,49038940,verified,C,5559,face_49038940.png,historical_mapping
+0f9002fa-e11b-45aa-b98e-52d8fa0cc34b,DE PAOLI,COM,2000488639,verified_sortitoutsi,D,,face_2000488639.png,sortitoutsi_verified_2026-09
 7c3d1f79-5ffa-42cc-99d3-8af26e60c202,DIAO,COM,2000210791,verified,A,6967,face_2000210791.png,historical_mapping
+0f2df2a4-4dd9-4c40-83b7-88c908bf4f47,DOSSENA,COM,43202417,verified_sortitoutsi,D,,face_43202417.png,sortitoutsi_verified_2026-09
 181a7682-c7a2-41f5-843a-a9f99c79b2b6,DOUVIKAS,COM,36137588,verified,A,7017,face_36137588.png,historical_mapping
+5cd62480-4cd1-4b35-901b-3517ddfcd1e8,GOLDANIGA,COM,43080121,verified_sortitoutsi,D,418,face_43080121.png,sortitoutsi_verified_2026-09
 ab1d5dcb-fa0e-43a1-af75-e107bca85097,KAIKI,COM,2000086175,verified,D,7414,face_2000086175.png,historical_mapping
+89226dd0-6434-483f-b98f-f75d527fcdb2,KAMBWALA,COM,2000006158,verified_sortitoutsi,D,6601,face_2000006158.png,sortitoutsi_verified_2026-09
 60247cae-9f2c-47ae-9697-24e1d4369481,KEAN,COM,43274977,verified,A,2097,face_43274977.png,historical_mapping
+c0f1caa2-eee7-4f8d-a68f-742fedf4a0fc,KUHN *,COM,91172582,verified_sortitoutsi,A,7128,face_91172582.png,sortitoutsi_verified_2026-09
+d40a3db1-1015-4fda-8882-80a8772da6f1,LAHDO,COM,93123140,verified_sortitoutsi,C,7357,face_93123140.png,sortitoutsi_verified_2026-09
+6fa1bcd0-a966-41c0-a582-ebbb8029064f,MAZZITELLI,COM,43093356,verified_sortitoutsi,C,,face_43093356.png,sortitoutsi_verified_2026-09
 201eeb89-e9b2-4d79-b00b-62bffe165184,MILLA,COM,67191561,verified,C,7412,face_67191561.png,historical_mapping
+633bb4c1-94b9-4e40-8e61-0aa0ca58b33f,MORATA *,COM,67117360,verified_sortitoutsi,A,313,face_67117360.png,sortitoutsi_verified_2026-09
 0453c49d-69b2-4541-838b-2e4e1c74dc3e,PAZ,COM,2000163799,verified,C,,face_2000163799.png,historical_mapping
 6c4d69df-9c19-4612-b861-acb12a5291a8,PERRONE,COM,14227360,verified,C,6151,face_14227360.png,historical_mapping
 200e7d09-fa5c-48b4-8ec7-81af4d66ff6b,RAMON,COM,2000214886,verified,D,6869,face_2000214886.png,historical_mapping
 4722d0a5-edac-4e5f-959e-bbf03a972c4a,RODRIGUEZ,COM,,needs_review,A,,,historical_mapping
 c6f4bf21-939b-435e-809f-476b1009b25e,SMOLCIC,COM,24061267,verified,D,7014,face_24061267.png,historical_mapping
 b57737f3-f090-49b7-8ec1-85c51ee8f93d,VALLE,COM,2000082098,verified,D,6867,face_2000082098.png,historical_mapping
+4b12d6e2-ae10-40ff-9b37-c57cda5a56a6,VIGORITO,COM,43018087,verified_sortitoutsi,P,2809,face_43018087.png,sortitoutsi_verified_2026-09
 b2cf488a-88ba-496d-b3ee-10ce7656f676,ATTA,FIO,2000024341,verified,C,6908,face_2000024341.png,historical_mapping
+8ac39396-4bbd-4131-a78b-7f28290fec2e,BARAK,FIO,25040431,verified_sortitoutsi,C,,face_25040431.png,sortitoutsi_verified_2026-09
 9d12f1f1-ea05-4da2-8fd6-6db2ed16c578,BETO,FIO,83228124,verified,A,5694,face_83228124.png,historical_mapping
+e32b9b36-9119-498d-865f-44489a7e1280,BRESCIANINI,FIO,43318320,verified_sortitoutsi,C,4947,face_43318320.png,sortitoutsi_verified_2026-09
+74aad832-3225-41fb-a220-fb99ec1f82cc,CHRISTENSEN,FIO,27137069,verified_sortitoutsi,P,6403,face_27137069.png,sortitoutsi_verified_2026-09
+cbe3af2e-2883-48a9-8eda-67a4308950a9,CROCI,FIO,2100062189,verified_sortitoutsi,A,,face_2100062189.png,sortitoutsi_verified_2026-09
 0436c052-e1ed-4678-b5d3-8f768dfea46a,DE GEA,FIO,67030171,verified,P,2521,face_67030171.png,historical_mapping
 7fe35256-e3da-4d26-8b3b-2e3688cdd903,DRAGUSIN,FIO,57178516,verified,D,5365,face_57178516.png,historical_mapping
 14fd23c8-d758-49f8-bcff-066905d0e8ba,FAGIOLI,FIO,43372948,verified,C,4465,face_43372948.png,historical_mapping
 f160ce0b-5d07-4f92-bc33-ed1c846fe59c,GONCALVES,FIO,29192705,verified,C,7625,face_29192705.png,historical_mapping
+f223c188-4656-4c65-8412-3a66c6eba0c6,INAO OULAI,FIO,2000381116,verified_sortitoutsi,C,,face_2000381116.png,sortitoutsi_verified_2026-09
 2cd4086a-72db-4271-aab7-2a89eeba8a03,JIMENEZ,FIO,2000211997,verified,D,6531,face_2000211997.png,historical_mapping
 458be558-6488-488f-ada4-85864cb21a5f,JOAO MARIO,FIO,83174775,verified,D,7175,face_83174775.png,historical_mapping
+147f1113-bea3-4da4-a94c-507494d0e860,KOSPO,FIO,2000260079,verified_sortitoutsi,D,,face_2000260079.png,sortitoutsi_verified_2026-09
+457b3ff5-9765-45e0-8e0c-6e54309f9106,LEZZERINI,FIO,43084560,verified_sortitoutsi,P,158,face_43084560.png,sortitoutsi_verified_2026-09
+a0b38a06-16b2-428e-a1a7-528a4e1ea7fe,MARIO,FIO,83174775,verified_sortitoutsi,D,,face_83174775.png,sortitoutsi_verified_2026-09
 03946eee-c2fd-4a47-bab2-dd2c081550e2,MASTANTUONO,FIO,2000183231,verified,C,7078,face_2000183231.png,historical_mapping
 08b759de-659d-4488-a0ef-e720eb943afd,NDOUR,FIO,2000022887,verified,C,6294,face_2000022887.png,historical_mapping
 d7bd0748-37f6-4ead-b67c-a943c7f10154,NJIE,FIO,,needs_review,C,6827,,historical_mapping
+660cda8e-4cbb-4f0c-b1b5-2e92505e36d4,NZOLA,FIO,83103196,verified_sortitoutsi,A,,face_83103196.png,sortitoutsi_verified_2026-09
 927918d8-31d0-42a6-a8fe-15ac54c5acda,OULAI,FIO,2000381116,verified,C,7464,face_2000381116.png,historical_mapping
+b3c5bdac-ad9c-42f1-9e3d-99bd2de8d03f,PARISI,FIO,43429372,verified_sortitoutsi,D,5449,face_43429372.png,sortitoutsi_verified_2026-09
 3a7b356c-4913-4fe1-9d17-6a8c59a164da,PELLEGRINO,FIO,14217538,verified,A,7023,face_14217538.png,historical_mapping
 d758bbda-4c8e-4950-98d1-3194b8f10500,PONGRACIC,FIO,91175664,verified,D,5603,face_91175664.png,historical_mapping
+fa9e361d-a194-4d6a-83dc-69d9a1b15591,RANIERI,FIO,43270506,verified_sortitoutsi,D,4378,face_43270506.png,sortitoutsi_verified_2026-09
+7636f989-69d5-4174-97d7-74b281c5bd81,SOTTIL,FIO,43270713,verified_sortitoutsi,C,,face_43270713.png,sortitoutsi_verified_2026-09
 1d6c6a67-cc94-4d30-a9a6-7b6b9597fb0e,VALDEPENAS,FIO,2000297000,verified,D,7294,face_2000297000.png,historical_mapping
 e25308aa-1f78-4ac0-bbb7-c6e9b18c6aa4,VIERY,FIO,2000255823,verified,D,7410,face_2000255823.png,historical_mapping
+056e62fd-020d-4e25-b89d-15765fced947,AKPOGUMA,FRO,91109389,verified_sortitoutsi,D,7540,face_91109389.png,sortitoutsi_verified_2026-09
+0b38dbb0-0adf-49e6-84eb-78c498b7bda9,AMEY,FRO,2000097938,verified_sortitoutsi,D,5424,face_2000097938.png,sortitoutsi_verified_2026-09
+1546b3a4-3fe1-4ceb-bb23-c17280502995,BARCELLA,FRO,2000188011,verified_sortitoutsi,A,,face_2000188011.png,sortitoutsi_verified_2026-09
 4706890e-7b4f-4dae-a643-72ee19dab03b,BOBCEK,FRO,63037851,verified,A,7612,face_63037851.png,historical_mapping
 0ee71393-d005-405e-bb82-28cd4fb5f059,BRACAGLIA,FRO,43500011,verified,D,7469,face_43500011.png,historical_mapping
 927f9fc3-5a29-4414-a299-4ca5eb7421e5,CALÒ,FRO,43154747,verified,C,7472,face_43154747.png,historical_mapping
 d2694e5d-158d-496b-a120-6119a875e56c,CALVANI,FRO,2000127893,verified,D,7467,face_2000127893.png,historical_mapping
 f84916dc-acd2-4843-be33-fe94d8f1c842,CICHELLA,FRO,2000184263,verified,C,7473,face_2000184263.png,historical_mapping
+ca2d10b5-d5c9-469e-bc65-18c80a99b472,CICHERO,FRO,2000261704,verified_sortitoutsi,A,,face_2000261704.png,sortitoutsi_verified_2026-09
+f27a6d0a-6e75-4862-89ce-dbd66b902524,CITTADINI,FRO,43424882,verified_sortitoutsi,D,5757,face_43424882.png,sortitoutsi_verified_2026-09
+4690647e-45d8-459d-b8d3-f6c6f33582eb,DESPLANCHES,FRO,43500211,verified_sortitoutsi,P,7463,face_43500211.png,sortitoutsi_verified_2026-09
+cc1093fe-3ea7-448a-a2d7-281f55652c42,EL AZZOUZI,FRO,37079214,verified_sortitoutsi,D,7456,face_37079214.png,sortitoutsi_verified_2026-09
+82a41cd2-662d-4850-80c3-ba94964a7aee,FAYED,FRO,2000231413,verified_duplicate_identity,D,,face_2000231413.png,sortitoutsi_verified_2026-09
+668ee28e-f8a7-4312-9bc7-240fbfc77ed2,FINI,FRO,2000185827,verified_sortitoutsi,A,6506,face_2000185827.png,sortitoutsi_verified_2026-09
+cad7c234-f2a6-4ccd-aa2f-6f24b5dc378b,GELLI,FRO,43124795,verified_sortitoutsi,C,6241,face_43124795.png,sortitoutsi_verified_2026-09
 f16edc20-be32-45d9-aeeb-c4110da979ef,GHEDJEMIS,FRO,49061425,verified,A,6530,face_49061425.png,historical_mapping
 f0f3a8ef-145d-4d96-901f-dfea3659cee3,GRILLITSCH,FRO,16096614,verified,C,7550,face_16096614.png,historical_mapping
+cfb39403-0658-41ed-a64c-a7be42d97a49,HASA,FRO,2000021435,verified_sortitoutsi,C,6903,face_2000021435.png,sortitoutsi_verified_2026-09
+3f66abef-6e9e-4730-8cb4-77ca47178bed,KONE,FRO,43390493,verified_duplicate_identity,C,,face_43390493.png,sortitoutsi_verified_2026-09
+ccd6f15d-ce35-4a40-8f8c-3ca7e3731478,KONE B.,FRO,43390493,verified_sortitoutsi,C,5725,face_43390493.png,sortitoutsi_verified_2026-09
+38d34cee-3ba9-48aa-882c-0029010a69e3,KOUTSOUPIAS *,FRO,43393590,verified_sortitoutsi,C,7474,face_43393590.png,sortitoutsi_verified_2026-09
 03cde70d-1053-4b51-9f44-f7c0d711d76e,KVERNADZE,FRO,59139122,verified,A,6204,face_59139122.png,historical_mapping
+02ef0dba-4506-42b3-b84b-47b8b9fbfddc,LOLIC,FRO,2000025517,verified_sortitoutsi,P,7466,face_2000025517.png,sortitoutsi_verified_2026-09
+ce6285f0-ebf5-4a40-93e5-06addde41501,MASINI,FRO,43390579,verified_sortitoutsi,C,6917,face_43390579.png,sortitoutsi_verified_2026-09
 c63df1bb-e897-4987-8228-79333a99b63d,MONTERISI,FRO,43393176,verified,D,4952,face_43393176.png,historical_mapping
+336ddb62-fbb6-49ec-9095-e43e47ab3d90,OMAR FAYED,FRO,2000231413,verified_sortitoutsi,D,7553,face_2000231413.png,sortitoutsi_verified_2026-09
 ee608056-7cb8-4526-8af1-861a1913ef58,OYONO,FRO,48049837,verified,D,6238,face_48049837.png,historical_mapping
 24542c6a-184b-4c02-9af3-0e3569a712a7,PALMISANI,FRO,2000055968,verified,P,6415,face_2000055968.png,historical_mapping
+b61e3ff8-75df-457a-967c-9eab2d832a51,PISSERI,FRO,43087232,verified_sortitoutsi,P,7560,face_43087232.png,sortitoutsi_verified_2026-09
 5c47b0d0-4dfb-46ed-821f-f4473c93306f,RAIMONDO,FRO,2000021170,verified,A,5436,face_2000021170.png,historical_mapping
 8e92aea3-67e6-4753-b00e-1ef15d174dac,SCHMID,FRO,16184737,verified,C,7551,face_16184737.png,historical_mapping
 c9209306-ece2-4ef5-b621-b2e7f99b1c14,TCHATO,FRO,49061872,verified,D,7605,face_49061872.png,historical_mapping
 49cd9a61-6afa-49c6-b840-6144cda8e440,TERZIC,FRO,62192744,verified,D,4375,face_62192744.png,historical_mapping
+ae2ec10f-f78f-464f-bb73-4a57c232b5d0,TOCI,FRO,2000389087,verified_sortitoutsi,C,,face_2000389087.png,sortitoutsi_verified_2026-09
 fd171f19-2e4f-4b7d-be50-ece0913aa280,ZERBIN,FRO,43280475,verified,C,5998,face_43280475.png,historical_mapping
 a08083ee-5e0d-47b6-8f07-ec46ad9d710a,AMORIM,GEN,2000207241,verified,C,7341,face_2000207241.png,historical_mapping
 e98441f7-3fbe-43a8-bd0d-1fea1c50852c,BALDANZI,GEN,43591641,verified,C,5823,face_43591641.png,historical_mapping
 131a2463-8d2b-49b9-91eb-d91593c51629,BIJLOW,GEN,37050136,verified,P,7332,face_37050136.png,historical_mapping
 8cfb9985-a9ff-4a88-8cc5-17d1dab4002c,COLOMBO,GEN,43424893,verified,A,4923,face_43424893.png,historical_mapping
+b000a802-fe58-469f-8b59-d40c0e49d23e,DRAMEH,GEN,28122190,verified_sortitoutsi,D,5742,face_28122190.png,sortitoutsi_verified_2026-09
 94162be6-e1eb-476d-994b-121e1cc16e27,EHIZIBUE,GEN,37053569,verified,D,6047,face_37053569.png,historical_mapping
 0899f9bd-9fe0-4baf-b289-41b74d081f75,EL SHAARAWY,GEN,43036636,verified,A,795,face_43036636.png,historical_mapping
 58e23fec-852f-404b-b2ed-8546214713e2,ELLERTSSON,GEN,39056943,verified,C,6020,face_39056943.png,historical_mapping
 dedb778f-bf54-4c7a-9e20-2afba4650339,FRENDRUP,GEN,27132198,verified,C,5791,face_27132198.png,historical_mapping
+e3150910-c994-42e3-81b6-08da868df319,HAVEL,GEN,16283625,verified_sortitoutsi,A,7453,face_16283625.png,sortitoutsi_verified_2026-09
+111c81a4-1c07-4062-a115-d3029149bcb6,KUMER CELIK,GEN,2000272157,verified_sortitoutsi,D,,face_2000272157.png,sortitoutsi_verified_2026-09
+f6411668-a881-4395-a488-fab1da0db992,LAFONT,GEN,2000214877,verified_sortitoutsi,C,,face_2000214877.png,sortitoutsi_verified_2026-09
+1ebe57dd-99a3-4635-9737-6dbd05e969c6,LYSIONOK,GEN,2000333084,verified_sortitoutsi,P,,face_2000333084.png,sortitoutsi_verified_2026-09
 7030c01d-c01a-464a-92d5-74fe9ba1d28b,MARCANDALLI,GEN,43500463,verified,D,6660,face_43500463.png,historical_mapping
+75c540f8-f2dc-4d49-9cf0-3adc858a979d,MARTIN *,GEN,67196209,verified_sortitoutsi,D,2593,face_67196209.png,sortitoutsi_verified_2026-09
+61a7a926-f60c-4235-a091-db7ee54bb1de,MEICHTRY,GEN,2000301391,verified_sortitoutsi,C,7409,face_2000301391.png,sortitoutsi_verified_2026-09
+fda2c9cf-1991-4b48-9b25-9d7dc1252062,MESSIAS,GEN,43315178,verified_sortitoutsi,C,4970,face_43315178.png,sortitoutsi_verified_2026-09
 bead089a-6cb6-4da7-aa88-ccd84e766542,MITAJ,GEN,2000029431,verified,D,7537,face_2000029431.png,historical_mapping
+68999c2b-f85c-4bec-8f9c-88fb3ffc37a1,NORTON-CUFFY *,GEN,2000047226,verified_sortitoutsi,D,6814,face_2000047226.png,sortitoutsi_verified_2026-09
+343b3ebb-3d7d-43b5-ba7d-11ccbecd1681,NUREDINI,GEN,2000266443,verified_sortitoutsi,A,,face_2000266443.png,sortitoutsi_verified_2026-09
 39de25e3-dc16-4173-b3e1-7213b9b09950,OSMAJIC,GEN,62221063,verified,A,7600,face_62221063.png,historical_mapping
 8affbb71-af43-475a-9c26-62557702d401,OSTIGARD,GEN,53122155,verified,D,5750,face_53122155.png,historical_mapping
+ef938372-9073-42b8-96df-42a846764e3e,OTOA,GEN,2000120656,verified_sortitoutsi,D,6977,face_2000120656.png,sortitoutsi_verified_2026-09
 a90f2c49-fdbe-4b6f-9438-a237c5eea0f5,PUCZKA,GEN,2000104623,verified,D,7413,face_2000104623.png,historical_mapping
+a8e3fa4b-6b4f-4f18-b9e7-b63de52e6aa0,ROBINHO JUNIOR,GEN,2000417769,verified_sortitoutsi,A,7622,face_2000417769.png,sortitoutsi_verified_2026-09
+f9cc311d-6643-4e40-b4b4-f5bb218b1c51,SABELLI,GEN,43093403,verified_sortitoutsi,D,791,face_43093403.png,sortitoutsi_verified_2026-09
+fece1cae-b08c-4594-9e09-b0a7c80d04a3,SOMMARIVA,GEN,43161654,verified_sortitoutsi,P,219,face_43161654.png,sortitoutsi_verified_2026-09
 563fbe21-e3d7-4674-96c5-0105129f6a7a,SOW,GEN,98034373,verified,C,5946,face_98034373.png,historical_mapping
+4ce9d52f-7966-4c36-a973-64d6742ad8d3,STOLZ,GEN,16248921,verified_sortitoutsi,P,6569,face_16248921.png,sortitoutsi_verified_2026-09
+89ba87c2-c524-4494-8278-14264587e2de,TRAORÈ,GEN,43317933,verified_sortitoutsi,C,,face_43317933.png,sortitoutsi_verified_2026-09
+2c693670-37e4-4053-8994-3b3a3a96cc42,TRAORÈ HJ.,GEN,43317933,verified_sortitoutsi,C,2857,face_43317933.png,sortitoutsi_verified_2026-09
 c11be3b7-e678-4f53-addd-478a7666ec9c,VASQUEZ,GEN,51067636,verified,D,5514,face_51067636.png,historical_mapping
+defc9130-ebd7-445b-af3d-125bb13f5e48,VAZ,GEN,2000509701,verified_sortitoutsi,D,,face_2000509701.png,sortitoutsi_verified_2026-09
+3b7ca6fd-f58b-4395-abac-39c172bbacfa,VENTURINO,GEN,2000246890,verified_sortitoutsi,C,6980,face_2000246890.png,sortitoutsi_verified_2026-09
 4f0f0b63-6cf2-4274-a73e-9f22371d2443,VITINHA,GEN,83227945,verified,A,6164,face_83227945.png,historical_mapping
+1ecda554-2c6f-4728-bed8-361f16c463c7,WIAFE,GEN,2000420231,verified_sortitoutsi,C,,face_2000420231.png,sortitoutsi_verified_2026-09
+a5009727-1cf1-4831-8050-1b99c2393482,ZULEVIC,GEN,2000398590,verified_sortitoutsi,A,,face_2000398590.png,sortitoutsi_verified_2026-09
 a72d235d-1490-449a-86dd-18e3309cc8a0,AKANJI,INT,98031331,verified,D,4159,face_98031331.png,historical_mapping
+a28c0de8-63bf-479b-a028-aa86dc173c16,ASLLANI,INT,43424567,verified_sortitoutsi,C,,face_43424567.png,sortitoutsi_verified_2026-09
 acdc42fa-493e-468a-8650-2c4bc769d734,BARELLA,INT,43139595,verified,C,1870,face_43139595.png,historical_mapping
 961c92ef-cbf0-444f-b6e1-d82019ddf103,BASTONI,INT,43252460,verified,D,2120,face_43252460.png,historical_mapping
 fa752b25-4d6f-4efc-958b-f4b2c9781921,BISSECK,INT,91175868,verified,D,6217,face_91175868.png,historical_mapping
+ab8189ac-e4a2-4f9d-a811-28a25f3a2fe7,BOVIO,INT,2000391611,verified_sortitoutsi,D,,face_2000391611.png,sortitoutsi_verified_2026-09
 5150a529-5ed4-4008-9db8-cdb9d1fd47a5,CALHANOGLU,INT,92026209,verified,C,2194,face_92026209.png,historical_mapping
+00ce44d3-1f1e-4bfa-afcf-d4849c6c3c19,CARBONI,INT,2000097988,verified_sortitoutsi,C,,face_2000097988.png,sortitoutsi_verified_2026-09
 ae69b932-54ce-4731-afbd-2873b7f245ff,CARLOS AUGUSTO,INT,19350649,verified,D,5877,face_19350649.png,historical_mapping
 8378f3fb-aac1-48cf-a074-787342bffafb,DIMARCO,INT,43143488,verified,D,254,face_43143488.png,historical_mapping
 e5edc3f8-e9b6-4627-9df9-c08a082db7bb,DIOUF,INT,49062699,verified,C,6274,face_49062699.png,historical_mapping
 16514f27-4e77-4ff9-ae5a-523bc2eb4c52,ESPOSITO,INT,2000146883,verified,A,7071,face_2000146883.png,historical_mapping
 948f2dff-9c92-41b5-902d-a50cb636c590,JONES,INT,28115788,verified,C,5172,face_28115788.png,historical_mapping
+2c63ecfe-be0c-48c7-bcc4-17ddac7a78c0,KAMATE,INT,2000097996,verified_sortitoutsi,C,,face_2000097996.png,sortitoutsi_verified_2026-09
 4b6b385e-f810-4977-b1aa-a5c96d41d6c9,LAUTARO MARTINEZ,INT,14110660,verified,A,2764,face_14110660.png,historical_mapping
+208f99bc-2b49-4d64-b589-a03deb9cc0f7,LAVELLI,INT,2000205837,verified_sortitoutsi,A,,face_2000205837.png,sortitoutsi_verified_2026-09
+53fee0ed-79d4-4e05-9b87-9db766d67f76,LUIS HENRIQUE,INT,19403484,verified_sortitoutsi,C,5301,face_19403484.png,sortitoutsi_verified_2026-09
+3ad37a0c-636a-4d10-90e4-2c853d319b6d,MOSCONI,INT,2000269293,verified_sortitoutsi,A,,face_2000269293.png,sortitoutsi_verified_2026-09
 0b74de6b-3699-45c6-a57d-ba94350d6913,SPENCE,INT,29178504,verified,D,5982,face_29178504.png,historical_mapping
+772489bc-6321-4e93-a3b6-f25305a975c4,SPINACCÈ,INT,2000205839,verified_sortitoutsi,A,,face_2000205839.png,sortitoutsi_verified_2026-09
+d4a74a5e-5854-464a-96ff-ad231c1d87e6,STANKOVIC,INT,2000098012,verified_sortitoutsi,C,6503,face_2000098012.png,sortitoutsi_verified_2026-09
 771a4a87-9918-478d-9337-daba714e902d,STONES,INT,28060397,verified,D,2514,face_28060397.png,historical_mapping
 0ef3ead6-4c98-4edd-b84b-3d865f79aad9,THURAM,INT,48037335,verified,A,4871,face_48037335.png,historical_mapping
 5f8d00d2-be6a-40d6-bb0f-c9a3ce34e373,ZIELINSKI,INT,43093171,verified,C,152,face_43093171.png,historical_mapping
 ae0bdb11-b68f-4084-b759-cec21c6706db,ALAJBEGOVIC,JUV,2000330855,verified,C,7436,face_2000330855.png,historical_mapping
 e9ce4d4a-9148-4791-aade-c0de05023310,BREMER,JUV,19270493,verified,D,2788,face_19270493.png,historical_mapping
+9bd4868a-98e3-4010-bb2e-690aec97c630,CABAL,JUV,76064373,verified_sortitoutsi,D,6039,face_76064373.png,sortitoutsi_verified_2026-09
 e3f64dc5-cb0f-4f15-a23f-8b88a1839eac,CAMBIASO,JUV,43339195,verified,D,5520,face_43339195.png,historical_mapping
 41a91f66-eccd-4f5b-8388-5e5f72663d1e,CELIK,JUV,70097248,verified,D,4657,face_70097248.png,historical_mapping
 d9d6a581-9d4a-42ea-b8ca-d3af70d713c4,CONCEICAO,JUV,83261140,verified,C,6884,face_83261140.png,historical_mapping
+59e7b36b-3e9d-4537-9822-5c0d3bf059a6,DAVID *,JUV,18108540,verified_sortitoutsi,A,5544,face_18108540.png,sortitoutsi_verified_2026-09
+a3536af2-14b4-441a-905a-cb5caac9dd81,EKHATOR,JUV,2000222926,verified_sortitoutsi,A,6822,face_2000222926.png,sortitoutsi_verified_2026-09
 dc0b2967-b9ee-4008-873a-a7d0421f1c38,GONZALEZ,JUV,14181375,verified,A,,face_14181375.png,historical_mapping
 87c5f5ab-3205-458b-8941-496622c862fd,KALULU,JUV,49045184,verified,D,4976,face_49045184.png,historical_mapping
 6e8db8ba-6524-4da1-9cbe-fecd003493d6,KELLY,JUV,29158244,verified,D,6766,face_29158244.png,historical_mapping
@@ -138,67 +254,131 @@ f6027e20-e044-40bb-b33f-2704fac98c0d,LOCATELLI,JUV,43167354,verified,C,827,face_
 25a696fb-1f12-452b-b101-241c704f282a,LUCUMÌ,JUV,76042952,verified,D,6042,face_76042952.png,historical_mapping
 be2f01da-c302-4625-b9bd-08a929ae07f8,LUIZ,JUV,19302456,verified,C,,face_19302456.png,historical_mapping
 16994ed2-927a-4c46-83c3-ddeca35a7671,MCKENNIE,JUV,72048035,verified,C,4973,face_72048035.png,historical_mapping
+73d30a64-03bf-4619-b187-6dd60c19f745,MILIK,JUV,96026541,verified_sortitoutsi,A,2012,face_96026541.png,sortitoutsi_verified_2026-09
+40888b2e-f4b6-4c1c-99dd-0a5f9831c693,RADU,JUV,2000294239,verified_sortitoutsi,P,,face_2000294239.png,sortitoutsi_verified_2026-09
+d83207cc-356a-4fcc-954c-701d18917733,RUGANI,JUV,43083931,verified_sortitoutsi,D,294,face_43083931.png,sortitoutsi_verified_2026-09
 f6405fd8-494a-456c-be7a-124566eda398,SARR,JUV,,needs_review,C,,,historical_mapping
 10265f62-80d4-48ce-950d-a0037ea07259,VICARIO,JUV,43155241,verified,P,4964,face_43155241.png,historical_mapping
 39cf37f0-691e-484b-9a33-a19bc26af1df,WOLTEMADE,JUV,91187791,verified,A,6752,face_91187791.png,historical_mapping
+8de45a32-895e-47aa-a9a2-6298d38a996c,ZHEGROVA,JUV,18104985,verified_sortitoutsi,C,5761,face_18104985.png,sortitoutsi_verified_2026-09
 d94dc927-054c-4cb6-ac73-6b17b5118088,CANCELLIERI,LAZ,43424754,verified,C,5500,face_43424754.png,historical_mapping
+a608632c-e3ab-42fd-b643-4967ccb65404,CATALDI,LAZ,43093936,verified_sortitoutsi,C,333,face_43093936.png,sortitoutsi_verified_2026-09
+b8c6ab4b-de86-4ffc-b4e0-3ed583054113,DELE-BASHIRU,LAZ,28115798,verified_sortitoutsi,C,6629,face_28115798.png,sortitoutsi_verified_2026-09
+18f0dd33-3b07-4fb1-9753-fe370b56622b,DIA *,LAZ,50065334,verified_sortitoutsi,A,5672,face_50065334.png,sortitoutsi_verified_2026-09
 48873446-46da-4696-bf5b-3e7cb25f2b73,DOEKHI,LAZ,37051440,verified,D,6320,face_37051440.png,historical_mapping
+d340e10a-5103-45ce-b169-0469c81c9d38,FARCOMENI,LAZ,2000187304,verified_sortitoutsi,C,,face_2000187304.png,sortitoutsi_verified_2026-09
 525cce3f-9a4e-41dd-b15e-116e2be78729,FRATTESI,LAZ,43272557,verified,C,2848,face_43272557.png,historical_mapping
+affffa90-f0d7-4f5b-b029-ff12c18254c2,FURLANETTO,LAZ,43425157,verified_sortitoutsi,P,,face_43425157.png,sortitoutsi_verified_2026-09
+1b1620fc-7cf1-4c5b-8d45-f3c5b15ceaac,GALASSI,LAZ,2000310956,verified_sortitoutsi,D,,face_2000310956.png,sortitoutsi_verified_2026-09
+7ed83d0b-6299-4111-805b-51e342668a8c,GIGOT,LAZ,48031358,verified_sortitoutsi,D,,face_48031358.png,sortitoutsi_verified_2026-09
 a978d4cc-9dee-45fe-805c-2c034284fbc5,GUDMUNDSSON,LAZ,37050603,verified,C,5800,face_37050603.png,historical_mapping
 b16e6a6d-f4a7-4ec9-967a-440d06809201,ISAKSEN,LAZ,27129146,verified,C,6398,face_27129146.png,historical_mapping
+bfee9a7f-6ef1-4b42-b830-70dfaf0b4098,LAZZARI,LAZ,43096538,verified_sortitoutsi,D,2263,face_43096538.png,sortitoutsi_verified_2026-09
 437982c3-f037-48e9-a036-2a6e61478ebf,LEITE,LAZ,83111536,verified,D,6319,face_83111536.png,historical_mapping
 46bca85a-445f-4ac1-955c-e6a7bf2cab8e,MANDAS,LAZ,36137769,verified,P,6482,face_36137769.png,historical_mapping
 2919f95e-2fc9-43e3-942a-86d24c232246,MARUSIC,LAZ,62095383,verified,D,2188,face_62095383.png,historical_mapping
 477cfcc3-6321-4051-87cd-4897ac1c4f16,MUSSOLINI,LAZ,2000050573,verified,D,,face_2000050573.png,historical_mapping
 fbbb7506-be9e-45c7-83b8-120c1803a738,NUNO TAVARES,LAZ,83169864,verified,D,,face_83169864.png,historical_mapping
+f1c08353-a86a-4eff-8453-3d61b28d36b7,PATRIC,LAZ,67100019,verified_sortitoutsi,D,327,face_67100019.png,sortitoutsi_verified_2026-09
 4eac7e79-d9d5-4977-9023-83626434be51,PEDRAZA,LAZ,67212046,verified,D,4817,face_67212046.png,historical_mapping
+ebdc8cf9-01b4-4ffe-8c61-2725731e7292,PELLEGRINI,LAZ,43252226,verified_sortitoutsi,D,2728,face_43252226.png,sortitoutsi_verified_2026-09
 44edf49b-164c-4e68-8c0d-f1c8b9fc09b5,PINAMONTI,LAZ,43252773,verified,A,2038,face_43252773.png,historical_mapping
 0157a61e-327d-429c-a831-144ec0d4bcf8,PROVSTGAARD,LAZ,27157970,verified,D,7012,face_27157970.png,historical_mapping
+9bf042de-3bfd-4230-bb42-a71f3e11e83a,PRZYBOREK,LAZ,2000255483,verified_sortitoutsi,C,7345,face_2000255483.png,sortitoutsi_verified_2026-09
+553824ec-9dc0-4a22-9b73-3b6157227972,RATKOV *,LAZ,2000098836,verified_sortitoutsi,A,7313,face_2000098836.png,sortitoutsi_verified_2026-09
+ade80089-48e9-4400-9378-9583dbf1e1c9,ROMAGNOLI *,LAZ,43093395,verified_sortitoutsi,D,460,face_43093395.png,sortitoutsi_verified_2026-09
 b332901c-2f75-4ea8-bc0e-86909dabe315,ROVELLA,LAZ,43372892,verified,C,4459,face_43372892.png,historical_mapping
 38121ae0-2355-4f79-a6d6-70ebf86d1083,SUTALO,LAZ,24058106,verified,D,7580,face_24058106.png,historical_mapping
 876480d2-7336-4e1d-bc10-c712af8a8d09,TAYLOR,LAZ,37073317,verified,C,7314,face_37073317.png,historical_mapping
 57817d55-9925-4c35-a739-d6bb9bcc3b57,ZACCAGNI,LAZ,43125343,verified,C,632,face_43125343.png,historical_mapping
 9c8b3a99-908f-45cd-92e0-dd5546ed5e38,BERISHA,LEC,2000048682,verified,C,6015,face_2000048682.png,historical_mapping
+0df2a0fa-e1df-4997-b84e-7c5999a2f568,BLEVE,LEC,43095136,verified_sortitoutsi,P,4468,face_43095136.png,sortitoutsi_verified_2026-09
 cb6196f9-84b6-42b1-892b-d8a77d1a161c,COULIBALY,LEC,48036752,verified,C,5504,face_48036752.png,historical_mapping
+4176c6e1-219b-455a-9ca7-f08c5615686c,DEMBELÈ A.,LEC,2000023340,verified_sortitoutsi,D,6826,face_2000023340.png,sortitoutsi_verified_2026-09
 489d7b6f-336e-47c5-9826-681a21a03b68,FALCONE,LEC,43094480,verified,P,2134,face_43094480.png,historical_mapping
 bf7bb681-9725-4810-8e1b-3c20df96e1c0,FATAH,LEC,2000019686,verified,A,7602,face_2000019686.png,historical_mapping
+9a5265c2-e6ca-4638-addc-75a81f3a22b9,FOFANA,LEC,2000065769,verified_sortitoutsi,C,,face_2000065769.png,sortitoutsi_verified_2026-09
+83e0d9a8-e17e-42ed-9265-239aa1098809,FOFANA SA.,LEC,2000065769,verified_sortitoutsi,C,7319,face_2000065769.png,sortitoutsi_verified_2026-09
+35b141b9-36be-4e3c-98dd-8035d61e1613,GABRIEL,LEC,2000288426,verified_sortitoutsi,D,,face_2000288426.png,sortitoutsi_verified_2026-09
 887c5ae2-f7c7-462c-b215-4fdd36c549f4,GALLO,LEC,43297394,verified,D,4502,face_43297394.png,historical_mapping
 a79633ad-db03-4e32-b0df-9a1b4e46f75b,GANDELMAN,LEC,42094193,verified,C,7318,face_42094193.png,historical_mapping
 5717d0af-ee23-467d-9519-7987089a7cfc,GASPAR,LEC,95080787,verified,D,6632,face_95080787.png,historical_mapping
 a02c81b2-c22f-46dd-af79-3f10f92fec25,GEUBBELS,LEC,49038936,verified,A,5029,face_49038936.png,historical_mapping
+ae2f151c-fd51-49d9-84d3-271c100a1691,GORTER,LEC,2000076549,verified_sortitoutsi,C,7248,face_2000076549.png,sortitoutsi_verified_2026-09
 f1756a14-f96a-429b-9336-84f3ffa82543,ILIC,LEC,,needs_review,C,5007,,historical_mapping
+400f2ce4-fb35-4ef1-8f9b-001397961d45,JEAN,LEC,2000029896,verified_sortitoutsi,D,6883,face_2000029896.png,sortitoutsi_verified_2026-09
+ec419b56-299e-4da1-ae7f-83bc2e58000a,JOVIC,LEC,62113639,verified_sortitoutsi,A,,face_62113639.png,sortitoutsi_verified_2026-09
+1814e4ff-595a-4bdf-a297-d254710631d9,KABA,LEC,49061282,verified_sortitoutsi,C,6410,face_49061282.png,sortitoutsi_verified_2026-09
+7a414755-6c0c-442a-8bce-1b4ed0198b1a,KOUASSI,LEC,2000311166,verified_sortitoutsi,D,,face_2000311166.png,sortitoutsi_verified_2026-09
+a37c9217-9091-4b01-a4ae-391d84853670,KOVAC,LEC,2000197238,verified_sortitoutsi,C,,face_2000197238.png,sortitoutsi_verified_2026-09
+48c6661c-1d7d-48e7-b338-b53ed0ca33e6,LAERKE,LEC,2000384675,verified_sortitoutsi,A,7571,face_2000384675.png,sortitoutsi_verified_2026-09
+92800d99-d629-483a-b0bb-791502af2155,MALEH,LEC,43193946,verified_sortitoutsi,C,5457,face_43193946.png,sortitoutsi_verified_2026-09
 a00c5521-ff17-4901-a9bc-2c9ede425f7c,MONTEIRO,LEC,84159827,verified,C,7619,face_84159827.png,historical_mapping
+b9811caf-7657-4335-a3ae-8eb2fc363695,NDABA,LEC,29173564,verified_sortitoutsi,D,7182,face_29173564.png,sortitoutsi_verified_2026-09
 8215ce34-a786-48ca-83ab-f14d92a63bb6,NGOM,LEC,2000051197,verified,C,7322,face_2000051197.png,historical_mapping
+8a4391c7-8266-488f-ba16-3bed7b98d03c,PENEV,LEC,2000382001,verified_sortitoutsi,P,7557,face_2000382001.png,sortitoutsi_verified_2026-09
 e28ec9d7-cc5d-4210-ac86-2305c218729d,PIEROTTI,LEC,14230113,verified,C,6549,face_14230113.png,historical_mapping
+3e7ecd0b-75ce-48d2-a6cf-4cf28433cd47,SIEBERT,LEC,91206955,verified_sortitoutsi,D,7240,face_91206955.png,sortitoutsi_verified_2026-09
 beb00a54-0f43-41c9-95b9-56458544c310,STULIC,LEC,62239624,verified,A,7252,face_62239624.png,historical_mapping
+e870f53a-7efc-4e15-8fcf-3d61dca9f64d,UBANI,LEC,2000196492,verified_sortitoutsi,D,,face_2000196492.png,sortitoutsi_verified_2026-09
 37ac1217-c6cb-44ec-a430-5fc82e64bcdf,VEIGA,LEC,83261126,verified,D,6990,face_83261126.png,historical_mapping
+329c03f0-1c2f-4750-94c3-2cb082218d94,BALENTIEN,MIL,2000408376,verified_sortitoutsi,A,,face_2000408376.png,sortitoutsi_verified_2026-09
 a19d20a7-b543-4b47-8f70-8ded75238307,BARTESAGHI,MIL,2000183044,verified,D,6496,face_2000183044.png,historical_mapping
+bc2029a6-c72f-4168-9c71-e187c0320e26,BONDO,MIL,2000006107,verified_sortitoutsi,C,,face_2000006107.png,sortitoutsi_verified_2026-09
 6055d76c-2519-4c04-be59-496390a023cc,CHUKWUEZE,MIL,67269484,verified,C,4856,face_67269484.png,historical_mapping
 5ca075ee-0baf-4fd5-b2e0-a85639fdab0b,CISSÈ,MIL,49060921,verified,C,6618,face_49060921.png,historical_mapping
+06612837-390c-4a8d-b42b-a54dc0977c7e,COMOTTO,MIL,2000388375,verified_sortitoutsi,C,7572,face_2000388375.png,sortitoutsi_verified_2026-09
 76372f85-74bc-4522-803d-9b3008d0e9f6,DE WINTER,MIL,18108550,verified,D,5739,face_18108550.png,historical_mapping
+44014570-4bec-43e2-9111-e915e4748581,DIAWARA,MIL,2000237610,verified_sortitoutsi,D,7525,face_2000237610.png,sortitoutsi_verified_2026-09
+8264d6b4-76dd-4625-a930-616e8f7d0db7,F. TERRACCIANO,MIL,43500821,verified_sortitoutsi,D,5812,face_43500821.png,sortitoutsi_verified_2026-09
+7ae928e3-9e41-426f-a9cb-3276ad2f519a,FOFANA,MIL,49045776,verified_sortitoutsi,C,,face_49045776.png,sortitoutsi_verified_2026-09
 1cbbe794-d95e-4756-88b6-513d0933467b,GABBIA,MIL,43266774,verified,D,4401,face_43266774.png,historical_mapping
 1bf1169a-49c4-412c-aca3-b5df8485560c,GILA,MIL,67277455,verified,D,5833,face_67277455.png,historical_mapping
+bfb7d17c-be32-4667-9782-9bc6bc5f9a69,GIMENEZ *,MIL,51067947,verified_sortitoutsi,A,7008,face_51067947.png,sortitoutsi_verified_2026-09
+f03b95d3-589c-45a8-bf31-1e4f075410ac,JASHARI,MIL,84161856,verified_sortitoutsi,C,7203,face_84161856.png,sortitoutsi_verified_2026-09
+fc92b4a7-f622-4e18-9877-250fb8eec2db,LEAO *,MIL,83111483,verified_sortitoutsi,A,4510,face_83111483.png,sortitoutsi_verified_2026-09
 4ef6e9fc-074f-43b0-9223-97bdc134db60,LOFTUS-CHEEK,MIL,28068727,verified,C,4199,face_28068727.png,historical_mapping
 10555c2f-5e96-4994-b69b-9b609dc161c4,MAIGNAN,MIL,85094520,verified,P,4312,face_85094520.png,historical_mapping
 875d8531-1131-43b9-8083-00a02a9c2500,MODRIC,MIL,653054,verified,C,2606,face_653054.png,historical_mapping
 4b4465ce-a9ec-49cb-9073-2ab21dfebc93,MOREIRA,MIL,2000027719,verified,C,6372,face_2000027719.png,historical_mapping
 b994f044-ac67-49df-85a4-f0b393a3dc7b,MUSAH,MIL,28129089,verified,C,5295,face_28129089.png,historical_mapping
 01d8e300-942c-4684-ba10-aa9dc9195b04,PAVLOVIC,MIL,62220026,verified,D,5022,face_62220026.png,historical_mapping
+b0485692-e5b7-4cbd-a282-b6e7d2846b14,PITTARELLA,MIL,2000443848,verified_sortitoutsi,P,,face_2000443848.png,sortitoutsi_verified_2026-09
 3d4a7289-5000-4585-b14e-2078a91a12b9,PULISIC,MIL,92074020,verified,C,2423,face_92074020.png,historical_mapping
 c5ebb1c6-7cb4-4020-bd76-cd3ed01fb769,RABIOT,MIL,85086031,verified,C,2379,face_85086031.png,historical_mapping
 5fd18af8-4937-4f66-a0ec-0a4b6a341f12,RAMOS,MIL,83209468,verified,A,6397,face_83209468.png,historical_mapping
+0dfd906f-24e3-4e24-8c1c-476fdba58aca,RICCI,MIL,43390774,verified_sortitoutsi,C,,face_43390774.png,sortitoutsi_verified_2026-09
 ba806661-b3db-4d2d-a913-8dce05d44679,SAELEMAEKERS,MIL,18097159,verified,C,4892,face_18097159.png,historical_mapping
+64a35a20-a553-4939-867e-d3e9b1a41094,TOMORI,MIL,28097980,verified_sortitoutsi,D,4751,face_28097980.png,sortitoutsi_verified_2026-09
+23487a81-c772-477d-835c-30c49140ceb8,ZEROLI,MIL,2000103118,verified_sortitoutsi,C,,face_2000103118.png,sortitoutsi_verified_2026-09
 0ffa0949-c590-432e-8070-d2e53ea4e6f7,AKINSANMIRO,MON,2000149882,verified,C,6593,face_2000149882.png,historical_mapping
+1160f5e1-2cc9-487c-9207-331c2dae857f,ANTOV,MON,22067326,verified_sortitoutsi,D,5399,face_22067326.png,sortitoutsi_verified_2026-09
+4180d828-79b5-46c3-8a21-c49a8b5bff34,BAKOUNE,MON,2000183048,verified_sortitoutsi,D,7476,face_2000183048.png,sortitoutsi_verified_2026-09
+e55c42fa-fd9b-4915-bf6c-772c95c25521,BALDÉ,MON,43093942,verified_sortitoutsi,A,,face_43093942.png,sortitoutsi_verified_2026-09
+d3d2e4ee-6aeb-4e29-81bd-30c827dab25a,BALLABIO,MON,2000495941,verified_sortitoutsi,C,,face_2000495941.png,sortitoutsi_verified_2026-09
 3850a180-90bd-45ac-8df4-e10627468a73,BIRINDELLI,MON,43274094,verified,D,5838,face_43274094.png,historical_mapping
 03953def-6785-4d42-9c7b-f5a35bc731b3,CARBONI,MON,43391662,verified,D,4925,face_43391662.png,historical_mapping
+13e28b24-5a39-4197-8266-b5b05edff2b9,CIURRIA,MON,43115532,verified_sortitoutsi,C,5880,face_43115532.png,sortitoutsi_verified_2026-09
+b68d766c-29fa-4afc-9cf0-885233e6eb55,COLOMBO,MON,2000098494,verified_sortitoutsi,C,7477,face_2000098494.png,sortitoutsi_verified_2026-09
 55380ccd-976d-408c-8e20-0eff2bbfd949,COLPANI,MON,43252476,verified,C,5878,face_43252476.png,historical_mapping
 7d0c1f93-4805-4010-9766-a6f5f82a59d8,CUTRONE,MON,43167351,verified,A,2155,face_43167351.png,historical_mapping
+40bd7d46-ab24-48fa-b994-de0441b0bb3e,DELLI CARRI *,MON,43254335,verified_sortitoutsi,D,2115,face_43254335.png,sortitoutsi_verified_2026-09
+a5810e00-319e-4436-9c9f-0cf37ee4b931,FOE-ONDOA,MON,2000311282,verified_sortitoutsi,C,7574,face_2000311282.png,sortitoutsi_verified_2026-09
 d3c3eae8-6833-44fb-a3d8-f7099b394864,FOLORUNSHO,MON,43207763,verified,C,6252,face_43207763.png,historical_mapping
+924d1415-eed4-4d0e-a618-96bdbf94ba4b,FORSON,MON,2000017597,verified_sortitoutsi,A,6592,face_2000017597.png,sortitoutsi_verified_2026-09
+e513713b-ab72-495a-a5b0-3a5221389fb9,GALAZZI,MON,43353701,verified_sortitoutsi,C,,face_43353701.png,sortitoutsi_verified_2026-09
+d5865266-29b8-46ee-acfd-3c077d52e93f,GOGLICHIDZE,MON,2000139890,verified_sortitoutsi,D,6537,face_2000139890.png,sortitoutsi_verified_2026-09
 83873363-d925-41b3-a8a3-65e5b69e79e7,KOUADIO,MON,2000184141,verified,D,7238,face_2000184141.png,historical_mapping
+f4fd4240-eab9-4ad6-8397-84dd7866f623,LOUBAO,MON,2000245579,verified_sortitoutsi,A,,face_2000245579.png,sortitoutsi_verified_2026-09
 14b0af6b-a40d-4ede-8d12-09d5c5d53eaf,LUCCHESI,MON,43500433,verified,D,6659,face_43500433.png,historical_mapping
 0291107d-9671-4dd1-b3e7-298d3f091838,MANGAS,MON,55082268,verified,D,7485,face_55082268.png,historical_mapping
+153407fa-5936-447b-839f-68cca254f38f,MARTINS,MON,2000097999,verified_sortitoutsi,A,,face_2000097999.png,sortitoutsi_verified_2026-09
+a74e4fc4-f237-4916-9eee-49e3563106e2,MAYE,MON,2000198856,verified_sortitoutsi,D,7604,face_2000198856.png,sortitoutsi_verified_2026-09
 9007d255-037d-4e6b-b94d-0e0a33465519,MOUT,MON,2000298535,verified,C,7575,face_2000298535.png,historical_mapping
 287034d5-eb8d-4155-8f09-6d5d96e644de,NGONGE,MON,18101760,verified,A,6145,face_18101760.png,historical_mapping
+4bad187e-b208-4883-8637-dcc92cb17c2d,PESSINA,MON,43155796,verified_sortitoutsi,C,2741,face_43155796.png,sortitoutsi_verified_2026-09
+d4edbe74-37c7-4caa-a7c3-70feeaf93739,PIZZIGNACCO *,MON,43392090,verified_sortitoutsi,P,6682,face_43392090.png,sortitoutsi_verified_2026-09
+e690ed5f-68a0-490f-9f61-6765f5affbb1,STRAJNAR,MON,2000455166,verified_sortitoutsi,P,7475,face_2000455166.png,sortitoutsi_verified_2026-09
 ae7f1d11-268e-47dd-9352-e1224cc4e6be,TORNQVIST,MON,93123680,verified,P,7301,face_93123680.png,historical_mapping
 b469215a-2dec-4862-bca5-63c745b8bc3f,TOURÉ,MON,,needs_review,C,7146,,historical_mapping
 a661a771-8b3e-4189-b155-09dc8a591ca0,VARELA,MON,2000145876,verified,A,7523,face_2000145876.png,historical_mapping
@@ -207,10 +387,18 @@ bbbd94e1-1766-44c2-a386-031c7906b159,ZEBALLOS,MON,14239273,verified,A,7620,face_
 6d5294e5-48b0-4b45-b3a5-a4f82b9c4d2f,ANGUISSA,NAP,48030711,verified,C,,face_48030711.png,historical_mapping
 e535bd32-7244-4bec-92a7-93abf2b2c519,BADIASHILE,NAP,49038942,verified,D,4664,face_49038942.png,historical_mapping
 83bb2fd8-ff4b-4875-ac10-f38c6749f71a,BUONGIORNO,NAP,43270682,verified,D,2724,face_43270682.png,historical_mapping
+2d509826-46aa-46d6-9f8f-4b4a18b0a3c3,CAJUSTE,NAP,93069729,verified_sortitoutsi,C,,face_93069729.png,sortitoutsi_verified_2026-09
+ca6b8b16-c867-4476-8caa-1b6583576f57,CHEDDIRA,NAP,43391696,verified_sortitoutsi,A,,face_43391696.png,sortitoutsi_verified_2026-09
 0c2db1a6-37c1-41e8-b690-9ae9dcbeb407,DE BRUYNE,NAP,18004457,verified,C,2517,face_18004457.png,historical_mapping
 dfb3622b-6684-4b1a-90b9-7eaa922afcb9,DI LORENZO,NAP,43075156,verified,D,2816,face_43075156.png,historical_mapping
+9fdb8adf-4c3d-4607-b9d1-9162e3bdc8ce,FAVASULI,NAP,2000025313,verified_sortitoutsi,D,7563,face_2000025313.png,sortitoutsi_verified_2026-09
+be0f26ed-2322-4c96-a009-02d1ac0ae0bb,GAROFALO,NAP,2000269083,verified_sortitoutsi,D,,face_2000269083.png,sortitoutsi_verified_2026-09
+ca313e66-1fbf-4a47-b277-ed6a7eff4e45,GIOVANE,NAP,2000123485,verified_sortitoutsi,A,7162,face_2000123485.png,sortitoutsi_verified_2026-09
 713ac9a6-a2bc-4780-9752-9c22510d409e,HOJLUND,NAP,27160181,verified,A,6052,face_27160181.png,historical_mapping
+b8438b12-5253-44a2-a1c6-63ff2e2da941,LINDSTROM,NAP,27143432,verified_sortitoutsi,C,,face_27143432.png,sortitoutsi_verified_2026-09
 0e353724-8657-4911-b7d6-1c8301318d0e,LOBOTKA,NAP,63012964,verified,C,4287,face_63012964.png,historical_mapping
+597b4372-c990-4ee1-9c76-9d9b49712f6e,MARIANUCCI,NAP,2000024732,verified_sortitoutsi,D,6809,face_2000024732.png,sortitoutsi_verified_2026-09
+dedd6022-35af-4e5b-ae5f-37e7fcdd3732,MARIN,NAP,2000051886,verified_sortitoutsi,D,6638,face_2000051886.png,sortitoutsi_verified_2026-09
 a2eb5872-f776-498e-8663-af0790b6c517,MCTOMINAY,NAP,29125343,verified,C,4777,face_29125343.png,historical_mapping
 47031dbb-3bc9-4d42-9172-d8c1368b0566,MERET,NAP,43140326,verified,P,572,face_43140326.png,historical_mapping
 bde1506d-3c39-4cf6-ab15-7b56ddab1d4f,NERES,NAP,19260918,verified,A,6831,face_19260918.png,historical_mapping
@@ -220,92 +408,204 @@ bde1506d-3c39-4cf6-ab15-7b56ddab1d4f,NERES,NAP,19260918,verified,A,6831,face_192
 4114c21d-0c4e-4ff8-b577-49e6b0bc0072,SANTOS,NAP,19404391,verified,C,,face_19404391.png,historical_mapping
 6203c11d-90ea-4d1c-8e52-b3c0dc9c007e,SPINAZZOLA,NAP,43036586,verified,D,1852,face_43036586.png,historical_mapping
 cd927dd1-e11d-4733-8de2-00ef5548de52,VERGARA,NAP,43617790,verified,C,7223,face_43617790.png,historical_mapping
+1d111336-89ea-48ff-adea-49efdbf68c62,VIGLIOTTI,NAP,2000135566,verified_sortitoutsi,A,,face_2000135566.png,sortitoutsi_verified_2026-09
+08cc19e0-167e-466f-9a86-5408127da3e5,ALMQVIST,PAR,93087462,verified_sortitoutsi,A,6207,face_93087462.png,sortitoutsi_verified_2026-09
 b1afa757-355f-4f53-83e0-4f6819f5c19b,BERNABÈ,PAR,67271025,verified,C,6666,face_67271025.png,historical_mapping
 33205ede-5a90-4416-983c-b4f8cb075311,BRITSCHGI,PAR,2000214745,verified,D,7255,face_2000214745.png,historical_mapping
+4d61e69b-57ad-4624-b73b-e48786d6e4ae,CARBONI,PAR,43619130,verified_sortitoutsi,D,6149,face_43619130.png,sortitoutsi_verified_2026-09
 13916312-6c7b-4b8a-a891-d1e5dc2db84f,CORVI,PAR,43379760,verified,P,6662,face_43379760.png,historical_mapping
+5f8d4369-e099-4b68-8961-5da430ad6fb0,CREMASCHI,PAR,2000237833,verified_sortitoutsi,C,7276,face_2000237833.png,sortitoutsi_verified_2026-09
 331f5a8f-be24-4d71-9df4-f96f0110cbe6,D. CARLOS,PAR,19188567,verified,D,,face_19188567.png,historical_mapping
 17aa8112-c44b-4294-9bbd-ea8c349b8b28,DAFFARA,PAR,2000021277,verified,P,7411,face_2000021277.png,historical_mapping
+0358247e-6e92-4d6a-97fe-553184354156,DE MARTIS,PAR,2100001923,verified_sortitoutsi,A,7568,face_2100001923.png,sortitoutsi_verified_2026-09
 27de3213-09f1-40cf-a548-57c049d656ab,DELPRATO,PAR,43252473,verified,D,6664,face_43252473.png,historical_mapping
+6cd71482-717e-4af4-9147-dc1cb298389a,DIALLO,PAR,2000488637,verified_sortitoutsi,A,7536,face_2000488637.png,sortitoutsi_verified_2026-09
+0f6859e9-033e-466a-95a8-575562f161e0,DROBNIC,PAR,2000293708,verified_sortitoutsi,D,7615,face_2000293708.png,sortitoutsi_verified_2026-09
 3ecdd3ab-0350-451d-8e96-24406b54c4e4,ELPHEGE,PAR,2000232765,verified,A,7342,face_2000232765.png,historical_mapping
 32279007-af2e-49fd-a7d2-f4ad9f94c299,FABBIAN,PAR,43500245,verified,C,6206,face_43500245.png,historical_mapping
+758ca6a5-dd81-4292-980c-cb5991949659,FRIGAN,PAR,2000078339,verified_sortitoutsi,A,7213,face_2000078339.png,sortitoutsi_verified_2026-09
+e1c0bce6-c9ce-46dc-8efd-c3c9bbfd9a4d,GHIDOTTI,PAR,43316795,verified_sortitoutsi,P,2874,face_43316795.png,sortitoutsi_verified_2026-09
 812a4e2c-ae6f-47b5-b3cc-9329352bd82e,KEITA,PAR,18116036,verified,C,6898,face_18116036.png,historical_mapping
+4e320a67-120a-4699-abc8-50360c222a33,KOUDA,PAR,43611977,verified_sortitoutsi,C,,face_43611977.png,sortitoutsi_verified_2026-09
+3d76f36d-f96e-4ce0-9f0f-7b25c08b9da1,MAZZOCCHI,PAR,2000474528,verified_sortitoutsi,P,,face_2000474528.png,sortitoutsi_verified_2026-09
+165babaa-d202-4cba-a97a-ac0411e02f3a,NDIAYE,PAR,12092872,verified_sortitoutsi,D,7202,face_12092872.png,sortitoutsi_verified_2026-09
+c4eaeff6-74f8-496d-9859-899ec28c809a,NICOLUSSI CAVIGLIA,PAR,43296764,verified_sortitoutsi,C,4349,face_43296764.png,sortitoutsi_verified_2026-09
 45623753-df33-44b6-8149-c111ea311fa9,ORDONEZ,PAR,2000141874,verified,C,7138,face_2000141874.png,historical_mapping
 335bebe7-a710-4e10-bb44-f203694acbd6,ROMERO,PAR,14225980,verified,A,7554,face_14225980.png,historical_mapping
+0dbd7643-d5a9-4062-b24a-72cb2370ef24,SIERRO,PAR,98034038,verified_sortitoutsi,C,7628,face_98034038.png,sortitoutsi_verified_2026-09
+6bb62b2a-8ca3-4ece-8f18-0b4bcdaad07b,SORENSEN,PAR,27139791,verified_sortitoutsi,C,,face_27139791.png,sortitoutsi_verified_2026-09
 f1e2c479-11a0-4156-9359-f927fb21244d,TOURÉ,PAR,12081007,verified,A,6229,face_12081007.png,historical_mapping
 625402be-05d3-4a39-8749-c725d8a94235,TROILO,PAR,2000200406,verified,D,7235,face_2000200406.png,historical_mapping
+ee73b476-fc35-4425-b50a-3f4cf2853bbb,VALENTI,PAR,14185196,verified_sortitoutsi,D,5307,face_14185196.png,sortitoutsi_verified_2026-09
 fda54646-b976-4b7b-b050-0eaa9bbab3e9,VALERI,PAR,43315140,verified,D,5862,face_43315140.png,historical_mapping
+59b5704d-7ffb-47b3-8582-ba68b9423b14,ARENA,ROM,2000461946,verified_sortitoutsi,A,,face_2000461946.png,sortitoutsi_verified_2026-09
 d967910d-7e87-4730-9b0a-5599a1479b54,CASTRO,ROM,14236223,verified,A,6572,face_14236223.png,historical_mapping
 35e0fb4c-3fae-4608-825f-4fd200c5463f,CRISTANTE,ROM,43091113,verified,C,779,face_43091113.png,historical_mapping
+1c85ce9e-d24e-48a1-8abd-6d0f4cae657c,DE MARZI,ROM,2000266582,verified_sortitoutsi,P,7048,face_2000266582.png,sortitoutsi_verified_2026-09
+b45b80c8-c7b3-44de-ade5-ba637ae0a941,DE ROON,ROM,37001813,verified_sortitoutsi,C,22,face_37001813.png,sortitoutsi_verified_2026-09
 3b0f638a-c447-4baf-8fdf-58139eca884e,DYBALA,ROM,14044150,verified,A,309,face_14044150.png,historical_mapping
+6a662124-c461-4480-8798-bd959714a7dc,EL AYNAOUI *,ROM,49045412,verified_sortitoutsi,C,6271,face_49045412.png,sortitoutsi_verified_2026-09
+6d30d6e4-4826-49db-9aa6-d78ded385aa6,GHILARDI,ROM,43500332,verified_sortitoutsi,D,6631,face_43500332.png,sortitoutsi_verified_2026-09
 fc084d6c-db60-4fd0-9331-e070559463fd,HERMOSO,ROM,67196188,verified,D,4807,face_67196188.png,historical_mapping
 7b7c6706-11cd-4b08-8ec2-496841d3b525,KONE,ROM,49047182,verified,C,,face_49047182.png,historical_mapping
 81259bd5-1b31-491c-8e0c-56827ff0d0ec,KOULIERAKIS,ROM,36159445,verified,D,7529,face_36159445.png,historical_mapping
 32f0fecd-52db-46ab-beb7-6611eaf26b32,MALEN,ROM,37055844,verified,A,5585,face_37055844.png,historical_mapping
 e247d70d-1eba-4248-9688-e024003da534,MANCINI,ROM,43093502,verified,D,2296,face_43093502.png,historical_mapping
+11b0d2b5-5083-424d-8be8-3214712be403,MANNINI,ROM,2000184284,verified_sortitoutsi,D,,face_2000184284.png,sortitoutsi_verified_2026-09
 d9be8ad0-bc98-4803-9a79-7c0416cc1df1,MOLINA,ROM,14129337,verified,D,4998,face_14129337.png,historical_mapping
 303293ba-e9dd-4997-836c-72a9aad48c8f,MORA,ROM,2000265865,verified,C,7556,face_2000265865.png,historical_mapping
 3fbb8fcd-98cc-442d-b921-fb4e8571d5d5,N'DICKA,ROM,48032198,verified,D,4317,face_48032198.png,historical_mapping
+66a91849-05ce-44ae-a04d-85e2acba5b30,RENSCH,ROM,37073313,verified_sortitoutsi,D,6986,face_37073313.png,sortitoutsi_verified_2026-09
 38d160ba-84e9-45e5-a564-decda832fd9f,SOULÈ,ROM,14222108,verified,A,5734,face_14222108.png,historical_mapping
 ae179eff-0dae-4b65-9c17-f4e97a3c5a94,SVILAR,ROM,18087914,verified,P,5841,face_18087914.png,historical_mapping
+7ec6cfdf-eeea-42a8-aac2-31729253e072,VAZ *,ROM,2000290881,verified_sortitoutsi,A,6981,face_2000290881.png,sortitoutsi_verified_2026-09
 e706aab8-3a8c-4cf7-beca-29cb753f5776,WESLEY,ROM,2000083915,verified,D,7181,face_2000083915.png,historical_mapping
 6f8b80f9-2438-49df-ba16-025d38ad4ba3,ADZIC,SAS,2000241044,verified,C,6677,face_2000241044.png,historical_mapping
+064bd745-d8b4-472f-94a5-d09123d45c5f,ALVAREZ,SAS,78096872,verified_sortitoutsi,A,,face_78096872.png,sortitoutsi_verified_2026-09
 f068ae1b-a9a5-4a51-a87f-e908968f1aa4,BAKOLA,SAS,2000398626,verified,C,7036,face_2000398626.png,historical_mapping
 2fb64762-24e7-4d7e-9bed-28f24e333de8,BERARDI,SAS,43094553,verified,A,531,face_43094553.png,historical_mapping
+6030fa43-4872-4815-b341-f216c06625f2,BOLOCA,SAS,43192537,verified_sortitoutsi,C,6219,face_43192537.png,sortitoutsi_verified_2026-09
 80d36f7e-4705-481f-850d-c5c06a091725,BOWIE,SAS,61095510,verified,A,7347,face_61095510.png,historical_mapping
 38f5c722-22f0-4dde-b984-e1732577e9b8,CALETA-CAR,SAS,24039427,verified,D,4147,face_24039427.png,historical_mapping
+73331c34-20e9-4307-a7fc-329acd2766fb,CALIGARA,SAS,43296746,verified_sortitoutsi,C,,face_43296746.png,sortitoutsi_verified_2026-09
+64271818-be3f-4389-bef5-4ad3b559f17c,CANDÈ,SAS,83149225,verified_sortitoutsi,D,6985,face_83149225.png,sortitoutsi_verified_2026-09
+b0f6198d-f521-4409-989d-41d3485af7f1,CINQUEGRANO,SAS,2000124322,verified_sortitoutsi,C,7573,face_2000124322.png,sortitoutsi_verified_2026-09
+73bc26c1-44f1-42f0-a7d2-e76702d499aa,DI BITONTO,SAS,2000103801,verified_sortitoutsi,D,,face_2000103801.png,sortitoutsi_verified_2026-09
 b3c580d4-9e15-462f-a144-b2aa27a16221,DOIG,SAS,61093823,verified,D,5851,face_61093823.png,historical_mapping
+98f9bb1d-680f-4026-b64d-fa0a700d6138,DOMINGUEZ,SAS,2000110081,verified_sortitoutsi,A,6895,face_2000110081.png,sortitoutsi_verified_2026-09
 501f11e8-013e-42d5-9b7b-b1600f0558bd,ESPOSITO,SAS,43425069,verified,A,4463,face_43425069.png,historical_mapping
+d0e33431-cd6c-4a3d-8b45-2bcf24e5a52f,GHION,SAS,43317768,verified_sortitoutsi,C,,face_43317768.png,sortitoutsi_verified_2026-09
+9f70221d-fefe-4483-ac64-3171448eec8f,I. SULEMANA,SAS,2000205565,verified_duplicate_identity,C,,face_2000205565.png,sortitoutsi_verified_2026-09
+175fbbf0-a1b7-425e-ae41-a051fdc0de9a,IANNONI *,SAS,43599180,verified_sortitoutsi,C,7157,face_43599180.png,sortitoutsi_verified_2026-09
 61b592b8-b25c-40f4-83f0-fdb92b5080f1,IDZES,SAS,37073855,verified,D,6672,face_37073855.png,historical_mapping
+830c0233-607b-44ac-8277-605138670af0,KONE,SAS,2000121309,verified_sortitoutsi,C,,face_2000121309.png,sortitoutsi_verified_2026-09
+63166ad3-7d4c-433e-9522-b9964e42ca10,KONÈ I.,SAS,2000121309,verified_sortitoutsi,C,6717,face_2000121309.png,sortitoutsi_verified_2026-09
+0f2711f6-9225-4ba4-8e3a-0ab79073c4e8,KULLA,SAS,2000364224,verified_sortitoutsi,A,,face_2000364224.png,sortitoutsi_verified_2026-09
 be8ecf61-e371-45d3-90a0-ded7da3b60a6,LAURIENTÈ,SAS,85145172,verified,A,6060,face_85145172.png,historical_mapping
 cd7866b6-4ca9-4e6c-8665-df1582c1fd74,LEYSEN,SAS,,needs_review,D,7564,,historical_mapping
+cb058a85-90f8-4e0f-aa43-f87e776b6122,LIPANI,SAS,2000098016,verified_sortitoutsi,C,6246,face_2000098016.png,sortitoutsi_verified_2026-09
+778f93d3-abeb-408a-8e58-7a0e83dadde0,MACCHIONI *,SAS,2000244082,verified_sortitoutsi,D,7396,face_2000244082.png,sortitoutsi_verified_2026-09
 11fedacc-34e8-45a0-9094-6ba37f7275e7,MATIC,SAS,62000307,verified,C,2528,face_62000307.png,historical_mapping
+3e1dfa6c-8a16-4f28-9f7c-d70b7cf01a21,MISSORI *,SAS,2000024765,verified_sortitoutsi,D,6189,face_2000024765.png,sortitoutsi_verified_2026-09
 507a1d52-430a-4176-ab58-b02a76fcd730,MURIC,SAS,28108492,verified,P,4236,face_28108492.png,historical_mapping
+6455edf5-c04b-496f-9191-617f6768c757,NUAMAH,SAS,2000098328,verified_sortitoutsi,C,,face_2000098328.png,sortitoutsi_verified_2026-09
 bc3ff69a-ff25-4589-8604-dc6d83f4dce2,OBRADOR,SAS,2000056917,verified,D,7329,face_2000056917.png,historical_mapping
+ac34d479-a518-4ad2-9cee-494110258625,ODENTHAL,SAS,37064719,verified_sortitoutsi,D,7154,face_37064719.png,sortitoutsi_verified_2026-09
+e8b4a182-4dbc-48ef-8727-f6b27e9e73e9,PAZ,SAS,76062662,verified_sortitoutsi,D,,face_76062662.png,sortitoutsi_verified_2026-09
+dc552253-f91d-47d6-957d-981e182f4c45,PIERAGNOLO,SAS,43500623,verified_sortitoutsi,D,7156,face_43500623.png,sortitoutsi_verified_2026-09
+728c10f8-dcdb-446d-846e-4a700846ab81,PIERINI,SAS,43206238,verified_sortitoutsi,A,,face_43206238.png,sortitoutsi_verified_2026-09
+9712f84b-58a0-48f7-9e51-34dbccfe821e,RUSSO A.,SAS,43384567,verified_sortitoutsi,P,4518,face_43384567.png,sortitoutsi_verified_2026-09
+3cff0437-6bd5-4055-95a8-a0efb5a4d613,SATALINO,SAS,43252200,verified_sortitoutsi,P,2127,face_43252200.png,sortitoutsi_verified_2026-09
+d15749c7-852c-4764-ace8-794faeb62980,SKJELLERUP,SAS,27150884,verified_sortitoutsi,A,,face_27150884.png,sortitoutsi_verified_2026-09
+718577d4-2a24-4727-ad37-6543174cb19d,SULEMANA I.,SAS,2000205565,verified_sortitoutsi,C,6024,face_2000205565.png,sortitoutsi_verified_2026-09
 a1c75cac-7ea9-4628-86aa-3448779d358d,THORSTVEDT,SAS,53126110,verified,C,5844,face_53126110.png,historical_mapping
+79c9612e-e5d5-417d-a696-84e268dd3b9c,TURATI,SAS,43378804,verified_sortitoutsi,P,4867,face_43378804.png,sortitoutsi_verified_2026-09
 d95b9880-9e1f-4714-87a6-56e8437a27d0,VAN DER BREMPT,SAS,18110809,verified,D,6896,face_18110809.png,historical_mapping
+3a277590-82ed-4dbe-b056-a604c9db896d,WALUKIEWICZ,SAS,96105337,verified_sortitoutsi,D,4374,face_96105337.png,sortitoutsi_verified_2026-09
+8fdf163a-b07a-4301-a46e-30ea558c5d7f,ABOUKHLAL,TOR,37065498,verified_sortitoutsi,A,7183,face_37065498.png,sortitoutsi_verified_2026-09
 2337ab6f-07db-481c-8cbd-66dfecc0c168,ADAMS,TOR,90055302,verified,A,6646,face_90055302.png,historical_mapping
+87702dec-68c9-4b42-98e7-ab976500a170,ANJORIN *,TOR,28121366,verified_sortitoutsi,C,6889,face_28121366.png,sortitoutsi_verified_2026-09
 87098e01-18bf-4a77-9c97-a60d51976917,BELGHALI,TOR,18116154,verified,D,7220,face_18116154.png,historical_mapping
+cabdfa5d-651a-44b0-965e-50ccaa831b45,BIANAY,TOR,2000216116,verified_sortitoutsi,D,,face_2000216116.png,sortitoutsi_verified_2026-09
+f4077c1e-6263-42fc-b0e2-4aa09f5e9b3d,BIRAGHI,TOR,43029905,verified_sortitoutsi,D,252,face_43029905.png,sortitoutsi_verified_2026-09
 0fa040ad-bb29-40e9-9164-dfc9eb79f716,BRAGANCA,TOR,83111519,verified,C,7624,face_83111519.png,historical_mapping
 52bc4ab0-f5bc-4fd4-ac98-1b0becc38ffa,CACCIAMANI,TOR,2000295087,verified,C,7060,face_2000295087.png,historical_mapping
 360ec043-0df7-4124-853a-35e53b26f293,CASADEI,TOR,43500064,verified,C,5888,face_43500064.png,historical_mapping
 87d184a6-6915-4db8-a565-3c81a768c38d,COCO,TOR,67245434,verified,D,6642,face_67245434.png,historical_mapping
 d620cb8a-99d7-4d58-a49d-e9076a9d55d2,COMERT,TOR,98033710,verified,D,7526,face_98033710.png,historical_mapping
 6cffc16f-85fe-4519-a23f-67670199e830,COMUZZO,TOR,2000096278,verified,D,6495,face_2000096278.png,historical_mapping
+e90a3288-7263-4de5-afad-d760f0fdf6eb,DEMBÉLÉ,TOR,2000023340,verified_sortitoutsi,D,,face_2000023340.png,sortitoutsi_verified_2026-09
 cc704b25-7ea5-4f29-88c2-107c906ac370,FITZ-JIM,TOR,37079089,verified,C,7535,face_37079089.png,historical_mapping
 0412cac9-ade6-4a42-aaad-56bc427a1ead,FORTINI,TOR,2000241002,verified,D,7069,face_2000241002.png,historical_mapping
+3c1aede2-ec9f-4be7-935a-b6cf1e31361e,GABELLINI,TOR,2000291246,verified_sortitoutsi,A,,face_2000291246.png,sortitoutsi_verified_2026-09
+31127b67-9483-4bff-9139-0e9848323790,GINEITIS,TOR,47102498,verified_sortitoutsi,C,6170,face_47102498.png,sortitoutsi_verified_2026-09
+afffa7d6-e51c-49fb-b955-730fbffc963d,ILKHAN,TOR,2000079739,verified_sortitoutsi,C,6005,face_2000079739.png,sortitoutsi_verified_2026-09
 e94c3a34-b2fe-463d-807a-bc4ee8742948,ISMAJLI,TOR,24052869,verified,D,5010,face_24052869.png,historical_mapping
+5136e577-adee-4195-b4d7-31382f1b9933,ISRAEL,TOR,78091927,verified_sortitoutsi,P,,face_78091927.png,sortitoutsi_verified_2026-09
+9635261f-ffc6-496c-92ab-a34a47892bab,KULENOVIC,TOR,24051731,verified_sortitoutsi,A,7349,face_24051731.png,sortitoutsi_verified_2026-09
+dd03e7d6-246e-475b-a7c0-20a16242c410,LUONGO,TOR,2000459182,verified_sortitoutsi,C,,face_2000459182.png,sortitoutsi_verified_2026-09
 67e6f506-55e4-452a-b990-916564f20563,MANDRAGORA,TOR,43159580,verified,C,1933,face_43159580.png,historical_mapping
+81c636ba-4d88-4a3f-890e-5a629af25d29,NJIE,TOR,2000128983,verified_sortitoutsi,A,,face_2000128983.png,sortitoutsi_verified_2026-09
+fb1366ad-cdb1-498d-8a26-e8bb1619e008,ORISTANIO,TOR,43425611,verified_sortitoutsi,C,6218,face_43425611.png,sortitoutsi_verified_2026-09
+c726f785-5e48-414c-9ec3-a7b9e8b3b10d,PALEARI *,TOR,43061318,verified_sortitoutsi,P,5320,face_43061318.png,sortitoutsi_verified_2026-09
 50891fc2-871d-4b77-87de-8370d820b258,PATTERSON,TOR,61083649,verified,D,5751,face_61083649.png,historical_mapping
+035a401d-1f2c-45a4-8c30-06176fc8f2dd,PEDERSEN *,TOR,53161610,verified_sortitoutsi,D,6426,face_53161610.png,sortitoutsi_verified_2026-09
+0572cef0-e717-44ac-9bf6-c8cd15c0891c,PELLEGRI,TOR,43344129,verified_sortitoutsi,A,,face_43344129.png,sortitoutsi_verified_2026-09
 415f2457-59d4-475e-bd2c-e6d22c614e53,PERRI,TOR,19226197,verified,P,6534,face_19226197.png,historical_mapping
+57500245-3a2a-45c5-96cb-8a831d606efa,RODRIGUEZ R.,TOR,98003635,verified_sortitoutsi,D,2169,face_98003635.png,sortitoutsi_verified_2026-09
 c6414079-91e4-47f8-8b29-1aaea271326d,SIMEONE,TOR,14031138,verified,A,2061,face_14031138.png,historical_mapping
+6003455d-d819-4bf2-a106-4062cd4c09e1,SIVIERO,TOR,2000267507,verified_sortitoutsi,P,7363,face_2000267507.png,sortitoutsi_verified_2026-09
 a1225df4-224d-4609-b959-4d52fbb8728f,VLASIC,TOR,24039948,verified,C,5687,face_24039948.png,historical_mapping
 3965573a-d5b3-486f-9c58-70065a1937de,ABANKWAH,UDI,2000145982,verified,D,6021,face_2000145982.png,historical_mapping
+a02302f8-700d-48a0-8f68-ee6ec2a15a87,ARIZALA,UDI,2000241471,verified_sortitoutsi,D,7312,face_2000241471.png,sortitoutsi_verified_2026-09
+7257ce65-ba33-44a5-9ef6-163122c4b35a,BAYO,UDI,13133378,verified_sortitoutsi,A,,face_13133378.png,sortitoutsi_verified_2026-09
+c3c0597c-9bf5-429f-b97b-f592b9435c68,BAYO V.,UDI,13133378,verified_sortitoutsi,A,7161,face_13133378.png,sortitoutsi_verified_2026-09
+9423ec84-6c6b-4fd0-93b3-a114b69196bd,BERTOLA,UDI,43617061,verified_sortitoutsi,D,5820,face_43617061.png,sortitoutsi_verified_2026-09
+3c252834-e128-4ef8-bfb2-22fe877ba54c,CHAKVETADZE,UDI,59123271,verified_sortitoutsi,C,7418,face_59123271.png,sortitoutsi_verified_2026-09
 ,DAVID ALABA,UDI,16010162,verified_external_transfer,D,,face_16010162.png,manual_transfer_2026-09
 9dac6911-07cd-4bcf-bd0b-a9dbf427b5e6,DAVIS,UDI,28107730,verified,A,5637,face_28107730.png,historical_mapping
+8f24ef31-a053-4c22-979d-65f150df02aa,EBOSSE,UDI,48036572,verified_sortitoutsi,D,5994,face_48036572.png,sortitoutsi_verified_2026-09
 4b563c91-aa9e-4139-915d-1bff739d8b81,EKKELENKAMP,UDI,37064578,verified,C,6684,face_37064578.png,historical_mapping
+f6b9dc89-87e9-49cc-a9ba-0b3516c66def,GOMEZ,UDI,2000065899,verified_duplicate_identity,C,,face_2000065899.png,sortitoutsi_verified_2026-09
+2097d8f0-bfe4-4c2c-b18c-b1f24a315d78,GUEYE,UDI,12094946,verified_sortitoutsi,A,7272,face_12094946.png,sortitoutsi_verified_2026-09
+0eb7b2da-9e61-48f5-8435-b08ed0ce557f,JOVANOVIC,UDI,2000288837,verified_sortitoutsi,C,7092,face_2000288837.png,sortitoutsi_verified_2026-09
 a08cd5a1-5d3e-4ae1-8c67-2477e5b2ae8c,KABASELE,UDI,18023431,verified,D,4263,face_18023431.png,historical_mapping
 b6b19057-eb9a-407b-8dcf-974cc1a38312,KAMARA,UDI,85057778,verified,D,5555,face_85057778.png,historical_mapping
 b7246ab6-d065-4706-9998-c01f1b633a45,KARLSTROM,UDI,93052050,verified,C,6680,face_93052050.png,historical_mapping
+6a378b33-31a0-4cd8-ab5d-9975ad383fb4,LOVRIC,UDI,16135875,verified_sortitoutsi,C,5850,face_16135875.png,sortitoutsi_verified_2026-09
 c5e3026e-bd90-4bf1-97ed-4a6deb108d0e,MILLER,UDI,2000170028,verified,C,7208,face_2000170028.png,historical_mapping
+335fba4a-1ac0-45c6-adfd-ee38e2ec5cf8,MLACIC *,UDI,2000298369,verified_sortitoutsi,D,7356,face_2000298369.png,sortitoutsi_verified_2026-09
+d60a408a-3707-4930-b14d-bb99136aa117,MODESTO,UDI,83209861,verified_sortitoutsi,A,,face_83209861.png,sortitoutsi_verified_2026-09
+399dbbec-0129-4ea7-801e-b905fa7d25c7,MROZEK,UDI,96100994,verified_sortitoutsi,P,7611,face_96100994.png,sortitoutsi_verified_2026-09
 bcbd8c97-74c3-4dbb-b0b4-885fc598ac0c,OKOYE,UDI,91184334,verified,P,6462,face_91184334.png,historical_mapping
+b80be3ac-54da-4731-84cd-58595b92e86f,PADELLI,UDI,7991070,verified_sortitoutsi,P,543,face_7991070.png,sortitoutsi_verified_2026-09
 e698cfb8-eb9c-4009-9bd0-6eef2cb26aa5,PALMA,UDI,2000383145,verified,D,6925,face_2000383145.png,historical_mapping
+803a28d4-c893-4467-a8ca-5e0813c56d5c,PEJICIC,UDI,2000271919,verified_sortitoutsi,C,,face_2000271919.png,sortitoutsi_verified_2026-09
+fc100fee-e54d-48f5-9991-f63e6f48393d,PIANA,UDI,2000023993,verified_sortitoutsi,P,5707,face_2000023993.png,sortitoutsi_verified_2026-09
 4c6c58be-f54e-4b9c-a67d-fced2b04df51,PIOTROWSKI,UDI,96088216,verified,C,7198,face_96088216.png,historical_mapping
 8a3d70ca-2250-47cb-9878-e77c4d95fc4c,SOLET,UDI,49037684,verified,D,6956,face_49037684.png,historical_mapping
+e1d4e4fc-458b-4d7a-92c7-bf07cf9432e5,UNAI GOMEZ,UDI,2000065899,verified_sortitoutsi,C,6783,face_2000065899.png,sortitoutsi_verified_2026-09
+495520bc-2e3b-40ab-a819-1484b3b91783,VINCIATI,UDI,2000271926,verified_sortitoutsi,A,,face_2000271926.png,sortitoutsi_verified_2026-09
 ca56748f-3ab7-44d3-b863-55ada1df4a90,VOJVODA,UDI,18086509,verified,D,4994,face_18086509.png,historical_mapping
 143f1eb3-9ad0-4b1a-ba5c-247e197e7845,ZANIOLO,UDI,43270517,verified,C,2766,face_43270517.png,historical_mapping
+3afa811e-b1b3-415e-bf2a-60ff219af55c,ZANOLI,UDI,43390940,verified_sortitoutsi,D,5527,face_43390940.png,sortitoutsi_verified_2026-09
+3010b7ae-3841-43f7-b35e-341ae01353cd,ZARRAGA,UDI,67260201,verified_sortitoutsi,C,6212,face_67260201.png,sortitoutsi_verified_2026-09
 093665d2-5fe8-4f55-95c7-8e2de48a51c5,AKOR ADAMS,VEN,53167062,verified,A,,face_53167062.png,historical_mapping
 8d5079ec-483e-4ae8-9738-917097549bc6,BASIC,VEN,24047067,verified,C,5674,face_24047067.png,historical_mapping
 47265d3b-2e80-40a6-8f28-177adb973c8c,BELLA-KOTCHAP,VEN,92102718,verified,D,7253,face_92102718.png,historical_mapping
+0d43f54c-1545-4cbf-836f-06625db972f5,BERARDI,VEN,2000269957,verified_sortitoutsi,C,,face_2000269957.png,sortitoutsi_verified_2026-09
+677ba2f2-54f6-498c-87d9-7287828566e4,BOHINEN,VEN,53126104,verified_sortitoutsi,C,,face_53126104.png,sortitoutsi_verified_2026-09
 5ffaa888-6c1e-4abc-acbe-bbb4b0744537,BUSIO,VEN,72049787,verified,C,5507,face_72049787.png,historical_mapping
 3555b0c6-b1c6-4438-bc59-2c66dc296436,CORREIA,VEN,83111501,verified,D,4845,face_83111501.png,historical_mapping
+01683439-4afd-4ca6-a301-c87f720958a4,DAGASSO,VEN,2000024390,verified_sortitoutsi,C,7481,face_2000024390.png,sortitoutsi_verified_2026-09
+b0965776-425d-45dc-9e99-400d9285a5ca,DUNCAN,VEN,43084308,verified_sortitoutsi,C,526,face_43084308.png,sortitoutsi_verified_2026-09
+b46883b5-fc17-4d82-94be-f64a6285b26c,EL HADDAD,VEN,2000125342,verified_sortitoutsi,C,,face_2000125342.png,sortitoutsi_verified_2026-09
+e6b5034f-a0c8-4e6b-b97a-42b491d82e13,FANNE,VEN,2000252921,verified_sortitoutsi,C,,face_2000252921.png,sortitoutsi_verified_2026-09
+a216f5f0-d0d9-4446-bd2d-4ce5d07a8cba,FARJI,VEN,2000065330,verified_sortitoutsi,C,,face_2000065330.png,sortitoutsi_verified_2026-09
+73b7e640-eece-4f3a-9103-9dcdbcde2eff,FERNANDEZ T.,VEN,2000351880,verified_sortitoutsi,C,7232,face_2000351880.png,sortitoutsi_verified_2026-09
+2d78381e-103d-4436-8c97-368629d04c05,FRANJIC,VEN,24058104,verified_sortitoutsi,D,7478,face_24058104.png,sortitoutsi_verified_2026-09
+7c67c622-91c4-4ca7-a319-38b98b73c29b,GOMES,VEN,2000496327,verified_sortitoutsi,D,7454,face_2000496327.png,sortitoutsi_verified_2026-09
+c27b4d32-5959-4a8a-b0b6-f426a4074d00,GRANDI,VEN,43068340,verified_sortitoutsi,P,6671,face_43068340.png,sortitoutsi_verified_2026-09
 0daae328-4159-48a1-9b08-9979dd68da03,HAINAUT,VEN,2000045509,verified,D,6821,face_2000045509.png,historical_mapping
 86f4c037-db1a-4d09-9241-1d5a415ca134,HALHAL,VEN,49060934,verified,D,7538,face_49060934.png,historical_mapping
 dc16b40a-5faa-41b9-8d84-098972641f70,HAPS,VEN,37020712,verified,D,5695,face_37020712.png,historical_mapping
+a909ffd8-b421-478b-afe1-a062f42694a7,HELGASON,VEN,39053303,verified_sortitoutsi,C,5872,face_39053303.png,sortitoutsi_verified_2026-09
 e4784a0c-dd19-4ac9-90ce-df52e643e646,JUAN JESUS,VEN,19042304,verified,D,256,face_19042304.png,historical_mapping
+9deb1f62-5c81-42ef-90e0-a8bbebe2431c,LAUBERBACH,VEN,92090401,verified_sortitoutsi,A,7482,face_92090401.png,sortitoutsi_verified_2026-09
+002a28b8-78a4-451f-a60a-54e939765323,LIGUE,VEN,2000116931,verified_sortitoutsi,D,,face_2000116931.png,sortitoutsi_verified_2026-09
+6a27d2d7-bf1e-4de7-8da5-27195e80a1ef,LISMAN,VEN,2000317301,verified_sortitoutsi,A,7408,face_2000317301.png,sortitoutsi_verified_2026-09
 62c8788f-c83b-4268-9fbb-e22223ef3df1,MAZZOCCHI,VEN,43124221,verified,D,5481,face_43124221.png,historical_mapping
+92eb0977-6f93-48a0-a7de-58f4599d1af1,MONTIPÒ,VEN,43124226,verified_sortitoutsi,P,4957,face_43124226.png,sortitoutsi_verified_2026-09
+b54ffc32-1316-4165-80a3-bce86489ef27,MORENO,VEN,2000158335,verified_sortitoutsi,D,6890,face_2000158335.png,sortitoutsi_verified_2026-09
+4e67c0ed-cc03-406f-8a80-78a2da73c44a,OKORO,VEN,2000023898,verified_sortitoutsi,A,,face_2000023898.png,sortitoutsi_verified_2026-09
+ab00ffd8-3260-4cf7-b24b-ed66695cd40f,PANADA,VEN,43425634,verified_sortitoutsi,C,,face_43425634.png,sortitoutsi_verified_2026-09
 3c1fa8d2-95d3-4a46-a63d-cdfa8f51c640,PEREZ,VEN,67213140,verified,C,6994,face_67213140.png,historical_mapping
+de597ee9-de6b-427e-9bf9-92e89083742f,POZZI,VEN,43392799,verified_sortitoutsi,P,7531,face_43392799.png,sortitoutsi_verified_2026-09
 eb413831-a2f4-4924-93dd-b7ebc580758c,RRAHMANI,VEN,30045976,verified,A,7449,face_30045976.png,historical_mapping
+5907ed5a-213b-4deb-9474-baefafd13be3,SAGRADO,VEN,2000022190,verified_sortitoutsi,D,6681,face_2000022190.png,sortitoutsi_verified_2026-09
 88ef3904-11a0-4569-adc0-53cebf47b028,SCHINGTIENNE,VEN,18116048,verified,D,6892,face_18116048.png,historical_mapping
 3a6537fa-76f5-416f-afd9-db674baac507,SOHM,VEN,84151691,verified,C,5319,face_84151691.png,historical_mapping
 7db527ca-5cf8-46ab-bcc4-0daf255a272f,STANKOVIC,VEN,43425978,verified,P,6248,face_43425978.png,historical_mapping
+5392d2ff-735e-4bdb-9ff1-025d0bf179f4,SVERKO,VEN,92084893,verified_sortitoutsi,D,6673,face_92084893.png,sortitoutsi_verified_2026-09
+c433ec71-d273-4041-aef6-e3681ac23f60,TOURÉ,VEN,2000446784,verified_sortitoutsi,A,,face_2000446784.png,sortitoutsi_verified_2026-09
 42f2dd5c-7ef3-45a3-a3a3-c99a47e6a7ee,YEBOAH,VEN,91175880,verified,A,6904,face_91175880.png,historical_mapping
