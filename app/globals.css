@@ -315,3 +315,8 @@
 .playerData .sectionTitle{display:flex;justify-content:space-between;gap:12px}.playerData .sectionTitle span{color:#60736c;letter-spacing:.6px;font-size:6px}
 .playerData article{grid-template-columns:minmax(130px,1fr) 52px minmax(0,2.7fr);gap:12px}.playerData small{line-height:1.5}
 @media(max-width:800px){.draftCallout{align-items:flex-start;flex-direction:column}.draftCallout a{width:100%;text-align:center}.seasonDraftRoles{grid-template-columns:repeat(2,1fr)}}
+
+.seasonStatsSummary{max-width:950px;margin:10px auto;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.seasonStatsSummary article{border:1px solid var(--line);background:rgba(7,17,14,.94);padding:14px 15px;display:grid;gap:5px;min-width:0}
+.seasonStatsSummary small{font-size:6px;letter-spacing:1.3px;color:var(--green)}.seasonStatsSummary strong{font-size:22px;color:#eff8f4}.seasonStatsSummary span{font-size:7px;color:#7f918a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media(max-width:850px){.seasonStatsSummary{grid-template-columns:repeat(2,minmax(0,1fr))}}
