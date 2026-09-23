@@ -586,3 +586,34 @@ radial-gradient(circle at 50% 50%,transparent 0 13.9%,rgba(232,250,242,.22) 14.1
 .seasonSectionMain .calendarHero,.seasonSectionMain .prepHero{max-width:1200px!important;margin:54px auto 28px!important;align-items:flex-end!important}.seasonSectionMain .calendarHero h1,.seasonSectionMain .prepHero h1{font-size:56px!important;letter-spacing:-1.8px!important;margin:4px 0 8px!important}.seasonSectionMain .calendarHero>p:last-child,.seasonSectionMain .prepHero>p:last-child{font-size:10px!important;color:#84958f!important;line-height:1.6!important}.seasonHeader h1{font-size:48px!important;letter-spacing:-1.4px!important}
 @media(max-width:900px){.liveTabs{grid-template-columns:repeat(3,1fr)!important}.playerTalkModal{padding:18px}.seasonSectionMain .calendarHero h1,.seasonSectionMain .prepHero h1{font-size:42px!important}}
 @media(max-width:620px){.liveTabs{grid-template-columns:repeat(2,1fr)!important}.touchlineShouts>div{grid-template-columns:1fr!important}.liveStandHead,.liveStandRow{grid-template-columns:24px minmax(0,1fr) 34px 42px 40px}.talkPlayer h2{font-size:20px}}
+
+
+/* 90M unified section heroes + season recap */
+.seasonSectionMain{min-width:0}
+.seasonPageHero{max-width:1200px;margin:54px auto 28px;padding:0 0 26px;border-bottom:1px solid rgba(72,111,97,.34);display:flex;align-items:flex-end;justify-content:space-between;gap:28px}
+.seasonPageHero>div:first-child{min-width:0;max-width:820px}
+.seasonPageHero .eyebrow{margin:0 0 7px!important;font-size:8px!important;letter-spacing:2px!important;color:var(--green)!important}
+.seasonPageHero h1{margin:0!important;font-size:58px!important;line-height:.96!important;letter-spacing:-2.1px!important;color:#f2f6f4!important}
+.seasonPageHero p:last-child{margin:13px 0 0!important;font-size:10px!important;line-height:1.65!important;color:#82938d!important;max-width:720px}
+.seasonHeroStat{display:grid;justify-items:end;align-content:end;min-width:140px;padding-bottom:2px}
+.seasonHeroStat strong{font-size:44px;line-height:.9;color:var(--green);font-weight:900;letter-spacing:-1.5px}
+.seasonHeroStat span{font-size:6px;letter-spacing:1.8px;color:#73857e;margin-top:8px;text-align:right}
+.calendarPage,.standPage,.matchStatsPage{padding:0 clamp(26px,4vw,58px) 70px!important}
+.calendarRounds,.standTable,.seasonStatsSummary,.statsSeasonGrid,.seasonDataTable{max-width:1200px!important}
+.matchStatsPage .seasonStatsSummary{margin-top:0!important}
+.seasonRecap{grid-column:1/-1;border:1px solid #2a4d41;background:linear-gradient(180deg,rgba(12,29,23,.98),rgba(7,17,14,.98));padding:20px}
+.seasonRecapHead{display:flex;justify-content:space-between;gap:20px;align-items:flex-end;padding-bottom:16px;border-bottom:1px solid #20362f}
+.seasonRecapHead small{font-size:7px;color:var(--green);letter-spacing:1.7px}
+.seasonRecapHead h2{font-size:28px;margin:5px 0 4px}
+.seasonRecapHead p{margin:0;color:#80928b;font-size:9px;line-height:1.5}
+.seasonRecapHead>strong{font-size:18px;color:#dce9e4;white-space:nowrap}
+.seasonRecapGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:12px}
+.seasonRecapGrid article{border:1px solid #20362f;background:#091510;padding:14px;min-height:105px}
+.seasonRecapGrid span{display:block;font-size:6px;letter-spacing:1.4px;color:#6e837a}
+.seasonRecapGrid b{display:block;font-size:13px;color:#edf6f2;margin:15px 0 6px;line-height:1.25}
+.seasonRecapGrid small{font-size:7px;color:var(--green)}
+.seasonRecapActions{display:flex;gap:8px;margin-top:12px}
+.seasonRecapActions a{flex:1;border:1px solid #2f5f4e;background:#0d211a;color:var(--green);text-decoration:none;text-align:center;padding:11px;font-size:7px;font-weight:900;letter-spacing:.55px}
+.seasonRecapActions a:hover{border-color:var(--green);background:#10271f}
+@media(max-width:900px){.seasonPageHero h1{font-size:46px!important}.seasonHeroStat strong{font-size:36px}.seasonRecapGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.seasonPageHero{align-items:flex-start;flex-direction:column;margin-top:34px}.seasonPageHero h1{font-size:40px!important}.seasonHeroStat{justify-items:start}.seasonRecapGrid{grid-template-columns:1fr}.seasonRecapActions{flex-direction:column}}
