@@ -342,3 +342,62 @@
 .squadPlayerCard.psychology{grid-template-columns:52px minmax(0,1fr) 122px}.squadPlayerCard.needsCare{box-shadow:inset 2px 0 #9a604d;background:rgba(55,28,20,.16)}.squadMind{display:grid;gap:8px}.squadMind>div{min-width:0}.squadMind small{display:block;font-size:5px;color:#6e827a;letter-spacing:.65px}.squadMind b{display:block;font-size:9px;color:#dcebe5;margin:2px 0 4px}.squadMind i{display:block;height:2px;background:#172822}.squadMind i span{display:block;height:100%;background:var(--green)}
 @media(max-width:1100px){.dressingGrid{grid-template-columns:repeat(2,1fr)}.dynamicsList>div{grid-template-columns:130px 1fr}.dynamicsList em{grid-column:2;text-align:left}.squadPlayerCard.psychology{grid-template-columns:48px minmax(0,1fr) 105px}}
 @media(max-width:650px){.dressingGrid{grid-template-columns:1fr}.dynamicsList>div{grid-template-columns:1fr}.dynamicsList em{grid-column:auto}.squadPlayerCard.psychology{grid-template-columns:48px 1fr}.squadMind{grid-column:1/-1;grid-template-columns:1fr 1fr}}
+
+
+/* 90M live + vigilia polish */
+.liveGrid{max-width:1180px!important;grid-template-columns:minmax(0,1.65fr) minmax(330px,.72fr)!important;gap:16px!important}
+.liveSide{padding:20px!important;background:linear-gradient(180deg,rgba(10,22,18,.97),rgba(6,15,12,.97))!important}
+.liveSide h3{font-size:8px!important;letter-spacing:2.2px!important;margin-top:0}
+.liveSide>strong{font-size:24px!important;margin:10px 0 14px!important}
+.matchSpeed{margin:16px 0 10px!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:7px!important}
+.matchSpeed span{grid-column:1/-1!important;font-size:8px!important;margin-bottom:2px}
+.matchSpeed button{appearance:none!important;-webkit-appearance:none!important;min-height:38px!important;padding:8px 6px!important;border:1px solid #29483e!important;background:#0b1814!important;color:#8ca098!important;font-size:8px!important;font-weight:900!important;letter-spacing:.75px!important;text-transform:uppercase!important;border-radius:0!important;cursor:pointer!important}
+.matchSpeed button:hover:not(:disabled){border-color:#4ca584!important;color:#dff8ee!important}
+.matchSpeed button.active{border-color:var(--green)!important;background:#112a21!important;color:var(--green)!important;box-shadow:inset 0 0 20px rgba(36,227,154,.06)!important}
+.liveTactics{margin-top:18px!important;padding-top:16px!important}
+.liveTactics>label{font-size:8px!important;margin-bottom:10px!important}
+.liveTactics>div{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:7px!important}
+.liveTactics>div button{appearance:none!important;-webkit-appearance:none!important;min-height:42px!important;border:1px solid #29483e!important;background:#0b1814!important;color:#8ca098!important;padding:9px 10px!important;font-size:8px!important;font-weight:900!important;letter-spacing:.6px!important;text-transform:uppercase!important;border-radius:0!important;cursor:pointer!important}
+.liveTactics>div button:hover:not(:disabled){border-color:#4ca584!important;color:#e3f6ef!important}
+.liveTactics>div button.active{border-color:var(--green)!important;background:#112a21!important;color:var(--green)!important;box-shadow:inset 0 0 20px rgba(36,227,154,.06)!important}
+.liveTactics>small{font-size:7px!important;line-height:1.55!important;margin-top:10px!important}
+.lineupLiveButton{appearance:none!important;-webkit-appearance:none!important;width:100%!important;min-height:42px!important;margin-top:12px!important;border:1px solid #315c4d!important;background:#0f211b!important;color:var(--green)!important;padding:10px 12px!important;font-size:8px!important;font-weight:900!important;letter-spacing:.65px!important;border-radius:0!important;cursor:pointer!important}
+.livePossession{grid-template-columns:minmax(160px,.75fr) minmax(520px,2.35fr) minmax(160px,.75fr)!important;padding:19px 30px 21px!important;gap:28px!important}
+.livePossessionCenter{gap:10px!important}.livePossessionCenter small{font-size:8px!important}
+.livePossessionTrack{height:16px!important;border-color:#315247!important}
+.livePossessionSide b{font-size:24px!important}.livePossessionSide span{font-size:8px!important}
+
+.evePage{padding:28px clamp(22px,4vw,64px) 80px!important;background:radial-gradient(circle at 50% -10%,#17352b 0,transparent 34%),linear-gradient(180deg,#07110e,#050b09 68%)!important}
+.evePage>.newTop,.eveHero,.eveGrid,.kickoffBar{max-width:1320px!important}
+.eveHero{margin:44px auto 22px!important;padding:26px 30px!important;border:1px solid #29483e!important;background:linear-gradient(180deg,rgba(12,28,22,.96),rgba(7,16,13,.96))!important;box-shadow:0 20px 60px rgba(0,0,0,.22)!important}
+.eveHero .eyebrow{text-align:center!important;font-size:8px!important;letter-spacing:2.2px!important}
+.eveTeams{margin:18px auto 14px!important;display:grid!important;grid-template-columns:minmax(0,1fr) 90px minmax(0,1fr)!important;align-items:center!important;gap:20px!important}
+.eveTeams>div{display:flex!important;align-items:center!important;justify-content:center!important;gap:16px!important}
+.eveTeams>span{font-size:11px!important;letter-spacing:2px!important;color:#62756e!important;text-align:center!important}
+.eveTeams strong{font-size:26px!important;letter-spacing:.2px!important}
+.eveLogo{width:72px!important;height:72px!important;object-fit:contain!important}
+.eveHero>p:last-child{text-align:center!important;font-size:9px!important;letter-spacing:.7px!important}
+.eveGrid{grid-template-columns:minmax(0,1.15fr) minmax(420px,.85fr)!important;gap:16px!important;align-items:stretch!important}
+.analystCard,.matchSetup{padding:22px!important;background:linear-gradient(180deg,rgba(10,22,18,.97),rgba(7,15,12,.97))!important;border-color:#294139!important}
+.staffHead{padding-bottom:18px!important}.staffAvatar{height:52px!important;width:52px!important}
+.staffHead small{font-size:7px!important}.staffHead strong{font-size:14px!important}
+.reportRows{margin-top:18px!important;gap:8px!important;background:transparent!important;grid-template-columns:1fr 1fr!important}
+.reportRows article{min-height:126px!important;padding:18px!important;border:1px solid #20352e!important;background:#0a1713!important}
+.reportRows article.weak{border-color:#2e624f!important;background:#0f211a!important}
+.reportRows b{font-size:7px!important;letter-spacing:1.4px!important}.reportRows p{font-size:11px!important;line-height:1.7!important}
+.matchSetup h3{font-size:8px!important;margin:2px 0 12px!important;padding-bottom:9px!important;border-bottom:1px solid #1d3029!important}
+.miniXI{margin:0 0 24px!important;border:1px solid #20352e!important;background:#08130f!important;padding:6px 12px!important}
+.miniRole{grid-template-columns:28px 1fr!important;padding:10px 0!important}
+.miniRolePlayers>span{padding:7px 8px!important;font-size:9px!important}
+.styleChoices{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important;margin:12px 0 14px!important}
+.styleChoices button{appearance:none!important;-webkit-appearance:none!important;min-height:68px!important;padding:12px 13px!important;border:1px solid #29463c!important;background:#0a1713!important;color:#84978f!important;text-align:left!important;display:grid!important;align-content:center!important;gap:5px!important;border-radius:0!important;cursor:pointer!important}
+.styleChoices button:last-child{grid-column:1/-1!important}
+.styleChoices button strong{font-size:10px!important;letter-spacing:.55px!important;color:#dce9e4!important}
+.styleChoices button small{font-size:7px!important;line-height:1.45!important;color:#6f817a!important}
+.styleChoices button.active{border-color:var(--green)!important;background:#10271f!important;box-shadow:inset 0 0 22px rgba(36,227,154,.06)!important}
+.styleChoices button.active strong,.styleChoices button.active small{color:var(--green)!important}
+.confirmPlan{appearance:none!important;min-height:48px!important;font-size:9px!important;letter-spacing:.7px!important;cursor:pointer!important}
+.kickoffBar{margin:16px auto 0!important;padding:18px 20px!important;background:linear-gradient(90deg,#10271f,#0b1b16)!important}
+.playMatch{padding:13px 19px!important;font-size:9px!important;letter-spacing:.7px!important}
+@media(max-width:980px){.eveGrid{grid-template-columns:1fr!important}.liveGrid{grid-template-columns:1fr!important}.livePossession{grid-template-columns:120px minmax(260px,1fr) 120px!important}}
+@media(max-width:700px){.eveHero{padding:20px 14px!important}.eveTeams{grid-template-columns:1fr 42px 1fr!important;gap:8px!important}.eveTeams>div{gap:8px!important}.eveTeams strong{font-size:16px!important}.eveLogo{width:46px!important;height:46px!important}.reportRows{grid-template-columns:1fr!important}.styleChoices{grid-template-columns:1fr!important}.styleChoices button:last-child{grid-column:auto!important}.liveTactics>div{grid-template-columns:1fr!important}}
