@@ -617,3 +617,13 @@ radial-gradient(circle at 50% 50%,transparent 0 13.9%,rgba(232,250,242,.22) 14.1
 .seasonRecapActions a:hover{border-color:var(--green);background:#10271f}
 @media(max-width:900px){.seasonPageHero h1{font-size:46px!important}.seasonHeroStat strong{font-size:36px}.seasonRecapGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.seasonPageHero{align-items:flex-start;flex-direction:column;margin-top:34px}.seasonPageHero h1{font-size:40px!important}.seasonHeroStat{justify-items:start}.seasonRecapGrid{grid-template-columns:1fr}.seasonRecapActions{flex-direction:column}}
+
+
+/* 90M matrix accept button polish */
+.matrixAcceptButton{width:100%;min-height:54px;border:1px solid #3c7e67;background:linear-gradient(180deg,#10281f,#0c1f19);color:#e8f5f0;padding:0 16px;display:flex;align-items:center;justify-content:center;gap:11px;cursor:pointer;transition:border-color .16s ease,background .16s ease,transform .16s ease,box-shadow .16s ease}
+.matrixAcceptButton:hover:not(:disabled){border-color:var(--green);background:linear-gradient(180deg,#15362a,#102a21);transform:translateY(-1px);box-shadow:0 8px 24px rgba(0,0,0,.22),inset 0 0 18px rgba(36,227,154,.035)}
+.matrixAcceptButton:disabled{opacity:.42;cursor:not-allowed;transform:none;box-shadow:none}
+.matrixAcceptIcon{width:28px;height:28px;border:1px solid var(--green);display:grid;place-items:center;color:var(--green);background:#0a1914;flex:0 0 auto}
+.matrixAcceptButton>span:last-child{display:grid;gap:2px;text-align:left}
+.matrixAcceptButton b{font-size:8px;letter-spacing:1px;color:#f1f8f5}
+.matrixAcceptButton small{font-size:6px;letter-spacing:1.4px;color:var(--green)}
