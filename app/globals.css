@@ -477,11 +477,14 @@
 .matrixContinueButton{background:#10271f;color:var(--green);border-color:#3b846a}
 .matrixContinueButton:hover{background:#143127}
 
-.liveEventCard{margin:0 28px 16px;border:1px solid #28463c;background:linear-gradient(180deg,#0c1915,#09120f);display:grid;grid-template-columns:58px minmax(0,1fr);align-items:stretch;overflow:hidden;text-align:left}
-.liveEventCard>b{display:grid;place-items:center;border-right:1px solid #28463c;color:var(--green);font-size:18px;letter-spacing:.4px;background:#0b1713}
-.liveEventCard>div{padding:11px 14px 12px;min-width:0}.liveEventCard small{display:block;font-size:6px;letter-spacing:1.7px;color:#70837c;margin-bottom:5px}.liveEventCard p{margin:0;font-size:9px;line-height:1.45;color:#d3dfda;text-transform:none}
-.liveEventCard.goalFlash{border-color:var(--goalA);animation:goalEventFlash .55s steps(1,end) infinite;box-shadow:0 0 28px color-mix(in srgb,var(--goalA) 24%,transparent)}
-.liveEventCard.goalFlash>b{border-right-color:currentColor}
-.liveEventCard.goalFlash small,.liveEventCard.goalFlash p,.liveEventCard.goalFlash>b{color:inherit}
-@keyframes goalEventFlash{0%,49%{background:var(--goalB);color:var(--goalA)}50%,100%{background:var(--goalA);color:var(--goalB)}}
-@media(max-width:760px){.liveEventCard{margin:0 14px 12px;grid-template-columns:48px 1fr}.liveEventCard>b{font-size:14px}.liveEventCard p{font-size:8px}}
+.scoreboard>.liveEventCard{margin:0!important;display:grid!important;grid-template-columns:92px minmax(0,1fr)!important;align-items:stretch!important;text-align:left!important;border-top:1px solid #28463c!important;border-left:0!important;border-right:0!important;border-bottom:0!important;border-radius:0!important;background:linear-gradient(180deg,#0c1915,#09120f)!important;overflow:hidden!important}
+.liveEventCard>b{display:grid!important;place-items:center!important;border-right:1px solid #28463c!important;color:var(--green)!important;font-size:24px!important;letter-spacing:.4px!important;background:#0b1713!important;min-height:92px}
+.liveEventCopy{padding:15px 20px 16px!important;min-width:0!important;display:block!important;margin:0!important}
+.liveEventMeta{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:14px!important;margin:0 0 7px!important}
+.liveEventCard small{display:block;font-size:7px!important;font-weight:900;letter-spacing:1.8px;color:#70837c;margin:0!important}
+.liveEventCard p{margin:0!important;max-width:none!important;width:100%!important;font-size:13px!important;line-height:1.55!important;color:#d8e4df!important;text-transform:none!important;font-weight:600}
+.eventPossessionLamp{--lamp:#24e39a;display:block;width:15px;height:15px;flex:0 0 15px;border-radius:50%;background:var(--lamp);border:2px solid rgba(255,255,255,.28);box-shadow:0 0 0 3px rgba(255,255,255,.035),0 0 12px color-mix(in srgb,var(--lamp) 55%,transparent)}
+.eventPossessionLamp.idle{background:#40524c;box-shadow:none;opacity:.55}
+.eventPossessionLamp.goalPulse{animation:goalLampPulse .16s steps(1,end) infinite}
+@keyframes goalLampPulse{0%,49%{opacity:1;transform:scale(1);box-shadow:0 0 0 4px color-mix(in srgb,var(--lamp) 20%,transparent),0 0 22px var(--lamp)}50%,100%{opacity:.18;transform:scale(.72);box-shadow:none}}
+@media(max-width:760px){.scoreboard>.liveEventCard{grid-template-columns:58px minmax(0,1fr)!important}.liveEventCard>b{font-size:16px!important;min-height:78px}.liveEventCopy{padding:12px 13px!important}.liveEventCard p{font-size:10px!important;line-height:1.5!important}.eventPossessionLamp{width:12px;height:12px;flex-basis:12px}}
