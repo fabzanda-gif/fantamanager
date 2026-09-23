@@ -527,3 +527,35 @@
 .heatSummary{margin-top:8px;padding:12px;border:1px solid #223c34;background:#091510}.heatSummary>span{display:block;font-size:7px;letter-spacing:1.5px;color:#789087;margin-bottom:8px}.heatSummary>div{display:grid;grid-template-columns:repeat(6,1fr);gap:3px}.heatSummary>div i{height:16px;background:var(--green);transition:opacity .4s}.heatSummary small{display:block!important;margin-top:7px!important;font-size:6px!important;color:#6d8179!important}
 
 @media(max-width:700px){.liveTabs{grid-template-columns:repeat(2,1fr)!important}.miniMatchPitch{min-height:250px}.pitchDot{width:10px;height:10px}.pitchBall{width:9px;height:9px}}
+
+
+/* 90M suspense commentary + true heatmap */
+.commentary article.shotBuildEvent{border-left:3px solid #8bb8a7;background:linear-gradient(90deg,rgba(139,184,167,.08),transparent 34%)}
+.shotBadge{background:#163129;color:#b9d7cc;border:1px solid #315a4c}
+.yellowBadge{min-height:30px!important;padding:5px 9px 5px 6px!important;background:#18170d!important;color:#ffe55c!important;border:1px solid #8d7a16!important;gap:8px}
+.yellowBadge i{display:inline-block;width:15px;height:21px;border-radius:2px;background:#f5d72d;box-shadow:0 0 12px rgba(245,215,45,.24);transform:rotate(-3deg)}
+.commentary article.yellowEvent{border-left-width:4px!important;background:linear-gradient(90deg,rgba(231,199,42,.13),rgba(231,199,42,.025) 45%,transparent)!important}
+.commentary article.yellowEvent .commentaryCopy p{color:#e5e1c9!important}
+.commentary article.goalEvent:after{content:"";position:absolute;inset:-30% -10%;background:radial-gradient(circle,rgba(36,227,154,.12),transparent 45%);pointer-events:none;animation:goalGlow .8s ease-out 1}
+@keyframes goalGlow{0%{opacity:0;transform:scale(.7)}35%{opacity:1}100%{opacity:0;transform:scale(1.18)}}
+
+.pitchViewNote{display:block!important;margin-top:10px!important;font-size:6px!important;line-height:1.55!important;color:#6d8179!important}
+.matchHeatmapBlock{margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}
+.matchHeatmapHead{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:10px}
+.matchHeatmapHead small{display:block;font-size:6px;color:#71857d;letter-spacing:1.6px}
+.matchHeatmapHead strong{display:block;font-size:9px;color:#dceae5;margin-top:3px}
+.matchHeatmapHead>span{font-size:6px;color:#61766d;letter-spacing:1px}
+.trueHeatmapPitch{position:relative;aspect-ratio:1.72/1;overflow:hidden;border:1px solid #31584b;background:
+linear-gradient(90deg,transparent 49.8%,rgba(232,250,242,.2) 50%,transparent 50.2%),
+radial-gradient(circle at 50% 50%,transparent 0 13.8%,rgba(232,250,242,.18) 14% 14.6%,transparent 14.8%),
+repeating-linear-gradient(90deg,#0b3a29 0,#0b3a29 16.66%,#0d422e 16.7%,#0d422e 33.33%)}
+.trueHeatmapPitch:before,.trueHeatmapPitch:after{content:"";position:absolute;top:26%;bottom:26%;width:11%;border:1px solid rgba(232,250,242,.28);z-index:5;pointer-events:none}
+.trueHeatmapPitch:before{left:0;border-left:0}.trueHeatmapPitch:after{right:0;border-right:0}
+.heatPitchLines{position:absolute;inset:0;z-index:6;pointer-events:none;background:
+linear-gradient(rgba(232,250,242,.26),rgba(232,250,242,.26)) 50% 0/1px 100% no-repeat,
+radial-gradient(circle at 50% 50%,transparent 0 13.9%,rgba(232,250,242,.22) 14.1% 14.5%,transparent 14.7%)}
+.heatSpot{position:absolute;width:24%;aspect-ratio:1;border-radius:50%;transform:translate(-50%,-50%);z-index:2;filter:blur(15px);mix-blend-mode:screen;background:radial-gradient(circle,rgba(255,44,0,.72) 0 9%,rgba(255,183,0,.55) 21%,rgba(235,255,0,.38) 36%,rgba(0,244,108,.28) 52%,rgba(0,139,255,.2) 67%,transparent 76%)}
+.heatScale{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:8px;margin-top:8px;font-size:5.5px;color:#667b72;letter-spacing:1px}
+.heatScale i{height:5px;background:linear-gradient(90deg,#126cff,#13d987,#e6f515,#ff9b00,#ff3100);border-radius:999px}
+.matchHeatmapBlock>small{display:block!important;margin-top:7px!important;font-size:6px!important;line-height:1.5!important;color:#6c8178!important}
+@media(max-width:700px){.heatSpot{width:32%;filter:blur(12px)}.matchHeatmapHead{align-items:flex-start;flex-direction:column;gap:5px}}
