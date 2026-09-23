@@ -30,7 +30,7 @@ export function buildMatchEvents(run:string,round:number,style:string,opp:string
    const oppAtt=choose(other,'shot','A'),def=choose(own,'defender','D'),mid=choose(own,'creator','C'),att=choose(own,'shot','A');
    add(minute,'action',us?'opp':'user',oppAtt,(oppAtt?.player_name||sideName(!us))+' punta il proprio marcatore e prova a creare superiorità nell’ultimo terzo.');
    const win=rnd()<clamp(.53+(quality(def)-1)*.45+((style==='Pressing'&&us) ? .05 : 0),.34,.72);
-   if(!win){add(minute,'duel',us?'opp':'user',oppAtt,(oppAtt?.player_name||sideName(!us))+' riesce a superare il primo contrasto e tiene viva l’azione.');finish(!us,minute+1,oppAtt,choose(other,'creator','C'),.025,"l'azione insistita");return}
+   if(!win){add(minute,'duel',us?'opp':'user',oppAtt,(oppAtt?.player_name||sideName(!us))+' riesce a superare il primo contrasto e tiene viva l’azione.');if(rnd()<.22){const fouler=choose(own,'defender','D');add(minute+1,'yellow',us?'user':'opp',fouler,(fouler?.player_name||"Il difensore")+' capisce che la ripartenza sta diventando pericolosa, spende il fallo tattico e viene ammonito.');return}finish(!us,minute+1,oppAtt,choose(other,'creator','C'),.025,"l'azione insistita");return}
    add(minute,'duel',us?'user':'opp',def,(def?.player_name||sideName(us))+' legge il dribbling, entra con il tempo giusto e recupera il pallone.');
    add(minute,'transition',us?'user':'opp',mid,(def?.player_name||"Il difensore")+' scarica subito su '+(mid?.player_name||"un centrocampista")+', che riceve fronte alla porta e alza la testa.');
    const through=rnd()<clamp(.55+((style==='Contropiede'&&us) ? .14 : 0)+((style==='Verticale'&&us) ? .10 : 0)+(quality(mid)-1)*.3,.38,.79);
@@ -56,7 +56,7 @@ export function buildMatchEvents(run:string,round:number,style:string,opp:string
    add(minute,'possession',us?'opp':'user',victim,(victim?.player_name||sideName(!us))+' riceve vicino alla propria area e prova a uscire palla al piede.');
    add(minute,'press',us?'user':'opp',presser,(presser?.player_name||sideName(us))+' accorcia forte e chiude la linea di passaggio.');
    if(rnd()<clamp(.48+((style==='Pressing'&&us) ? .18 : 0)+(quality(presser)-1)*.35,.32,.75)){add(minute,'transition',us?'user':'opp',presser,(presser?.player_name||"Il centrocampista")+' ruba palla in zona alta e serve immediatamente '+(att?.player_name||"l'attaccante")+' dentro l’area.');finish(us,minute+1,att,presser,.075,"il recupero alto")}
-   else add(minute+1,'action',us?'opp':'user',victim,(victim?.player_name||sideName(!us))+' resiste alla pressione, protegge palla e trova l’uomo libero per uscire.');
+   else{add(minute+1,'action',us?'opp':'user',victim,(victim?.player_name||sideName(!us))+' resiste alla pressione, protegge palla e trova l’uomo libero per uscire.');if(rnd()<.18)add(minute+1,'yellow',us?'user':'opp',presser,(presser?.player_name||"Il giocatore in pressione")+' arriva un attimo in ritardo nel tentativo di recuperare: fallo netto e cartellino giallo.')}
  };
  while(m<88){
    m+=3+Math.floor(rnd()*3);if(m>=90)break;if(m>43&&m<48)m=48;
@@ -65,8 +65,7 @@ export function buildMatchEvents(run:string,round:number,style:string,opp:string
    if(r<counterChance)counterChain(us,m);
    else if(r<counterChance+pressChance)pressChain(us,m);
    else if(r<counterChance+pressChance+possessionChance)possessionChain(us,m);
-   else{const own=us?ps:oppPs,creator=choose(own,'creator','C'),shotter=choose(own,'shot','A');add(m,'action',us?'user':'opp',creator,(creator?.player_name||sideName(us))+' riceve tra le linee, porta palla in avanti e cerca un compagno nell’ultimo terzo.');if(rnd()<.56)finish(us,m+1,shotter,creator,.015,"l'azione");else add(m+1,'duel',us?'opp':'user',null,'La difesa chiude bene lo spazio e interrompe la giocata prima dell’ultimo passaggio.')}
-   if(rnd()<.08){const fouler=us?choose(ps,'defender','D'):null;add(m+2,'yellow',us?'user':'opp',fouler,us?(fouler?.player_name||"Un difensore")+' ferma la transizione in ritardo e viene ammonito.':'Ammonizione per '+opp+' dopo un intervento in ritardo.')}
+   else{const own=us?ps:oppPs,other=us?oppPs:ps,creator=choose(own,'creator','C'),shotter=choose(own,'shot','A');add(m,'action',us?'user':'opp',creator,(creator?.player_name||sideName(us))+' riceve tra le linee, porta palla in avanti e cerca un compagno nell’ultimo terzo.');if(rnd()<.56)finish(us,m+1,shotter,creator,.015,"l'azione");else{const defender=choose(other,'defender','D');add(m+1,'duel',us?'opp':'user',defender,(defender?.player_name||"Il difensore")+' legge l’ultimo passaggio, esce in anticipo e interrompe la giocata.');if(rnd()<.14)add(m+2,'yellow',us?'opp':'user',defender,(defender?.player_name||"Il difensore")+' trattiene l’avversario per evitare che riparta subito: l’arbitro estrae il giallo.')}}
  }
  add(45,'phase','user',null,'INTERVALLO — il primo tempo entra nell’analisi dello staff.');
  out.sort((a,b)=>a.minute-b.minute);
