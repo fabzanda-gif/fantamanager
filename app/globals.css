@@ -740,3 +740,28 @@ radial-gradient(circle at 50% 50%,transparent 0 13.9%,rgba(232,250,242,.22) 14.1
 @media (prefers-reduced-motion: reduce){
   .staffHubGrid article img{animation:none!important;transform:none!important}
 }
+
+
+/* 90M mobile PWA install */
+html,body{min-height:100%;background:#050b09}
+body{padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right)}
+.pwaInstallPrompt{position:fixed;left:max(14px,env(safe-area-inset-left));right:max(14px,env(safe-area-inset-right));bottom:max(14px,calc(env(safe-area-inset-bottom) + 8px));z-index:14000;display:grid;grid-template-columns:42px minmax(0,1fr) auto 30px;gap:11px;align-items:center;border:1px solid #2e5f4e;background:rgba(7,17,14,.97);backdrop-filter:blur(14px);padding:10px;box-shadow:0 18px 50px rgba(0,0,0,.42)}
+.pwaInstallMark{width:42px;height:42px;border:1px solid var(--green);display:grid;place-items:center;color:var(--green);font-size:15px;font-weight:900;background:#0b1c16}
+.pwaInstallPrompt>div:nth-child(2){min-width:0}.pwaInstallPrompt strong,.pwaInstallPrompt span{display:block}.pwaInstallPrompt strong{font-size:7.5px;letter-spacing:.8px;color:#edf7f3}.pwaInstallPrompt span{font-size:6.5px;color:#788b83;margin-top:4px;line-height:1.35}
+.pwaInstallButton{min-height:36px;padding:0 12px;border:1px solid var(--green);background:#10271f;color:var(--green);font-size:7px;font-weight:900;letter-spacing:.7px;display:flex;align-items:center;gap:6px}
+.pwaInstallClose{width:30px;height:30px;border:1px solid #294239;background:#091510;color:#71857d;display:grid;place-items:center}
+@media(display-mode:standalone){
+  .pwaInstallPrompt{display:none!important}
+}
+@media(max-width:620px){
+  .pwaInstallPrompt{grid-template-columns:38px minmax(0,1fr) 30px}
+  .pwaInstallMark{width:38px;height:38px}
+  .pwaInstallButton{grid-column:1/4;width:100%;justify-content:center}
+  .pwaInstallClose{grid-column:3;grid-row:1}
+}
+
+/* extra standalone spacing for phones with notches / home indicator */
+@media(display-mode:standalone){
+  .seasonNav{padding-bottom:calc(18px + env(safe-area-inset-bottom))}
+  .audioDock{bottom:calc(18px + env(safe-area-inset-bottom))}
+}
