@@ -294,3 +294,24 @@
 .seasonPage>.reportPage .analystEntry>div{min-width:0}.seasonPage>.reportPage .analystEntry strong{overflow-wrap:normal;word-break:normal}
 .seasonPage>.reportPage .staffHead{grid-template-columns:45px minmax(0,1fr)}
 @media(max-width:1050px){.seasonPage>.reportPage .reportGrid{grid-template-columns:1fr}.seasonPage>.reportPage{padding-left:24px;padding-right:24px}}
+
+/* In-season Matrix */
+.seasonDraftRoles{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:12px 0}
+.seasonDraftRoles button{border:1px solid #29453b;background:#0b1713;color:#80938b;padding:10px 6px;display:grid;gap:4px;cursor:pointer}
+.seasonDraftRoles button b{font-size:13px;color:#dce9e4}.seasonDraftRoles button span{font-size:6px;letter-spacing:1px}.seasonDraftRoles button.active{border-color:var(--green);background:#10271f;color:var(--green);box-shadow:0 0 20px rgba(98,255,158,.08)}.seasonDraftRoles button.active b{color:var(--green)}
+.navBadge{margin-left:auto;min-width:17px;height:17px;display:grid;place-items:center;border-radius:50%;background:var(--green);color:#06110d;font-size:7px!important}
+.draftCallout{grid-column:1/-1;border:1px solid #3c8068;background:linear-gradient(90deg,rgba(15,44,34,.96),rgba(7,20,16,.96));padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:20px;box-shadow:0 0 30px rgba(98,255,158,.07)}
+.draftCallout small{font-size:7px;color:var(--green);letter-spacing:1.7px}.draftCallout h2{font-size:20px;margin:6px 0}.draftCallout p{font-size:9px;color:#91a39c;margin:0}.draftCallout a{background:var(--green);color:#06110d;text-decoration:none;padding:12px 15px;font-size:8px;font-weight:900;white-space:nowrap}
+
+/* Live statistics dashboard */
+.liveStatsPanel{min-height:0!important;padding:0!important;overflow:hidden}
+.liveStatsHeader{display:flex;align-items:center;justify-content:space-between;padding:15px 18px;background:linear-gradient(180deg,#0d201a,#091511);border-bottom:1px solid var(--line)}
+.liveStatsHeader small{display:block;font-size:6px;letter-spacing:1.8px;color:var(--green);margin-bottom:4px}.liveStatsHeader h3{margin:0!important;font-size:13px!important;letter-spacing:.4px!important;color:#eef7f3!important}.liveStatsHeader>span{font-size:16px;font-weight:900;color:var(--green)}
+.liveStatTeams{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;padding:10px 18px;border-bottom:1px solid #172a23}.liveStatTeams b{font-size:8px}.liveStatTeams b:last-child{text-align:right}.liveStatTeams small{font-size:6px;letter-spacing:1.4px;color:#60736c}
+.liveStatsPanel .statRow{padding:9px 18px;grid-template-columns:90px 1fr 90px}.liveStatsPanel .statRow b{font-size:15px}.liveStatsPanel .statRow span{font-size:7px}.liveStatsPanel>small{padding:4px 18px 14px;margin:0!important}
+
+/* Denser, more useful match statistics */
+.statsCompare{overflow:hidden}.statsCompare>div{padding:10px 18px}.statsCompare b{font-size:13px}.statsCompare span{align-self:center}
+.playerData .sectionTitle{display:flex;justify-content:space-between;gap:12px}.playerData .sectionTitle span{color:#60736c;letter-spacing:.6px;font-size:6px}
+.playerData article{grid-template-columns:minmax(130px,1fr) 52px minmax(0,2.7fr);gap:12px}.playerData small{line-height:1.5}
+@media(max-width:800px){.draftCallout{align-items:flex-start;flex-direction:column}.draftCallout a{width:100%;text-align:center}.seasonDraftRoles{grid-template-columns:repeat(2,1fr)}}
