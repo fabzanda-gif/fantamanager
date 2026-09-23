@@ -649,3 +649,9 @@ radial-gradient(circle at 50% 50%,transparent 0 13.9%,rgba(232,250,242,.22) 14.1
 .completeSeason .playerPulse{grid-column:1/-1!important}
 .completeSeason .seasonMetric,.completeSeason .seasonSquad,.completeSeason .playerPulse{min-width:0}
 @media(max-width:800px){.squadPlayerCard.psychology{grid-template-columns:48px minmax(0,1fr) 66px!important}.completeSeason{grid-template-columns:1fr!important}.completeSeason .nextMatchCard{grid-template-columns:1fr!important}.completeSeason .nextMatchCard .newSeasonButton{grid-column:1;grid-row:auto;margin-top:14px!important}}
+
+
+/* 90M injured player marker */
+.squadPlayerCard.isInjured{position:relative!important;padding-top:18px!important}
+.injuryCross{position:absolute;right:8px;top:7px;width:22px;height:22px;display:grid;place-items:center;background:#6b1717;border:1px solid #d94a4a;color:#fff;font-size:13px;font-weight:900;line-height:1;box-shadow:0 0 14px rgba(217,74,74,.24);z-index:3}
+.squadPlayerCard.isInjured .squadFaceWrap{border-color:#a7473f!important;box-shadow:0 0 0 2px rgba(190,62,55,.08)}
