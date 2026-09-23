@@ -655,3 +655,14 @@ radial-gradient(circle at 50% 50%,transparent 0 13.9%,rgba(232,250,242,.22) 14.1
 .squadPlayerCard.isInjured{position:relative!important;padding-top:18px!important}
 .injuryCross{position:absolute;right:8px;top:7px;width:22px;height:22px;display:grid;place-items:center;background:#6b1717;border:1px solid #d94a4a;color:#fff;font-size:13px;font-weight:900;line-height:1;box-shadow:0 0 14px rgba(217,74,74,.24);z-index:3}
 .squadPlayerCard.isInjured .squadFaceWrap{border-color:#a7473f!important;box-shadow:0 0 0 2px rgba(190,62,55,.08)}
+
+
+/* 90M set pieces + touchline layout fix */
+.liveTactics>.touchlineShouts{display:block!important;width:100%!important;box-sizing:border-box!important;grid-template-columns:none!important;overflow:hidden}
+.touchlineShouts>label{display:block!important;width:100%!important;box-sizing:border-box!important}
+.touchlineShouts>div{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:7px!important;width:100%!important;box-sizing:border-box!important}
+.touchlineShouts>div button{width:100%!important;min-width:0!important;box-sizing:border-box!important}
+.touchlineShouts>small{width:100%!important;box-sizing:border-box!important}
+.setPieceEvent{border-left:3px solid #5ba7d9!important;background:linear-gradient(90deg,rgba(91,167,217,.10),transparent 38%)!important}
+.setPieceBadge{background:#132933;color:#a9daf8;border:1px solid #356b8d}
+@media(max-width:760px){.touchlineShouts>div{grid-template-columns:1fr!important}}
