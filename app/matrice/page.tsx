@@ -15,9 +15,9 @@ export default function Matrix(){
  const [runId,setRunId]=useState<string|null>(null),[pool,setPool]=useState<Player[]>([]),[draw,setDraw]=useState<Draw|null>(null),[accepted,setAccepted]=useState<Player[]>([]),[removed,setRemoved]=useState<string[]>([]),[busy,setBusy]=useState(true),[error,setError]=useState("");
  const counts=useMemo(()=>({P:accepted.filter(p=>p.role==="P").length,D:accepted.filter(p=>p.role==="D").length,C:accepted.filter(p=>p.role==="C").length,A:accepted.filter(p=>p.role==="A").length}),[accepted]);
  const role=(Object.keys(targets) as Role[]).find(r=>counts[r]<targets[r])??null;
- useEffect(()=>{(async()=>{setBusy(true);let {data:{session}}=await supabase.auth.getSession();if(!session){const a=await supabase.auth.signInAnonymously();if(a.error){setError("Per salvare la run serve attivare l'accesso anonimo di Supabase Auth.");setBusy(false);return}session=a.data.session}
-   const existing=localStorage.getItem("fm_run_"+code);let rid=existing;
-   if(!rid){const ins=await supabase.from("game_runs").insert({user_id:session!.user.id,club_code:code}).select("id").single();if(ins.error){setError(ins.error.message);setBusy(false);return}rid=ins.data.id;localStorage.setItem("fm_run_"+code,rid!)}
+ useEffect(()=>{(async()=>{setBusy(true);const qs=new URLSearchParams(window.location.search),requested=qs.get("club");if(requested&&requested!==code)return;const forceNew=qs.get("new")==="1";let {data:{session}}=await supabase.auth.getSession();if(!session){const a=await supabase.auth.signInAnonymously();if(a.error){setError("Per salvare la run serve attivare l'accesso anonimo di Supabase Auth.");setBusy(false);return}session=a.data.session}
+   const existing=forceNew?null:localStorage.getItem("fm_run_"+code);let rid=existing;
+   if(!rid){const ins=await supabase.from("game_runs").insert({user_id:session!.user.id,club_code:code,status:"active",current_round:0,squad_size:0}).select("id").single();if(ins.error){setError(ins.error.message);setBusy(false);return}rid=ins.data.id;localStorage.setItem("fm_run_"+code,rid!)}
    setRunId(rid);
    const ps=await supabase.from("players").select("id,name,role,team_nfl,fvm_fc,quotazione_fc,list_price,status_titolarita").in("status_titolarita",["Titolare","Ballottaggio"]).in("role",["P","D","C","A"]);
    if(ps.error){setError(ps.error.message);setBusy(false);return}setPool((ps.data??[]) as Player[]);
