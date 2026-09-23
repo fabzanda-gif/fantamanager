@@ -62,7 +62,7 @@ export function buildMatchEvents(run:string,round:number,style:string,opp:string
  while(m<88){
    m+=3+Math.floor(rnd()*3);if(m>=90)break;if(m>43&&m<48)m=48;
    const trailing=usGoals<opGoals,leading=usGoals>opGoals,late=m>70,attackShare=usShare+(late&&trailing?.045:0)-(late&&leading?.02:0),us=rnd()<attackShare;
-   const r=rnd(),mindAttack=us&&mentality==='attack',mindDefend=us&&mentality==='defend',counterChance=((style==='Contropiede'&&us) ? .34 : .20)+((style==='Verticale'&&us) ? .08 : 0)+(mindAttack?.05:0),pressChance=((style==='Pressing'&&us) ? .27 : .15)+(mindAttack?.05:0)-(mindDefend?.04:0),possessionChance=((style==='Possesso'&&us) ? .38 : .25)+(mindDefend?.08:0);
+   const r=rnd(),mindAttack=us&&mentality==='attack',mindDefend=us&&mentality==='defend',counterChance=((style==='Contropiede'&&us) ? .34 : .20)+((style==='Verticale'&&us) ? .08 : 0)+(mindAttack ? .05 : 0),pressChance=((style==='Pressing'&&us) ? .27 : .15)+(mindAttack ? .05 : 0)-(mindDefend ? .04 : 0),possessionChance=((style==='Possesso'&&us) ? .38 : .25)+(mindDefend ? .08 : 0);
    if(r<counterChance)counterChain(us,m);
    else if(r<counterChance+pressChance)pressChain(us,m);
    else if(r<counterChance+pressChance+possessionChance)possessionChain(us,m);
