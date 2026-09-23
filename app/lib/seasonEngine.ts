@@ -1,7 +1,7 @@
 export type Fixture={home_code:string;away_code:string};
 export type CpuResult=Fixture&{home_goals:number;away_goals:number;is_user_match:boolean};
 export type Starter={player_id:string;player_name:string;role:string;confidence:number;managerTrust?:number|null;strength?:number|null};
-export type MatchEvent={minute:number;type:string;side:'user'|'opp';player?:Starter|null;assist?:Starter|null;desc:string;xg?:number;shotOnTarget?:boolean;x?:number;y?:number};
+export type MatchEvent={minute:number;type:string;side:'user'|'opp';player?:Starter|null;assist?:Starter|null;desc:string;xg?:number;shotOnTarget?:boolean;x?:number;y?:number;injuryWeeks?:number;injuryLabel?:string};
 export function seeded(seed:string){let h=2166136261;for(const c of seed)h=Math.imul(h^c.charCodeAt(0),16777619);return()=>((h=Math.imul(h^(h>>>15),2246822519))>>>0)/4294967296}
 const clamp=(n:number,a:number,b:number)=>Math.max(a,Math.min(b,n));function poisson(lambda:number,rnd:()=>number){const L=Math.exp(-lambda);let p=1,k=0;do{k++;p*=Math.max(.000001,rnd())}while(p>L&&k<9);return clamp(k-1,0,6)}
 export function confidenceFactor(c:number,trust=50){const conf=clamp((c-50)/50,-1,1)*.06,rel=clamp((trust-50)/50,-1,1)*.035;return 1+conf+rel}
@@ -13,7 +13,7 @@ export function buildMatchEvents(run:string,round:number,style:string,opp:string
  const avg=ps.reduce((a,p)=>a+Number(p.strength||55),0)/Math.max(1,ps.length),oppAvg=oppPs.reduce((a,p)=>a+Number(p.strength||55),0)/Math.max(1,oppPs.length||1),conf=ps.reduce((a,p)=>a+p.confidence,0)/Math.max(1,ps.length),trust=ps.reduce((a,p)=>a+Number(p.managerTrust??50),0)/Math.max(1,ps.length);
  const styleShare:any={Equilibrato:.50,Possesso:.55,Verticale:.51,Contropiede:.47,Pressing:.53},streakBoost=clamp(dryStreak*.045,0,.16),strengthEdge=oppPs.length?clamp((avg-oppAvg)/180,-.07,.07):0;
  const mentalityShare=mentality==='attack'?.055:mentality==='defend'?-.045:0,usShare=clamp((styleShare[style]||.5)+mentalityShare+strengthEdge+(conf-50)*.0007+(trust-50)*.00035,.36,.66);
- let usGoals=0,opGoals=0,m=2;
+ let usGoals=0,opGoals=0,m=2,injuryCount=0;
  const add=(minute:number,type:string,side:'user'|'opp',player:Starter|null|undefined,desc:string,extra:any={})=>{const dir=side==='user'?1:-1,base=type==='goal'?94:type==='shot_saved'||type==='shot_missed'||type==='shot_attempt'?86:type==='press'?68:type==='transition'?64:type==='action'?70:type==='duel'?52:type==='possession'?35:type==='keeper_save'?8:50,x=extra.x??(dir===1?base:100-base),y=extra.y??(18+coordRnd()*64);out.push({minute:Math.min(89,minute),type,side,player:player||null,desc,x:+clamp(x,3,97).toFixed(1),y:+clamp(y,7,93).toFixed(1),...extra})};
  const sideName=(us:boolean)=>us?"La squadra":opp;
  const byRole=(pool:Starter[],role:string)=>pool.filter(p=>p.role===role);
@@ -67,7 +67,7 @@ export function buildMatchEvents(run:string,round:number,style:string,opp:string
    else if(r<counterChance+pressChance)pressChain(us,m);
    else if(r<counterChance+pressChance+possessionChance)possessionChain(us,m);
    else{const own=us?ps:oppPs,other=us?oppPs:ps,creator=choose(own,'creator','C'),shotter=choose(own,'shot','A');add(m,'action',us?'user':'opp',creator,(creator?.player_name||sideName(us))+' riceve tra le linee, porta palla in avanti e cerca un compagno nell’ultimo terzo.');if(rnd()<.56)finish(us,m+1,shotter,creator,.015,"l'azione");else{const defender=choose(other,'defender','D');add(m+1,'duel',us?'opp':'user',defender,(defender?.player_name||"Il difensore")+' legge l’ultimo passaggio, esce in anticipo e interrompe la giocata.');if(rnd()<.19)add(m+2,'yellow',us?'opp':'user',defender,(defender?.player_name||"Il difensore")+' trattiene l’avversario per evitare che riparta subito: l’arbitro estrae il cartellino giallo.')}}
-   if(rnd()<.045){const injurySide=rnd()<.64?'user':'opp',pool=injurySide==='user'?ps:oppPs,inj=pool.length?pool[Math.floor(rnd()*pool.length)]:null;if(inj)add(m+2,'injury',injurySide,inj,inj.player_name+' si ferma improvvisamente dopo un contrasto e chiede l’intervento dello staff medico. Non sembra in grado di continuare.')}
+   if(injuryCount<1&&rnd()<.018){const injurySide=rnd()<.64?'user':'opp',pool=injurySide==='user'?ps:oppPs,inj=pool.length?pool[Math.floor(rnd()*pool.length)]:null;if(inj){const sev=rnd(),weeks=sev<.20?0:sev<.90?(rnd()<.62?1:2):(rnd()<.5?3:4),label=weeks===0?"trauma lieve":weeks===1?"problema muscolare lieve":weeks===2?"lesione di media entità":weeks===3?"infortunio serio":"infortunio importante",detail=weeks===0?"Lo staff lo accompagna fuori per precauzione: potrebbe recuperare già per la prossima gara.":weeks===1?"Lo staff teme uno stop breve: la prossima partita è a forte rischio.":weeks===2?"Il gesto è doloroso: serviranno verosimilmente un paio di giornate di recupero.":"I segnali non sono buoni: si prospetta uno stop di diverse settimane.";add(m+2,'injury',injurySide,inj,inj.player_name+' si ferma dopo un contrasto e chiede subito il cambio. '+detail,{injuryWeeks:weeks,injuryLabel:label});injuryCount++}}
  }
  add(45,'phase','user',null,'INTERVALLO — il primo tempo entra nell’analisi dello staff.');
  out.sort((a,b)=>a.minute-b.minute);
