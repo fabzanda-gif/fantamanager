@@ -262,7 +262,7 @@
 .liveFormationPitch{padding:18px;background:linear-gradient(90deg,transparent 49.7%,rgba(91,255,178,.12) 50%,transparent 50.3%),repeating-linear-gradient(0deg,rgba(8,33,24,.92) 0,rgba(8,33,24,.92) 74px,rgba(10,39,28,.92) 75px,rgba(10,39,28,.92) 148px);border-bottom:1px solid #29473d;display:flex;flex-direction:column;gap:14px}
 .liveFormationBand{display:grid;grid-template-columns:82px 1fr;gap:12px;align-items:center;min-height:82px}
 .liveFormationRole{font-size:7px;letter-spacing:1.2px;color:#69a58f;writing-mode:vertical-rl;transform:rotate(180deg);justify-self:center}
-.liveFormationPlayers{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.liveFormationPlayers{display:grid;justify-content:center;gap:10px;align-items:stretch;width:100%}
 .liveFormationCard{width:132px;min-width:0;border:1px solid #31564a;background:rgba(5,16,12,.92);display:grid;grid-template-columns:48px minmax(0,1fr);align-items:center;gap:8px;padding:7px}
 .liveFormationFace{width:48px;height:58px;border:1px solid #31564a;background:#0d1d18;overflow:hidden;display:grid;place-items:center}
 .liveFormationFace img,.liveBenchFace img{width:100%;height:100%;object-fit:cover;object-position:center top}.liveFormationFace>span,.liveBenchFace>span{color:var(--green);font-size:11px;font-weight:900}
@@ -274,3 +274,11 @@
 .liveBenchGrid strong{display:block;font-size:7px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.liveBenchGrid small{display:block;font-size:6px;color:#71837c;margin-top:3px}
 @media(max-width:900px){.liveFormationBand{grid-template-columns:1fr}.liveFormationRole{writing-mode:horizontal-tb;transform:none;justify-self:start}.liveBenchGrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:560px){.liveFormationCard{width:110px;grid-template-columns:40px 1fr}.liveFormationFace{width:40px;height:50px}.liveBenchGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Live possession */
+.livePossession{border-top:1px solid rgba(53,87,75,.55);padding:10px 18px 12px;background:rgba(5,15,12,.72)}
+.livePossessionLabels{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;margin-bottom:7px}
+.livePossessionLabels>span{font-size:7px;color:#9eb0aa;letter-spacing:.5px}.livePossessionLabels>span:last-child{text-align:right}.livePossessionLabels b{font-size:9px;color:#e9f5f0}.livePossessionLabels small{font-size:6px;letter-spacing:1.5px;color:#648078}
+.livePossessionTrack{height:5px;display:flex;background:#14231f;overflow:hidden;border:1px solid #203b32}
+.livePossessionTrack i,.livePossessionTrack em{display:block;height:100%;transition:width .45s ease}.livePossessionTrack i{background:var(--green)}.livePossessionTrack em{background:#35534a}
+@media(max-width:700px){.livePossessionLabels>span{font-size:6px}.livePossessionLabels small{font-size:5px}}
