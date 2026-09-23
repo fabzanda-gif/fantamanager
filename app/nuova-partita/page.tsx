@@ -43,8 +43,8 @@ export default function NewGame() {
         <h2>{club[1]}</h2>
         <div className="rule"><Shield size={17}/><div><strong>Tabula rasa</strong><span>I giocatori del club diventano eleggibili per la nuova costruzione.</span></div></div>
         <div className="rule"><Sparkles size={17}/><div><strong>16 pescate iniziali</strong><span>2 P · 5 D · 5 C · 4 A. Ogni scelta inizierà a definire la tua storia.</span></div></div>
-        <div className="selectionNote">La selezione del club non viene ancora salvata: questa è la prima vertical slice dell'avvio run.</div>
-        <Link href={"/matrice?club="+selected} className="startButton">Entra nella Matrice <ArrowRight size={17}/></Link>
+        <div className="selectionNote">Verrà creata una nuova run separata dalle carriere già concluse o in corso.</div>
+        <Link href={"/matrice?club="+selected+"&new=1"} className="startButton">Entra nella Matrice <ArrowRight size={17}/></Link>
       </aside>
     </div>
   </main>
