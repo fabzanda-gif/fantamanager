@@ -276,9 +276,21 @@
 @media(max-width:560px){.liveFormationCard{width:110px;grid-template-columns:40px 1fr}.liveFormationFace{width:40px;height:50px}.liveBenchGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
 /* Live possession */
-.livePossession{border-top:1px solid rgba(53,87,75,.55);padding:10px 18px 12px;background:rgba(5,15,12,.72)}
-.livePossessionLabels{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;margin-bottom:7px}
-.livePossessionLabels>span{font-size:7px;color:#9eb0aa;letter-spacing:.5px}.livePossessionLabels>span:last-child{text-align:right}.livePossessionLabels b{font-size:9px;color:#e9f5f0}.livePossessionLabels small{font-size:6px;letter-spacing:1.5px;color:#648078}
-.livePossessionTrack{height:5px;display:flex;background:#14231f;overflow:hidden;border:1px solid #203b32}
-.livePossessionTrack i,.livePossessionTrack em{display:block;height:100%;transition:width .45s ease}.livePossessionTrack i{background:var(--green)}.livePossessionTrack em{background:#35534a}
-@media(max-width:700px){.livePossessionLabels>span{font-size:6px}.livePossessionLabels small{font-size:5px}}
+.livePossession{border-top:1px solid rgba(53,87,75,.55);padding:13px 28px 15px;background:linear-gradient(180deg,rgba(5,15,12,.42),rgba(5,15,12,.88));display:grid;grid-template-columns:minmax(150px,.75fr) minmax(320px,1.5fr) minmax(150px,.75fr);gap:22px;align-items:end}
+.livePossessionSide{display:flex;align-items:baseline;gap:10px;min-width:0}.livePossessionSide.away{justify-content:flex-end}.livePossessionSide span{font-size:7px;font-weight:900;letter-spacing:1.25px;color:#81978f;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.livePossessionSide b{font-size:17px;line-height:1;color:#eff8f4;letter-spacing:.7px}
+.livePossessionCenter{display:grid;gap:7px}.livePossessionCenter small{text-align:center;font-size:6px;font-weight:900;letter-spacing:2px;color:#617b72}
+.livePossessionTrack{position:relative;height:7px;display:flex;background:#10211b;border:1px solid #244238;overflow:hidden;border-radius:999px;box-shadow:inset 0 0 8px rgba(0,0,0,.45)}
+.livePossessionTrack i,.livePossessionTrack em{display:block;height:100%;transition:width .45s ease}.livePossessionTrack i{background:linear-gradient(90deg,#20c98b,var(--green))}.livePossessionTrack em{background:linear-gradient(90deg,#324d44,#263c35)}.livePossessionMid{position:absolute;z-index:2;left:50%;top:-2px;width:1px;height:11px;background:#7ca495;opacity:.75}
+@media(max-width:760px){.livePossession{grid-template-columns:1fr 1fr;padding:11px 14px;gap:8px 14px}.livePossessionCenter{grid-column:1/-1;grid-row:1}.livePossessionSide{grid-row:2}.livePossessionSide span{font-size:6px}.livePossessionSide b{font-size:13px}}
+
+/* Report inside persistent season shell */
+.seasonPage>.reportPage{width:100%;min-width:0;background:transparent!important;padding:30px clamp(20px,4vw,58px) 70px}
+.seasonPage>.reportPage .newTop,.seasonPage>.reportPage .reportHero,.seasonPage>.reportPage .reportGrid,.seasonPage>.reportPage .confidencePost,.seasonPage>.reportPage .returnHub{width:100%;max-width:1180px}
+.seasonPage>.reportPage .reportHero{margin:32px auto 24px}
+.seasonPage>.reportPage .reportGrid{grid-template-columns:minmax(0,1.08fr) minmax(360px,.92fr)}
+.seasonPage>.reportPage .ratings,.seasonPage>.reportPage .analystPost{min-width:0}
+.seasonPage>.reportPage .ratings article{grid-template-columns:46px minmax(0,1fr) auto}
+.seasonPage>.reportPage .ratings article>div{min-width:0}.seasonPage>.reportPage .ratings strong,.seasonPage>.reportPage .ratings span{overflow-wrap:normal;word-break:normal}
+.seasonPage>.reportPage .analystEntry>div{min-width:0}.seasonPage>.reportPage .analystEntry strong{overflow-wrap:normal;word-break:normal}
+.seasonPage>.reportPage .staffHead{grid-template-columns:45px minmax(0,1fr)}
+@media(max-width:1050px){.seasonPage>.reportPage .reportGrid{grid-template-columns:1fr}.seasonPage>.reportPage{padding-left:24px;padding-right:24px}}
