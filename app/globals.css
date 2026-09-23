@@ -666,3 +666,77 @@ radial-gradient(circle at 50% 50%,transparent 0 13.9%,rgba(232,250,242,.22) 14.1
 .setPieceEvent{border-left:3px solid #5ba7d9!important;background:linear-gradient(90deg,rgba(91,167,217,.10),transparent 38%)!important}
 .setPieceBadge{background:#132933;color:#a9daf8;border:1px solid #356b8d}
 @media(max-width:760px){.touchlineShouts>div{grid-template-columns:1fr!important}}
+
+
+/* 90M staff idle life */
+.staffHubGrid article{isolation:isolate}
+.staffHubGrid img{
+  transform:scale(1.035) translate3d(0,0,0);
+  transform-origin:center 38%;
+  will-change:transform,filter,object-position;
+  backface-visibility:hidden;
+}
+.staffHubGrid article:nth-child(1) img{animation:staffIdleVice 18s ease-in-out infinite}
+.staffHubGrid article:nth-child(2) img{animation:staffIdleAnalyst 22s ease-in-out 2.8s infinite}
+.staffHubGrid article:nth-child(3) img{animation:staffIdleFitness 19s ease-in-out 5.2s infinite}
+.staffHubGrid article:nth-child(4) img{animation:staffIdlePhysio 24s ease-in-out 1.2s infinite}
+.staffHubGrid article:nth-child(5) img{animation:staffIdleDs 21s ease-in-out 7s infinite}
+
+@keyframes staffIdleVice{
+  0%,30%,100%{transform:scale(1.035) translate3d(0,0,0);filter:saturate(.78) contrast(1.04) brightness(1)}
+  34%{transform:scale(1.045) translate3d(-2px,-1px,0) rotate(-.15deg)}
+  38%{transform:scale(1.052) translate3d(2px,-2px,0) rotate(.18deg);filter:saturate(.82) contrast(1.05) brightness(1.025)}
+  43%{transform:scale(1.04) translate3d(1px,0,0)}
+  48%,78%{transform:scale(1.035) translate3d(0,0,0)}
+  82%{transform:scale(1.042) translate3d(0,-2px,0)}
+  86%{transform:scale(1.035) translate3d(0,0,0)}
+}
+@keyframes staffIdleAnalyst{
+  0%,24%,100%{transform:scale(1.04) translate3d(0,0,0);object-position:center 24%;filter:saturate(.78) contrast(1.04) brightness(1)}
+  29%{transform:scale(1.05) translate3d(-3px,-1px,0);object-position:48% 24%}
+  34%{transform:scale(1.055) translate3d(-5px,-1px,0);object-position:46% 24%;filter:saturate(.8) contrast(1.06) brightness(1.04)}
+  39%{transform:scale(1.045) translate3d(-2px,0,0);object-position:49% 24%}
+  44%,73%{transform:scale(1.04) translate3d(0,0,0);object-position:center 24%}
+  78%{filter:saturate(.84) contrast(1.08) brightness(1.06)}
+  82%{filter:saturate(.76) contrast(1.03) brightness(.97)}
+  86%{filter:saturate(.78) contrast(1.04) brightness(1)}
+}
+@keyframes staffIdleFitness{
+  0%,34%,100%{transform:scale(1.035) translate3d(0,0,0)}
+  39%{transform:scale(1.048) translate3d(3px,-2px,0) rotate(.12deg)}
+  44%{transform:scale(1.052) translate3d(4px,-3px,0) rotate(.18deg);filter:saturate(.82) contrast(1.05) brightness(1.03)}
+  49%{transform:scale(1.043) translate3d(1px,-1px,0)}
+  54%,80%{transform:scale(1.035) translate3d(0,0,0)}
+  85%{transform:scale(1.042) translate3d(-1px,-2px,0)}
+  89%{transform:scale(1.035) translate3d(0,0,0)}
+}
+@keyframes staffIdlePhysio{
+  0%,20%,100%{transform:scale(1.04) translate3d(0,0,0);object-position:center 24%}
+  25%{transform:scale(1.05) translate3d(2px,-1px,0);object-position:52% 24%}
+  30%{transform:scale(1.055) translate3d(4px,-2px,0);object-position:54% 24%;filter:saturate(.84) contrast(1.05) brightness(1.035)}
+  36%{transform:scale(1.047) translate3d(1px,0,0);object-position:51% 24%}
+  42%,72%{transform:scale(1.04) translate3d(0,0,0);object-position:center 24%}
+  77%{filter:saturate(.8) contrast(1.06) brightness(1.055)}
+  82%{filter:saturate(.77) contrast(1.03) brightness(.98)}
+  86%{filter:saturate(.78) contrast(1.04) brightness(1)}
+}
+@keyframes staffIdleDs{
+  0%,28%,100%{transform:scale(1.038) translate3d(0,0,0);object-position:center 24%}
+  33%{transform:scale(1.047) translate3d(-2px,-1px,0) rotate(-.1deg);object-position:48% 24%}
+  38%{transform:scale(1.052) translate3d(-4px,-2px,0) rotate(-.18deg);object-position:46% 24%}
+  44%{transform:scale(1.045) translate3d(-1px,0,0);object-position:49% 24%}
+  50%,77%{transform:scale(1.038) translate3d(0,0,0);object-position:center 24%}
+  82%{transform:scale(1.044) translate3d(2px,-1px,0);filter:saturate(.82) contrast(1.05) brightness(1.025)}
+  87%{transform:scale(1.038) translate3d(0,0,0)}
+}
+
+/* faint monitor/light activity over the portraits */
+.staffHubGrid article:not(.hasInteraction)::marker{display:none}
+.staffHubGrid article>div{position:relative;z-index:2;background:#091310}
+.staffHubGrid article img{z-index:0}
+.staffHubGrid article:nth-child(2) img,
+.staffHubGrid article:nth-child(4) img{animation-timing-function:cubic-bezier(.45,0,.35,1)}
+
+@media (prefers-reduced-motion: reduce){
+  .staffHubGrid article img{animation:none!important;transform:none!important}
+}
