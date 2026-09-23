@@ -1,4 +1,5 @@
 export const PLAYER_PHOTOS: Record<string,string> = {
+  "0412cac9-ade6-4a42-aaad-56bc427a1ead": "/assets/players/torino/fm_2000241002__FORTINI.png",
   "0899f9bd-9fe0-4baf-b289-41b74d081f75": "/assets/players/genoa/fm_43036636__EL_SHAARAWY.png",
   "048edaee-81b5-4ee4-ad2f-a6f4fe4146f7": "/assets/players/atalanta/048edaee-81b5-4ee4-ad2f-a6f4fe4146f7__HIEN.png",
   "113a3e88-aa00-46cb-9fcd-3eb9b4725977": "/assets/players/atalanta/113a3e88-aa00-46cb-9fcd-3eb9b4725977__SAMARDZIC.png",
