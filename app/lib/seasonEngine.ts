@@ -1,6 +1,6 @@
 export type Fixture={home_code:string;away_code:string};
 export type CpuResult=Fixture&{home_goals:number;away_goals:number;is_user_match:boolean};
-export type Starter={player_id:string;player_name:string;role:string;confidence:number;managerTrust?:number|null;strength?:number|null};
+export type Starter={player_id:string;player_name:string;role:string;confidence:number;managerTrust?:number|null;strength?:number|null;penaltyTaker?:boolean;penaltyOrder?:number|null;setPieceTaker?:boolean;setPieceOrder?:number|null};
 export type MatchEvent={minute:number;type:string;side:'user'|'opp';player?:Starter|null;assist?:Starter|null;desc:string;xg?:number;shotOnTarget?:boolean;x?:number;y?:number;injuryWeeks?:number;injuryLabel?:string};
 export function seeded(seed:string){let h=2166136261;for(const c of seed)h=Math.imul(h^c.charCodeAt(0),16777619);return()=>((h=Math.imul(h^(h>>>15),2246822519))>>>0)/4294967296}
 const clamp=(n:number,a:number,b:number)=>Math.max(a,Math.min(b,n));function poisson(lambda:number,rnd:()=>number){const L=Math.exp(-lambda);let p=1,k=0;do{k++;p*=Math.max(.000001,rnd())}while(p>L&&k<9);return clamp(k-1,0,6)}
@@ -18,6 +18,7 @@ export function buildMatchEvents(run:string,round:number,style:string,opp:string
  const sideName=(us:boolean)=>us?"La squadra":opp;
  const byRole=(pool:Starter[],role:string)=>pool.filter(p=>p.role===role);
  const choose=(pool:Starter[],kind:'shot'|'creator'|'defender',fallbackRole?:string)=>{if(!pool.length)return null;const filtered=fallbackRole?byRole(pool,fallbackRole):[];return pick(rnd,filtered.length?filtered:pool,kind)};
+ const deadBallTaker=(pool:Starter[],kind:"penalty"|"setpiece")=>{const eligible=pool.filter(p=>kind==="penalty"?p.penaltyTaker:p.setPieceTaker).sort((a,b)=>Number(kind==="penalty"?a.penaltyOrder??99:a.setPieceOrder??99)-Number(kind==="penalty"?b.penaltyOrder??99:b.setPieceOrder??99));return eligible[0]||choose(pool,'shot',kind==="penalty"?"A":"C")};
  const quality=(p:Starter|null|undefined)=>p?confidenceFactor(p.confidence,p.managerTrust??50)*(0.86+Number(p.strength||55)/250):1;
  const finish=(us:boolean,minute:number,shotter:Starter|null,creator:Starter|null,contextBoost=0,kind="azione")=>{
    const trailing=usGoals<opGoals,late=minute>70,base=.045+rnd()*.15,xg=Number(clamp(base+contextBoost+(late&&trailing?.035:0)+streakBoost*.1,.025,.62).toFixed(3)),q=quality(shotter),onTarget=rnd()<clamp(.34+xg*.52+(q-1)*.11,.28,.72),goal=rnd()<clamp(xg*q*(1.02+streakBoost*.6),.015,.74),side=us?'user':'opp';
@@ -44,6 +45,24 @@ export function buildMatchEvents(run:string,round:number,style:string,opp:string
    if(dribble){add(minute+2,'action',us?'user':'opp',att,(att?.player_name||"L'attaccante")+' prova a saltare il portiere con un ultimo tocco e si apre lo specchio.');finish(us,minute+2,att,mid,.10,"il contropiede")}
    else{add(minute+2,'shot_saved',us?'user':'opp',att,(att?.player_name||"L'attaccante")+' prova a superare il portiere, ma l’estremo difensore resta in piedi e chiude lo spazio.',{xg:.16,shotOnTarget:true});if(!us){const gk=ps.find(p=>p.role==='P');if(gk)add(minute+2,'keeper_save','user',gk,gk.player_name+' vince il duello uno contro uno e salva la squadra.')}}
  };
+ const penaltyChain=(us:boolean,minute:number)=>{
+   const own=us?ps:oppPs;if(!own.length)return;const taker=deadBallTaker(own,"penalty"),side=us?'user':'opp',q=quality(taker),xg=.76,goal=rnd()<clamp(.72+(q-1)*.22,.60,.88),saved=!goal&&rnd()<.72;
+   add(minute,'foul',side,taker,'Contatto in area! L’arbitro indica il dischetto: calcio di rigore.');
+   add(minute+1,'penalty_awarded',side,taker,(taker?.player_name||"Il rigorista")+' prende il pallone e si presenta sul dischetto.');
+   add(minute+2,'shot_attempt',side,taker,(taker?.player_name||"Il rigorista")+' parte nella rincorsa e calcia il rigore.',{xg});
+   if(goal){if(us)usGoals++;else opGoals++;add(minute+3,'goal',side,taker,(us?'GOL! ':'GOL '+opp+'! ')+(taker?.player_name||opp)+' è freddissimo dal dischetto e trasforma il rigore!',{xg,shotOnTarget:true});return}
+   if(saved){add(minute+3,'penalty_saved',side,taker,'Il portiere intuisce l’angolo e respinge il calcio di rigore!',{xg,shotOnTarget:true});if(!us){const gk=ps.find(p=>p.role==='P');if(gk)add(minute+3,'keeper_save','user',gk,gk.player_name+' para il rigore e salva la squadra.')}return}
+   add(minute+3,'shot_missed',side,taker,'Il rigore termina fuori: occasione enorme sprecata.',{xg,shotOnTarget:false});
+ };
+ const freeKickChain=(us:boolean,minute:number)=>{
+   const own=us?ps:oppPs;if(!own.length)return;const taker=deadBallTaker(own,"setpiece"),side=us?'user':'opp',q=quality(taker),xg=Number(clamp(.055+(q-1)*.12+rnd()*.08,.035,.20).toFixed(3)),onTarget=rnd()<clamp(.37+(q-1)*.28,.28,.64),goal=rnd()<clamp(xg*q,.025,.24);
+   add(minute,'foul',side,taker,'Fallo al limite dell’area: punizione da posizione interessante.');
+   add(minute+1,'free_kick',side,taker,(taker?.player_name||"Il tiratore")+' sistema il pallone e prende qualche passo di rincorsa.');
+   add(minute+2,'shot_attempt',side,taker,(taker?.player_name||"Il tiratore")+' calcia direttamente verso la porta.',{xg});
+   if(goal){if(us)usGoals++;else opGoals++;add(minute+3,'goal',side,taker,(us?'GOL! ':'GOL '+opp+'! ')+(taker?.player_name||opp)+' disegna una punizione perfetta e trova la rete!',{xg,shotOnTarget:true});return}
+   if(onTarget){add(minute+3,'shot_saved',side,taker,'Il portiere vola sulla traiettoria e respinge la punizione.',{xg,shotOnTarget:true});return}
+   add(minute+3,'shot_missed',side,taker,'La punizione supera la barriera ma finisce fuori dallo specchio.',{xg,shotOnTarget:false});
+ };
  const possessionChain=(us:boolean,minute:number)=>{
    const own=us?ps:oppPs;if(!own.length)return;const d=choose(own,'defender','D'),m1=choose(own,'creator','C'),m2=choose(own,'creator','C'),a=choose(own,'shot','A');
    add(minute,'possession',us?'user':'opp',d,(d?.player_name||sideName(us))+' apre la costruzione dal basso e aspetta che il pressing si muova.');
@@ -62,6 +81,7 @@ export function buildMatchEvents(run:string,round:number,style:string,opp:string
  while(m<88){
    m+=3+Math.floor(rnd()*3);if(m>=90)break;if(m>43&&m<48)m=48;
    const trailing=usGoals<opGoals,leading=usGoals>opGoals,late=m>70,attackShare=usShare+(late&&trailing?.045:0)-(late&&leading?.02:0),us=rnd()<attackShare;
+   const special=rnd();if(special<.012){penaltyChain(us,m);continue}if(special<.062){freeKickChain(us,m);continue}
    const r=rnd(),mindAttack=us&&mentality==='attack',mindDefend=us&&mentality==='defend',counterChance=((style==='Contropiede'&&us) ? .34 : .20)+((style==='Verticale'&&us) ? .08 : 0)+(mindAttack ? .05 : 0),pressChance=((style==='Pressing'&&us) ? .27 : .15)+(mindAttack ? .05 : 0)-(mindDefend ? .04 : 0),possessionChance=((style==='Possesso'&&us) ? .38 : .25)+(mindDefend ? .08 : 0);
    if(r<counterChance)counterChain(us,m);
    else if(r<counterChance+pressChance)pressChain(us,m);
