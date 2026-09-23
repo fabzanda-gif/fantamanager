@@ -401,3 +401,68 @@
 .playMatch{padding:13px 19px!important;font-size:9px!important;letter-spacing:.7px!important}
 @media(max-width:980px){.eveGrid{grid-template-columns:1fr!important}.liveGrid{grid-template-columns:1fr!important}.livePossession{grid-template-columns:120px minmax(260px,1fr) 120px!important}}
 @media(max-width:700px){.eveHero{padding:20px 14px!important}.eveTeams{grid-template-columns:1fr 42px 1fr!important;gap:8px!important}.eveTeams>div{gap:8px!important}.eveTeams strong{font-size:16px!important}.eveLogo{width:46px!important;height:46px!important}.reportRows{grid-template-columns:1fr!important}.styleChoices{grid-template-columns:1fr!important}.styleChoices button:last-child{grid-column:auto!important}.liveTactics>div{grid-template-columns:1fr!important}}
+
+
+/* 90M gameplay depth + dashboard polish */
+.halfPhase .liveGrid{max-width:1360px!important;grid-template-columns:1fr!important}
+.halfPhase .liveSide{max-width:1360px!important;margin:0 auto!important;padding:22px 26px!important}
+.halfPhase .lockerGrid{grid-template-columns:minmax(0,1.85fr) minmax(330px,.72fr)!important;gap:22px!important}
+.halfPhase .tacticalPitch{min-height:520px!important;grid-template-columns:1fr!important;padding:20px!important}
+.halfPhase .pitchBand{display:grid!important;grid-template-columns:54px 1fr!important;align-items:center!important;gap:12px!important}
+.halfPhase .pitchBandPlayers{display:flex!important;justify-content:center!important;gap:14px!important;flex-wrap:wrap!important}
+.halfPhase .faceToken{min-width:132px!important;padding:10px!important}
+.halfPhase .faceWrap{width:64px!important;height:64px!important}
+@media(max-width:950px){.halfPhase .lockerGrid{grid-template-columns:1fr!important}.halfPhase .liveSide{padding:18px!important}}
+
+.livePossessionTrack i,.livePossessionTrack em{transition:width 1.15s cubic-bezier(.22,.61,.36,1)!important}
+.livePauseBox{margin-top:16px;border:1px solid #3a8067;background:#0d211a;padding:14px;display:grid;gap:7px}
+.livePauseBox b{font-size:9px;color:var(--green);letter-spacing:1.2px}.livePauseBox span{font-size:7px;color:#91a39c;line-height:1.5}
+.livePauseBox button{margin-top:3px;border:0;background:var(--green);color:#06110d;min-height:38px;font-size:8px;font-weight:900;display:flex;align-items:center;justify-content:center;gap:6px;cursor:pointer}
+
+.prepPage .prepGrid{max-width:1320px!important;grid-template-columns:minmax(0,1.22fr) minmax(420px,.78fr)!important;gap:16px!important}
+.prepPage .prepHero,.prepPage .captainBar,.prepPage .goMatch{max-width:1320px!important}
+.prepPage .pitch{min-height:590px!important;padding:32px 28px!important}
+.prepPage .pitchLine{gap:16px!important;align-items:center!important}
+.prepPage .pitchSlot{width:126px!important;min-height:106px!important;padding:8px!important;border-style:solid!important;display:flex!important;align-items:center!important;gap:6px!important}
+.prepPage .pitchSlot.filled{background:rgba(8,28,21,.94)!important;box-shadow:0 10px 28px rgba(0,0,0,.2)}
+.prepFace{width:48px;height:48px;border-radius:50%;overflow:hidden;border:1px solid #35705b;background:#10261e;display:grid;place-items:center;flex:0 0 auto}
+.prepFace img{width:100%;height:100%;object-fit:cover;object-position:center top}.prepFace i{font-style:normal;font-size:11px;font-weight:900;color:var(--green)}
+.prepPage .pitchSlot>span:not(.prepFace){font-size:8px!important;font-weight:900;white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis}
+.prepPage .pitchSlot small{font-size:6px!important;letter-spacing:.4px!important}
+.prepPage .pickRole button{grid-template-columns:40px minmax(0,1fr) auto 18px!important;gap:9px!important;min-height:54px!important;padding:7px 8px!important}
+.prepPage .pickRole button .prepFace{width:36px;height:36px}
+.prepPage .pickRole button.injured{opacity:.52;background:#211713!important;border-color:#684c42!important;cursor:not-allowed}
+.prepPage .pickRole button.injured em{color:#d99478!important}
+@media(max-width:900px){.prepPage .prepGrid{grid-template-columns:1fr!important}.prepPage .pitchSlot{width:104px!important}.prepPage .pitch{min-height:520px!important}}
+@media(max-width:620px){.prepPage .pitch{padding:24px 10px!important}.prepPage .pitchSlot{width:82px!important;min-height:88px!important}.prepPage .pitchSlot .prepFace{width:38px;height:38px}}
+
+.squadFaceWrap{width:52px;height:52px;border:1px solid #31584a;background:#10211c;display:grid;place-items:center;overflow:hidden}
+.squadFaceWrap .playerFaceLarge{width:100%!important;height:100%!important;border:0!important}.squadFaceWrap>i{font-style:normal;color:var(--green);font-weight:900;font-size:12px}
+.squadPlayerCard.isInjured{border-left:2px solid #c87a5b!important;background:rgba(77,38,25,.22)!important}
+.squadPlayerCard.isInjured .squadPlayerInfo small{color:#d99579!important}
+.squadMind>div:nth-child(2) i span{background:#63d7a9}
+.squadPlayerCard.isInjured .squadMind>div:nth-child(2) i span{background:#d58b69}
+
+.matchStatsPage{width:100%;min-width:0;padding:30px clamp(24px,4vw,58px) 70px}
+.matchStatsPage .prepHero{max-width:1180px;margin:28px auto 20px!important;align-items:end}
+.statsHeroCards{max-width:1180px!important;gap:10px!important}
+.statsHeroCards article{position:relative;min-height:126px;padding:17px 18px!important;background:linear-gradient(180deg,rgba(10,24,19,.97),rgba(6,15,12,.97))!important;overflow:hidden}
+.statsHeroCards article>svg{position:absolute;right:14px;top:14px;width:22px;height:22px;color:#355e50;opacity:.8}
+.statsHeroCards article strong{font-size:30px!important;margin:18px 0 5px!important}.statsHeroCards article small{font-size:6px!important;letter-spacing:1.6px!important}.statsHeroCards article span{font-size:7px!important}
+.statsSeasonGrid{max-width:1180px;margin:10px auto;display:grid;grid-template-columns:minmax(0,1.45fr) minmax(300px,.55fr);gap:10px}
+.statsLeaderboard,.statsLeaders,.seasonDataTable{border:1px solid var(--line);background:rgba(7,17,14,.96)}
+.statsLeaderboard .sectionTitle,.statsLeaders .sectionTitle{padding:13px 16px}
+.statsLeaderboard article{display:grid;grid-template-columns:28px 46px minmax(0,1fr) 50px;gap:10px;align-items:center;padding:10px 14px;border-top:1px solid #1c3029}
+.statsLeaderboard article>b{font-size:8px;color:#587067}.statsLeaderboard article>div strong{display:block;font-size:9px}.statsLeaderboard article>div small{display:block;font-size:6px;color:#71837c;margin-top:3px}.statsLeaderboard article>em{font-style:normal;font-size:20px;color:var(--green);font-weight:900;text-align:right}
+.statsFace{width:44px;height:44px;border-radius:50%;overflow:hidden;background:#10211c;border:1px solid #31584a;display:grid;place-items:center;color:var(--green);font-size:8px;font-weight:900}
+.statsFace img{width:100%;height:100%;object-fit:cover;object-position:center top}.statsFace.mini{width:34px;height:34px}
+.statsLeaders article{display:grid;grid-template-columns:62px 1fr auto;gap:10px;align-items:center;padding:13px 15px;border-top:1px solid #1c3029}
+.statsLeaders article small{font-size:6px;color:#6f817a;letter-spacing:1.2px}.statsLeaders article strong{font-size:9px}.statsLeaders article b{font-size:20px;color:var(--green)}
+.seasonDataTable{max-width:1180px!important;margin:10px auto!important}
+.seasonDataTable article{display:grid!important;grid-template-columns:minmax(180px,1.1fr) 62px minmax(150px,.8fr) minmax(280px,1.8fr)!important;gap:14px!important;align-items:center!important;padding:9px 14px!important}
+.statsPlayerName{display:flex;align-items:center;gap:10px;min-width:0}.statsPlayerName strong{font-size:8px!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.statsAvg{font-size:18px!important;color:var(--green)!important;font-weight:900;text-align:center}
+.statsUsage{display:grid;gap:5px}.statsUsage i{height:3px;background:#172822;overflow:hidden}.statsUsage i span{display:block;height:100%;background:var(--green)}.statsUsage small{font-size:6px;color:#71837c}
+.statsProduction{font-size:6px!important;line-height:1.45!important;color:#82958e!important}
+@media(max-width:920px){.statsSeasonGrid{grid-template-columns:1fr}.seasonDataTable article{grid-template-columns:minmax(150px,1fr) 48px minmax(120px,.8fr)!important}.statsProduction{grid-column:1/-1;padding-left:44px}.statsHeroCards{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:560px){.statsHeroCards{grid-template-columns:1fr!important}.seasonDataTable article{grid-template-columns:1fr 45px!important}.statsUsage,.statsProduction{grid-column:1/-1;padding-left:0}}
