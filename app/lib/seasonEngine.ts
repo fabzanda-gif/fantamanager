@@ -8,11 +8,11 @@ export function confidenceFactor(c:number,trust=50){const conf=clamp((c-50)/50,-
 export function clubStrength(rows:{team_nfl:string|null;fvm_fc:number|null;quotazione_fc:number|null}[]){const by:Record<string,number[]>={};for(const p of rows){if(!p.team_nfl)continue;(by[p.team_nfl]??=[]).push(Number(p.fvm_fc||p.quotazione_fc||1))}const out:Record<string,number>={};for(const [club,vals] of Object.entries(by)){vals.sort((a,b)=>b-a);const xi=vals.slice(0,11);out[club]=xi.length?xi.reduce((a,b)=>a+b,0)/xi.length:1}return out}
 export function simulateCpuFixture(run:string,round:number,f:Fixture,strength:Record<string,number>):CpuResult{const rnd=seeded(`${run}|g${round}|${f.home_code}|${f.away_code}`),h=strength[f.home_code]||50,a=strength[f.away_code]||50,diff=clamp((h-a)/Math.max(30,(h+a)/2),-.45,.45);return{...f,home_goals:poisson(clamp(1.51+.55*diff,.45,2.35),rnd),away_goals:poisson(clamp(1.20-.55*diff,.35,2.2),rnd),is_user_match:false}}
 function pick(rnd:()=>number,ps:Starter[],kind:'shot'|'creator'|'defender'){const rw:any=kind==='shot'?{P:.001,D:.22,C:.7,A:1.8}:kind==='creator'?{P:.03,D:.45,C:1.45,A:1.1}:{P:.1,D:1.7,C:1,A:.35};const w=ps.map(p=>(rw[p.role]||1)*confidenceFactor(p.confidence,p.managerTrust??50)*(0.72+Math.min(1.5,Number(p.strength||55)/75))),t=w.reduce((a,b)=>a+b,0);let x=rnd()*t;for(let i=0;i<ps.length;i++){x-=w[i];if(x<=0)return ps[i]}return ps[ps.length-1]}
-export function buildMatchEvents(run:string,round:number,style:string,opp:string,ps:Starter[],oppPs:Starter[]=[],dryStreak=0){
- const rnd=seeded(`${run}|g${round}|${style}|match6`),coordRnd=seeded(`${run}|g${round}|${style}|coords2`),out:MatchEvent[]=[];
+export function buildMatchEvents(run:string,round:number,style:string,opp:string,ps:Starter[],oppPs:Starter[]=[],dryStreak=0,mentality:'attack'|'balanced'|'defend'='balanced'){
+ const rnd=seeded(`${run}|g${round}|${style}|${mentality}|match7`),coordRnd=seeded(`${run}|g${round}|${style}|${mentality}|coords3`),out:MatchEvent[]=[];
  const avg=ps.reduce((a,p)=>a+Number(p.strength||55),0)/Math.max(1,ps.length),oppAvg=oppPs.reduce((a,p)=>a+Number(p.strength||55),0)/Math.max(1,oppPs.length||1),conf=ps.reduce((a,p)=>a+p.confidence,0)/Math.max(1,ps.length),trust=ps.reduce((a,p)=>a+Number(p.managerTrust??50),0)/Math.max(1,ps.length);
  const styleShare:any={Equilibrato:.50,Possesso:.55,Verticale:.51,Contropiede:.47,Pressing:.53},streakBoost=clamp(dryStreak*.045,0,.16),strengthEdge=oppPs.length?clamp((avg-oppAvg)/180,-.07,.07):0;
- const usShare=clamp((styleShare[style]||.5)+strengthEdge+(conf-50)*.0007+(trust-50)*.00035,.39,.62);
+ const mentalityShare=mentality==='attack'?.055:mentality==='defend'?-.045:0,usShare=clamp((styleShare[style]||.5)+mentalityShare+strengthEdge+(conf-50)*.0007+(trust-50)*.00035,.36,.66);
  let usGoals=0,opGoals=0,m=2;
  const add=(minute:number,type:string,side:'user'|'opp',player:Starter|null|undefined,desc:string,extra:any={})=>{const dir=side==='user'?1:-1,base=type==='goal'?94:type==='shot_saved'||type==='shot_missed'||type==='shot_attempt'?86:type==='press'?68:type==='transition'?64:type==='action'?70:type==='duel'?52:type==='possession'?35:type==='keeper_save'?8:50,x=extra.x??(dir===1?base:100-base),y=extra.y??(18+coordRnd()*64);out.push({minute:Math.min(89,minute),type,side,player:player||null,desc,x:+clamp(x,3,97).toFixed(1),y:+clamp(y,7,93).toFixed(1),...extra})};
  const sideName=(us:boolean)=>us?"La squadra":opp;
@@ -62,7 +62,7 @@ export function buildMatchEvents(run:string,round:number,style:string,opp:string
  while(m<88){
    m+=3+Math.floor(rnd()*3);if(m>=90)break;if(m>43&&m<48)m=48;
    const trailing=usGoals<opGoals,leading=usGoals>opGoals,late=m>70,attackShare=usShare+(late&&trailing?.045:0)-(late&&leading?.02:0),us=rnd()<attackShare;
-   const r=rnd(),counterChance=((style==='Contropiede'&&us) ? .34 : .20)+((style==='Verticale'&&us) ? .08 : 0),pressChance=((style==='Pressing'&&us) ? .27 : .15),possessionChance=((style==='Possesso'&&us) ? .38 : .25);
+   const r=rnd(),mindAttack=us&&mentality==='attack',mindDefend=us&&mentality==='defend',counterChance=((style==='Contropiede'&&us) ? .34 : .20)+((style==='Verticale'&&us) ? .08 : 0)+(mindAttack?.05:0),pressChance=((style==='Pressing'&&us) ? .27 : .15)+(mindAttack?.05:0)-(mindDefend?.04:0),possessionChance=((style==='Possesso'&&us) ? .38 : .25)+(mindDefend?.08:0);
    if(r<counterChance)counterChain(us,m);
    else if(r<counterChance+pressChance)pressChain(us,m);
    else if(r<counterChance+pressChance+possessionChance)possessionChain(us,m);
