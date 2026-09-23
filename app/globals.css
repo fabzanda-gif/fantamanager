@@ -177,3 +177,30 @@
 .squadPage.ambienceSection .squadRole,.squadPage.ambienceSection .squadNext,.calendarPage.ambienceSection .calendarRounds article,.standPage.ambienceSection .standTable,.matchStatsPage.ambienceSection .playerData{background:rgba(7,17,14,.94);backdrop-filter:blur(4px)}
 .squadPage.ambienceSection .newTop,.squadPage.ambienceSection .squadHero,.squadPage.ambienceSection .squadRoles,.squadPage.ambienceSection .squadNext,.calendarPage.ambienceSection .newTop,.calendarPage.ambienceSection .calendarHero,.calendarPage.ambienceSection .calendarRounds,.standPage.ambienceSection .newTop,.standPage.ambienceSection .calendarHero,.standPage.ambienceSection .standTable,.matchStatsPage.ambienceSection .newTop,.matchStatsPage.ambienceSection .prepHero,.matchStatsPage.ambienceSection .playerData{position:relative;z-index:1}
 @media(max-width:800px){.ambienceSection{background-attachment:scroll!important}}
+
+/* Live lineup rows — keep every player in the name column */
+.liveXI>div{grid-template-columns:32px minmax(0,1fr)!important}
+.liveXI>div>b{grid-column:1;grid-row:1 / span 30}
+.liveXI>div>span{grid-column:2;white-space:normal;overflow-wrap:normal!important;word-break:normal}
+@media(max-width:520px){.liveXI>div{grid-template-columns:24px minmax(0,1fr)!important}}
+
+/* Goal scorers around the live scoreboard */
+.scoreScorers{display:grid;gap:4px;min-height:18px;margin-top:2px}
+.scoreScorers span{font-size:8px;color:#dce9e4;line-height:1.35;letter-spacing:.2px;text-transform:uppercase}
+.scoreScorers span b{display:inline!important;font-size:8px!important;color:var(--green)!important;letter-spacing:.2px}
+.scoreScorers span em{font-style:normal!important;color:#7f928a!important;font-size:7px!important;font-weight:600!important;letter-spacing:0!important}
+.scoreTeam.home .scoreScorers{text-align:left;align-self:flex-start}
+.scoreTeam.away .scoreScorers{text-align:right;align-self:flex-end}
+@media(max-width:750px){.scoreScorers span,.scoreScorers span b{font-size:7px!important}.scoreScorers span em{display:inline!important;font-size:6px!important}}
+
+/* Match analyst — player-by-player narrative */
+.analystPlayerList{display:grid}
+.analystEntry{padding:13px 0;border-bottom:1px solid var(--line)}
+.analystEntry:last-child{border-bottom:0}
+.analystEntry>div{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.analystEntry strong{font-size:10px;color:#e8f2ee}
+.analystEntry span{font-size:12px;font-weight:900;color:#96aaa2}
+.analystEntry p{border:0!important;padding:6px 0 0!important;font-size:9px!important;line-height:1.65!important;color:#9eaea8!important}
+.analystEntry.positive{border-left:2px solid #2c765d;padding-left:10px}.analystEntry.positive span{color:var(--green)}
+.analystEntry.negative{border-left:2px solid #8a5245;padding-left:10px}.analystEntry.negative span{color:#d99680}
+.analystEntry.neutral{opacity:.86}
