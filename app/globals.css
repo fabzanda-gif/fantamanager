@@ -252,3 +252,25 @@
 .playerPulse{margin-top:2px}
 .playerPulse>.cardHead{background:rgba(8,20,16,.96)}
 @media(max-width:800px){.seasonBrief{align-items:flex-start;flex-direction:column}.seasonBrief button{width:100%}}
+
+/* Live formation showcase */
+.lineupShowcase{padding:0!important;overflow:hidden}
+.lineupShowcaseHead{display:flex;align-items:end;justify-content:space-between;padding:16px 18px;border-bottom:1px solid var(--line);background:rgba(8,20,16,.95)}
+.lineupShowcaseHead small{display:block;color:var(--green);font-size:7px;letter-spacing:1.8px;margin-bottom:5px}
+.lineupShowcaseHead h3{margin:0!important;font-size:17px!important;color:#eff8f4!important;letter-spacing:.8px!important}
+.lineupShowcaseHead>span{font-size:9px;color:#71857d}
+.liveFormationPitch{padding:18px;background:linear-gradient(90deg,transparent 49.7%,rgba(91,255,178,.12) 50%,transparent 50.3%),repeating-linear-gradient(0deg,rgba(8,33,24,.92) 0,rgba(8,33,24,.92) 74px,rgba(10,39,28,.92) 75px,rgba(10,39,28,.92) 148px);border-bottom:1px solid #29473d;display:flex;flex-direction:column;gap:14px}
+.liveFormationBand{display:grid;grid-template-columns:82px 1fr;gap:12px;align-items:center;min-height:82px}
+.liveFormationRole{font-size:7px;letter-spacing:1.2px;color:#69a58f;writing-mode:vertical-rl;transform:rotate(180deg);justify-self:center}
+.liveFormationPlayers{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.liveFormationCard{width:132px;min-width:0;border:1px solid #31564a;background:rgba(5,16,12,.92);display:grid;grid-template-columns:48px minmax(0,1fr);align-items:center;gap:8px;padding:7px}
+.liveFormationFace{width:48px;height:58px;border:1px solid #31564a;background:#0d1d18;overflow:hidden;display:grid;place-items:center}
+.liveFormationFace img,.liveBenchFace img{width:100%;height:100%;object-fit:cover;object-position:center top}.liveFormationFace>span,.liveBenchFace>span{color:var(--green);font-size:11px;font-weight:900}
+.liveFormationCard strong{display:block;font-size:8px;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.liveFormationCard small{display:block;font-size:6px;color:#7f918a;margin-top:5px;line-height:1.35}
+.liveBenchHead{display:flex;align-items:center;justify-content:space-between;padding:13px 18px 8px}.liveBenchHead h3{margin:0!important}.liveBenchHead span{font-size:7px;color:#657970}
+.liveBenchGrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:7px;padding:0 18px 18px}
+.liveBenchGrid article{min-width:0;border:1px solid #223b33;background:#08130f;padding:7px;display:grid;grid-template-columns:34px minmax(0,1fr);gap:7px;align-items:center}
+.liveBenchFace{width:34px;height:40px;overflow:hidden;background:#10211c;border:1px solid #294b3e;display:grid;place-items:center}
+.liveBenchGrid strong{display:block;font-size:7px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.liveBenchGrid small{display:block;font-size:6px;color:#71837c;margin-top:3px}
+@media(max-width:900px){.liveFormationBand{grid-template-columns:1fr}.liveFormationRole{writing-mode:horizontal-tb;transform:none;justify-self:start}.liveBenchGrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:560px){.liveFormationCard{width:110px;grid-template-columns:40px 1fr}.liveFormationFace{width:40px;height:50px}.liveBenchGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
