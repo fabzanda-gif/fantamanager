@@ -204,3 +204,29 @@
 .analystEntry.positive{border-left:2px solid #2c765d;padding-left:10px}.analystEntry.positive span{color:var(--green)}
 .analystEntry.negative{border-left:2px solid #8a5245;padding-left:10px}.analystEntry.negative span{color:#d99680}
 .analystEntry.neutral{opacity:.86}
+
+/* Season workspace shell */
+.seasonSectionMain{min-width:0;position:relative;z-index:1}
+.seasonPage>.calendarPage,.seasonPage>.standPage,.seasonPage>.matchStatsPage,.seasonPage>.squadPage{background:transparent!important}
+.seasonPage>.calendarPage,.seasonPage>.standPage,.seasonPage>.matchStatsPage{padding:30px 4vw 70px}
+.seasonPage>.squadPage{padding:34px clamp(22px,3.2vw,52px) 70px}
+.seasonPage.ambienceSection .seasonNav{position:sticky;top:0;height:100vh;align-self:start}
+
+/* Squad board redesign */
+.squadHeroNew{max-width:1180px;margin:18px auto 24px;display:flex;align-items:flex-end;justify-content:space-between;gap:30px;border-bottom:1px solid rgba(74,105,95,.35);padding:28px 0 22px}
+.squadHeroNew>div:first-child{max-width:680px}.squadHeroNew h1{font-size:clamp(34px,4vw,52px);line-height:.95;margin:8px 0 12px;letter-spacing:-1.8px}.squadHeroNew>div:first-child>p:last-child{font-size:10px;line-height:1.65;color:#8fa09a;max-width:590px}
+.squadCount{display:grid;justify-items:end;align-content:end}.squadCount strong{font-size:44px;line-height:.9;color:var(--green)}.squadCount span{font-size:7px;letter-spacing:1.8px;color:#778983;margin-top:7px}
+.squadRolesBoard{max-width:1180px;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;align-items:start}
+.squadRolesBoard .squadRole{padding:0;background:rgba(7,17,14,.94)!important;backdrop-filter:blur(5px);box-shadow:0 18px 55px rgba(0,0,0,.18)}
+.squadRoleHead{height:58px;display:flex;align-items:center;justify-content:space-between;padding:11px 13px;border-bottom:1px solid #20332d;background:linear-gradient(180deg,rgba(17,35,29,.9),rgba(9,22,18,.88))}
+.squadRoleHead>div{display:flex;align-items:center;gap:9px}.squadRoleHead small{width:25px;height:25px;display:grid;place-items:center;border:1px solid #315548;color:var(--green);font-size:9px;font-weight:900}.squadRoleHead strong{font-size:8px;letter-spacing:1.25px}.squadRoleHead>b{font-size:17px;color:#71857d}
+.squadRolePlayers{display:grid}
+.squadPlayerCard{min-width:0;display:grid;grid-template-columns:52px minmax(0,1fr) 62px;gap:10px;align-items:center;padding:12px;border-bottom:1px solid rgba(43,65,58,.55);transition:background .15s,border-color .15s}
+.squadPlayerCard:last-child{border-bottom:0}.squadPlayerCard:hover{background:rgba(20,44,35,.48);border-color:#315548}
+.playerFaceLarge{width:52px!important;height:52px!important;border-color:#31584a!important;background:#10211c;object-fit:cover;object-position:center top}
+.squadPlayerInfo{min-width:0}.squadPlayerInfo strong{display:block;font-size:10px;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.squadPlayerInfo span{display:block;color:#9caca6;font-size:7px;margin-top:5px}.squadPlayerInfo small{display:block;color:#52655e;font-size:6px;margin-top:3px;letter-spacing:.55px}
+.squadPlayerCard .squadTrust{min-width:0}.squadPlayerCard .squadTrust small{font-size:6px;letter-spacing:.7px}.squadPlayerCard .squadTrust b{font-size:13px;margin:3px 0 7px}.squadPlayerCard .squadTrust i{display:block;height:2px;background:#172822;overflow:hidden}.squadPlayerCard .squadTrust i span{display:block;height:100%;background:var(--green)}
+.squadLoading{max-width:1180px;margin:40px auto;color:var(--muted)}
+.seasonPage>.squadPage .squadNext{max-width:1180px;background:rgba(11,28,22,.95);backdrop-filter:blur(5px);margin-top:10px}
+@media(max-width:1180px){.squadRolesBoard{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:800px){.seasonPage>.squadPage{padding:24px 14px 65px}.squadHeroNew{align-items:flex-start;margin-top:8px}.squadHeroNew h1{font-size:36px}.squadCount{display:none}.squadRolesBoard{grid-template-columns:1fr}.seasonPage.ambienceSection .seasonNav{position:relative;height:auto}}
