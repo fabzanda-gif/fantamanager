@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import brand90 from "./assets/logos/SidebarPNG.png";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
@@ -9,27 +10,15 @@ export default function manifest(): MetadataRoute.Manifest {
     scope: "/",
     display: "standalone",
     orientation: "portrait-primary",
-    background_color: "#050b09",
-    theme_color: "#24e39a",
+    background_color: "#0b0f0e",
+    theme_color: "#242829",
     categories: ["games", "sports"],
     icons: [
       {
-        src: "/pwa/icon-192.svg",
-        sizes: "192x192",
-        type: "image/svg+xml",
+        src: brand90.src,
+        sizes: "any",
+        type: "image/png",
         purpose: "any"
-      },
-      {
-        src: "/pwa/icon-512.svg",
-        sizes: "512x512",
-        type: "image/svg+xml",
-        purpose: "any"
-      },
-      {
-        src: "/pwa/icon-maskable.svg",
-        sizes: "512x512",
-        type: "image/svg+xml",
-        purpose: "maskable"
       }
     ]
   };
