@@ -1198,3 +1198,76 @@ body{padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-ri
   .playerProfileHero p{font-size:7.5px}
   .techGrid,.seasonPlayerNumbers{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
+
+
+/* 90M mobile live/report screenshot fixes */
+@media(max-width:800px){
+  /* keep the season navigation as a bottom app bar; later responsive rules must not move it back to the top */
+  .seasonPage{display:block!important;padding-bottom:calc(78px + env(safe-area-inset-bottom))!important}
+  .seasonPage>.seasonNav{
+    position:fixed!important;left:0!important;right:0!important;top:auto!important;bottom:0!important;z-index:1300!important;
+    height:calc(64px + env(safe-area-inset-bottom))!important;
+    padding:6px max(7px,env(safe-area-inset-left)) calc(6px + env(safe-area-inset-bottom)) max(7px,env(safe-area-inset-right))!important;
+    display:flex!important;flex-direction:row!important;align-items:stretch!important;gap:4px!important;
+    overflow-x:auto!important;overflow-y:hidden!important;border:0!important;border-top:1px solid #29483e!important;
+    background:rgba(5,13,10,.98)!important;backdrop-filter:blur(14px)!important;box-shadow:0 -10px 30px rgba(0,0,0,.28)!important
+  }
+  .seasonPage>.seasonNav a{
+    flex:1 0 62px!important;min-width:62px!important;height:50px!important;min-height:50px!important;
+    padding:5px 4px!important;margin:0!important;border:1px solid transparent!important;border-right:0!important;border-bottom:0!important;
+    display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:3px!important;
+    font-size:5.7px!important;line-height:1.1!important;letter-spacing:.35px!important;white-space:nowrap!important
+  }
+  .seasonPage>.seasonNav a.active{border-color:#2d5e4e!important;background:#10261f!important;box-shadow:inset 0 -2px var(--green)!important}
+  .seasonPage>.seasonNav a svg{width:17px!important;height:17px!important}
+
+  /* post-match report must never exceed the phone viewport */
+  .seasonPage>.reportPage{
+    width:100%!important;max-width:100%!important;min-width:0!important;box-sizing:border-box!important;
+    padding:18px 14px calc(150px + env(safe-area-inset-bottom))!important;overflow-x:hidden!important
+  }
+  .seasonPage>.reportPage .newTop,
+  .seasonPage>.reportPage .reportHero,
+  .seasonPage>.reportPage .reportGrid,
+  .seasonPage>.reportPage .confidencePost,
+  .seasonPage>.reportPage .returnHub{width:100%!important;max-width:100%!important;min-width:0!important;box-sizing:border-box!important}
+  .seasonPage>.reportPage .newTop{margin:0 0 22px!important}
+  .seasonPage>.reportPage .reportHero{margin:0 0 18px!important;display:block!important;overflow:hidden!important}
+  .seasonPage>.reportPage .reportHero>.eyebrow{margin:0 0 14px!important;font-size:9px!important;line-height:1.2!important;letter-spacing:1.8px!important}
+  .seasonPage>.reportPage .reportScore{
+    width:100%!important;min-width:0!important;display:grid!important;
+    grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)!important;gap:7px!important;align-items:center!important
+  }
+  .seasonPage>.reportPage .reportScore>div{
+    min-width:0!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:6px!important;text-align:center!important
+  }
+  .seasonPage>.reportPage .reportScore .reportLogo{width:44px!important;height:44px!important;flex:0 0 auto!important}
+  .seasonPage>.reportPage .reportScore strong{font-size:10px!important;line-height:1.15!important;max-width:100%!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
+  .seasonPage>.reportPage .reportScore h1{
+    margin:0!important;font-size:42px!important;line-height:1!important;letter-spacing:-2px!important;white-space:nowrap!important;min-width:72px!important;text-align:center!important
+  }
+  .seasonPage>.reportPage .reportHero>p:not(.eyebrow){margin:16px 0 12px!important;font-size:11px!important;line-height:1.5!important;max-width:none!important}
+  .seasonPage>.reportPage .statsLink{display:block!important;width:100%!important;box-sizing:border-box!important;text-align:center!important}
+  .seasonPage>.reportPage .reportGrid{display:grid!important;grid-template-columns:1fr!important;gap:10px!important}
+  .seasonPage>.reportPage .ratings,.seasonPage>.reportPage .analystPost{width:100%!important;min-width:0!important;overflow:hidden!important}
+  .seasonPage>.reportPage .ratings article{grid-template-columns:48px minmax(0,1fr) auto!important;padding:10px 12px!important}
+  .seasonPage>.reportPage .ratings strong{font-size:10px!important}
+  .seasonPage>.reportPage .ratings span{font-size:7px!important;white-space:normal!important;overflow-wrap:anywhere!important}
+  .seasonPage>.reportPage .confidenceGate{flex-direction:column!important;align-items:stretch!important}
+  .seasonPage>.reportPage .confidenceGate button{width:100%!important}
+  .seasonPage>.reportPage .returnHub{align-items:flex-start!important;flex-wrap:wrap!important}
+  .seasonPage>.reportPage .returnHub a{width:100%!important;text-align:center!important;box-sizing:border-box!important}
+
+  /* keep the live screen contained on narrow phones */
+  .livePage{overflow-x:hidden!important}
+  .livePage .scoreboard,.livePage .liveTabs,.livePage .liveGrid{max-width:100%!important;box-sizing:border-box!important}
+  .livePage .scoreboard{margin-left:10px!important;margin-right:10px!important}
+  .livePage .liveTabs,.livePage .liveGrid{margin-left:10px!important;margin-right:10px!important}
+  .livePage .audioDock{width:min(286px,calc(100vw - 40px))!important}
+}
+@media(max-width:420px){
+  .seasonPage>.reportPage .reportScore{grid-template-columns:minmax(0,1fr) 66px minmax(0,1fr)!important}
+  .seasonPage>.reportPage .reportScore h1{font-size:36px!important;min-width:66px!important}
+  .seasonPage>.reportPage .reportScore .reportLogo{width:38px!important;height:38px!important}
+  .seasonPage>.reportPage .reportScore strong{font-size:8.5px!important}
+}
