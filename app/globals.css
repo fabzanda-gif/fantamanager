@@ -1429,3 +1429,37 @@ body{padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-ri
   .livePage .scoreTeam .scoreLogo{width:40px!important;height:40px!important;max-width:40px!important}
   .livePage .scoreTeam b{font-size:10px!important}
 }
+
+
+/* 90M live pacing + mobile lineup density */
+.skipStateButton{border-color:#5b735f!important;color:#dbe8e2!important;background:#101914!important}
+.skipStateButton:hover:not(:disabled){border-color:#9db4a8!important;background:#15231d!important}
+.commentaryExpand{width:calc(100% - 24px);margin:12px;border:1px solid #31584b;background:#0d1c17;color:var(--green);min-height:38px;font-size:7px;font-weight:900;letter-spacing:.8px;cursor:pointer}
+
+@media(max-width:750px){
+  .liveFormationPlayers{width:100%!important;justify-content:center!important;gap:4px!important}
+  .liveFormationPlayers:has(> :nth-child(5)){grid-template-columns:repeat(5,minmax(0,1fr))!important}
+  .liveFormationPlayers:has(> :nth-child(4):last-child){grid-template-columns:repeat(4,minmax(0,1fr))!important}
+  .liveFormationPlayers:has(> :nth-child(3):last-child){grid-template-columns:repeat(3,minmax(0,1fr))!important}
+  .liveFormationPlayers:has(> :nth-child(2):last-child){grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .liveFormationPlayers:has(> :only-child){grid-template-columns:minmax(0,76px)!important}
+  .liveFormationCard{
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:center!important;
+    justify-content:flex-start!important;
+    width:100%!important;
+    min-width:0!important;
+    min-height:74px!important;
+    padding:4px 2px!important;
+    gap:3px!important;
+    text-align:center!important;
+  }
+  .liveFormationFace{width:32px!important;height:36px!important;flex:0 0 auto!important}
+  .liveFormationCard>div:last-child{min-width:0!important;width:100%!important}
+  .liveFormationCard strong{display:block!important;width:100%!important;font-size:5.7px!important;line-height:1.1!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
+  .liveFormationCard small{display:block!important;font-size:4.7px!important;line-height:1.15!important;margin-top:2px!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
+  .liveFormationRole{margin-bottom:4px!important}
+  .commentaryExpand{display:block}
+  .fullTime{position:sticky;bottom:8px;z-index:20;background:#091510;padding:12px!important;border:1px solid #31584b!important;box-shadow:0 -8px 24px rgba(0,0,0,.28)}
+}
