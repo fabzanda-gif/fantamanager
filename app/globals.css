@@ -1041,3 +1041,61 @@ body{padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-ri
   .liveTactics .touchlineShouts>div{grid-template-columns:repeat(3,minmax(0,1fr))!important}
   .halfPhase .pitchBandPlayers{grid-template-columns:repeat(2,minmax(0,1fr))!important}
 }
+
+
+/* 90M mobile cleanup round 2 */
+.fixtureScoreMobile,.hubScoreMobile{display:none}
+@media(max-width:800px){
+  .evePage{padding:22px 14px calc(105px + env(safe-area-inset-bottom))!important;overflow-x:hidden!important}
+  .evePage .newTop{max-width:none!important;margin:0!important}
+  .eveHero{max-width:none!important;margin:34px 0 18px!important;padding:0!important;overflow:hidden!important}
+  .eveTeams{grid-template-columns:minmax(0,1fr) 34px minmax(0,1fr)!important;gap:8px!important;width:100%!important}
+  .eveTeams>div{min-width:0!important;flex-direction:column!important;gap:7px!important}
+  .eveTeams strong{font-size:16px!important;max-width:100%!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
+  .eveTeams span{font-size:12px!important}
+  .eveLogo{width:54px!important;height:54px!important}
+  .eveHero>p:last-child{font-size:8px!important;line-height:1.5!important;overflow-wrap:anywhere!important}
+  .eveGrid{grid-template-columns:1fr!important;max-width:none!important;width:100%!important}
+  .analystCard,.matchSetup{min-width:0!important;width:100%!important;padding:14px!important}
+  .staffHead{grid-template-columns:54px minmax(0,1fr) 22px!important;gap:10px!important}
+  .staffHead strong{font-size:16px!important;line-height:1.15!important}
+  .reportRows{grid-template-columns:1fr!important}
+  .reportRows article{min-height:0!important;padding:18px!important}
+  .reportRows p{font-size:11px!important;line-height:1.55!important}
+  .styleChoices{grid-template-columns:1fr!important}
+  .kickoffBar{margin-left:0!important;margin-right:0!important;align-items:flex-start!important;flex-wrap:wrap!important}
+  .playMatch{width:100%!important;text-align:center!important}
+
+  .fixtureScoreDigital,.hubScoreDigital{display:none!important}
+  .fixtureScoreMobile,.hubScoreMobile{display:inline!important}
+  .fixtureScore{font-family:Inter,ui-sans-serif,system-ui,sans-serif!important;font-size:12px!important;letter-spacing:.2px!important;color:var(--green)!important;white-space:nowrap!important}
+  .hubScore{height:auto!important;margin:12px 0!important;overflow:visible!important}
+  .hubScoreMobile{font-family:Inter,ui-sans-serif,system-ui,sans-serif!important;font-size:30px!important;font-weight:900!important;color:var(--green)!important;line-height:1!important;letter-spacing:-1px!important}
+
+  .calendarPage{padding-left:12px!important;padding-right:12px!important}
+  .calendarRounds{width:100%!important;max-width:none!important}
+  .calendarRounds article{padding:10px!important;overflow:hidden!important}
+  .calendarRounds article>div:not(.calendarRoundHead){grid-template-columns:minmax(0,1fr) 46px minmax(0,1fr)!important;padding:4px 0!important;gap:5px!important}
+  .fixtureClub{min-width:0!important;font-size:8px!important;gap:5px!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
+  .fixtureClub .fixtureLogo{flex:0 0 22px!important;width:22px!important;height:22px!important}
+  .awayFixture{justify-content:flex-end!important;text-align:right!important}
+  .calendarRoundHead{gap:6px!important}
+  .calendarRoundHead span{font-size:6px!important}
+
+  .audioDock{width:auto!important;max-width:248px!important;min-width:0!important;padding:5px!important}
+  .audioCompact{grid-template-columns:repeat(4,50px)!important;width:auto!important}
+  .audioDock button{width:50px!important;height:42px!important}
+  .audioDock.expanded{width:min(330px,calc(100vw - 24px))!important;max-width:none!important}
+  .audioDock.expanded .audioCompact{grid-template-columns:repeat(4,1fr)!important;width:100%!important}
+
+  .livePossessionSide span{max-width:58px!important}
+  .livePossessionSide:first-child{justify-items:start!important}
+  .livePossessionSide:last-child{justify-items:end!important;text-align:right!important}
+}
+@media(max-width:420px){
+  .eveTeams strong{font-size:14px!important}
+  .eveLogo{width:48px!important;height:48px!important}
+  .audioDock{max-width:232px!important}
+  .audioCompact{grid-template-columns:repeat(4,46px)!important}
+  .audioDock button{width:46px!important}
+}
