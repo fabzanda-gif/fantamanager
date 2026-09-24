@@ -21,10 +21,10 @@ export function buildMatchEvents(run:string,round:number,style:string,opp:string
  const deadBallTaker=(pool:Starter[],kind:"penalty"|"setpiece")=>{const eligible=pool.filter(p=>kind==="penalty"?p.penaltyTaker:p.setPieceTaker).sort((a,b)=>Number(kind==="penalty"?a.penaltyOrder??99:a.setPieceOrder??99)-Number(kind==="penalty"?b.penaltyOrder??99:b.setPieceOrder??99));return eligible[0]||choose(pool,'shot',kind==="penalty"?"A":"C")};
  const quality=(p:Starter|null|undefined)=>p?confidenceFactor(p.confidence,p.managerTrust??50)*(0.86+Number(p.strength||55)/250):1;
  const finish=(us:boolean,minute:number,shotter:Starter|null,creator:Starter|null,contextBoost=0,kind="azione")=>{
-   const trailing=usGoals<opGoals,late=minute>70,base=.045+rnd()*.15,xg=Number(clamp(base+contextBoost+(late&&trailing?.035:0)+streakBoost*.1,.025,.62).toFixed(3)),q=quality(shotter),onTarget=rnd()<clamp(.34+xg*.52+(q-1)*.11,.28,.72),goal=rnd()<clamp(xg*q*(1.02+streakBoost*.6),.015,.74),side=us?'user':'opp';
+   const trailing=usGoals<opGoals,late=minute>70,base=.045+rnd()*.15,xg=Number(clamp(base+contextBoost+(late&&trailing?.035:0)+streakBoost*.1,.025,.62).toFixed(3)),q=quality(shotter),onTarget=rnd()<clamp(.34+xg*.52+(q-1)*.11,.28,.72),goal=rnd()<clamp(xg*q*(1.02+streakBoost*.6),.015,.74),woodwork=!goal&&rnd()<clamp(.055+xg*.12,.045,.13),side=us?'user':'opp';
    add(minute,'shot_attempt',side,shotter,(shotter?.player_name||opp)+' prende la mira e calcia verso la porta.',{assist:creator&&creator.player_id!==shotter?.player_id?creator:null});
    if(goal){if(us)usGoals++;else opGoals++;add(minute+1,'goal',side,shotter,(us?'GOL! ':'GOL '+opp+'! ')+(shotter?.player_name||opp)+' trova il varco e manda il pallone in rete! Lo stadio esplode mentre i compagni corrono ad abbracciarlo. Chance da '+xg.toFixed(2)+' xG.',{assist:creator&&creator.player_id!==shotter?.player_id?creator:null,xg,shotOnTarget:true});return}
-   if(onTarget){add(minute+1,'shot_saved',side,shotter,'Il portiere legge la traiettoria e respinge il pallone.',{assist:us&&creator?.player_id!==shotter?.player_id?creator:null,xg,shotOnTarget:true});if(!us){const gk=ps.find(p=>p.role==='P');if(gk)add(minute+1,'keeper_save','user',gk,gk.player_name+' completa l’intervento, blocca la seconda palla e fa ripartire la squadra.')}}
+   if(woodwork){add(minute+1,'woodwork',side,shotter,rnd()<.5?'Il pallone si stampa sul palo!':'La conclusione centra in pieno la traversa!',{assist:us&&creator?.player_id!==shotter?.player_id?creator:null,xg,shotOnTarget:false});return}if(onTarget){add(minute+1,'shot_saved',side,shotter,'Il portiere legge la traiettoria e respinge il pallone.',{assist:us&&creator?.player_id!==shotter?.player_id?creator:null,xg,shotOnTarget:true});if(!us){const gk=ps.find(p=>p.role==='P');if(gk)add(minute+1,'keeper_save','user',gk,gk.player_name+' completa l’intervento, blocca la seconda palla e fa ripartire la squadra.')}}
    else add(minute+1,'shot_missed',side,shotter,'Il pallone sfila fuori dallo specchio della porta.',{assist:us&&creator?.player_id!==shotter?.player_id?creator:null,xg,shotOnTarget:false});
  };
  const counterChain=(us:boolean,minute:number)=>{
@@ -32,7 +32,7 @@ export function buildMatchEvents(run:string,round:number,style:string,opp:string
    const oppAtt=choose(other,'shot','A'),def=choose(own,'defender','D'),mid=choose(own,'creator','C'),att=choose(own,'shot','A');
    add(minute,'action',us?'opp':'user',oppAtt,(oppAtt?.player_name||sideName(!us))+' punta il proprio marcatore e prova a creare superiorità nell’ultimo terzo.');
    const win=rnd()<clamp(.53+(quality(def)-1)*.45+((style==='Pressing'&&us) ? .05 : 0),.34,.72);
-   if(!win){add(minute,'duel',us?'opp':'user',oppAtt,(oppAtt?.player_name||sideName(!us))+' riesce a superare il primo contrasto e tiene viva l’azione.');if(rnd()<.22){const fouler=choose(own,'defender','D');add(minute+1,'yellow',us?'user':'opp',fouler,(fouler?.player_name||"Il difensore")+' capisce che la ripartenza sta diventando pericolosa, spende il fallo tattico e viene ammonito.');return}finish(!us,minute+1,oppAtt,choose(other,'creator','C'),.025,"l'azione insistita");return}
+   if(!win){add(minute,'duel',us?'opp':'user',oppAtt,(oppAtt?.player_name||sideName(!us))+' riesce a superare il primo contrasto e tiene viva l’azione.');if(rnd()<.22){const fouler=choose(own,'defender','D');add(minute+1,'yellow',us?'user':'opp',fouler,(fouler?.player_name||"Il difensore")+' capisce che la ripartenza sta diventando pericolosa, spende il fallo tattico e viene ammonito.');return}resolveAttack(!us,minute+1,oppAtt,choose(other,'creator','C'),.025,"l'azione insistita",.18);return}
    add(minute,'duel',us?'user':'opp',def,(def?.player_name||sideName(us))+' legge il dribbling, entra con il tempo giusto e recupera il pallone.');
    add(minute,'transition',us?'user':'opp',mid,(def?.player_name||"Il difensore")+' scarica subito su '+(mid?.player_name||"un centrocampista")+', che riceve fronte alla porta e alza la testa.');
    const through=rnd()<clamp(.55+((style==='Contropiede'&&us) ? .14 : 0)+((style==='Verticale'&&us) ? .10 : 0)+(quality(mid)-1)*.3,.38,.79);
@@ -42,12 +42,12 @@ export function buildMatchEvents(run:string,round:number,style:string,opp:string
    if(!control){add(minute+1,'action',us?'user':'opp',att,(att?.player_name||"L'attaccante")+' scatta sul filtrante ma il controllo lo rallenta: il portiere esce e fa sua la palla.');return}
    add(minute+1,'action',us?'user':'opp',att,(att?.player_name||"L'attaccante")+' attacca la profondità, controlla in corsa e si presenta davanti al portiere.');
    const dribble=rnd()<clamp(.46+(quality(att)-1)*.32+((style==='Contropiede'&&us) ? .05 : 0),.28,.68);
-   if(dribble){add(minute+2,'action',us?'user':'opp',att,(att?.player_name||"L'attaccante")+' prova a saltare il portiere con un ultimo tocco e si apre lo specchio.');finish(us,minute+2,att,mid,.10,"il contropiede")}
+   if(dribble){add(minute+2,'action',us?'user':'opp',att,(att?.player_name||"L'attaccante")+' prova a saltare il portiere con un ultimo tocco e si apre lo specchio.');resolveAttack(us,minute+2,att,mid,.10,"il contropiede",.32)}
    else{add(minute+2,'shot_saved',us?'user':'opp',att,(att?.player_name||"L'attaccante")+' prova a superare il portiere, ma l’estremo difensore resta in piedi e chiude lo spazio.',{xg:.16,shotOnTarget:true});if(!us){const gk=ps.find(p=>p.role==='P');if(gk)add(minute+2,'keeper_save','user',gk,gk.player_name+' vince il duello uno contro uno e salva la squadra.')}}
  };
  const penaltyChain=(us:boolean,minute:number)=>{
    const own=us?ps:oppPs;if(!own.length)return;const taker=deadBallTaker(own,"penalty"),side=us?'user':'opp',q=quality(taker),xg=.76,goal=rnd()<clamp(.72+(q-1)*.22,.60,.88),saved=!goal&&rnd()<.72;
-   add(minute,'foul',side,taker,'Contatto in area! L’arbitro indica il dischetto: calcio di rigore.');
+   add(minute,'penalty_awarded',side,taker,'L’arbitro indica il dischetto: calcio di rigore.');
    add(minute+1,'penalty_awarded',side,taker,(taker?.player_name||"Il rigorista")+' prende il pallone e si presenta sul dischetto.');
    add(minute+2,'shot_attempt',side,taker,(taker?.player_name||"Il rigorista")+' parte nella rincorsa e calcia il rigore.',{xg});
    if(goal){if(us)usGoals++;else opGoals++;add(minute+3,'goal',side,taker,(us?'GOL! ':'GOL '+opp+'! ')+(taker?.player_name||opp)+' è freddissimo dal dischetto e trasforma il rigore!',{xg,shotOnTarget:true});return}
@@ -56,12 +56,20 @@ export function buildMatchEvents(run:string,round:number,style:string,opp:string
  };
  const freeKickChain=(us:boolean,minute:number)=>{
    const own=us?ps:oppPs;if(!own.length)return;const taker=deadBallTaker(own,"setpiece"),side=us?'user':'opp',q=quality(taker),xg=Number(clamp(.055+(q-1)*.12+rnd()*.08,.035,.20).toFixed(3)),onTarget=rnd()<clamp(.37+(q-1)*.28,.28,.64),goal=rnd()<clamp(xg*q,.025,.24);
-   add(minute,'foul',side,taker,'Fallo al limite dell’area: punizione da posizione interessante.');
+   add(minute,'free_kick',side,taker,'Punizione da posizione interessante.');
    add(minute+1,'free_kick',side,taker,(taker?.player_name||"Il tiratore")+' sistema il pallone e prende qualche passo di rincorsa.');
    add(minute+2,'shot_attempt',side,taker,(taker?.player_name||"Il tiratore")+' calcia direttamente verso la porta.',{xg});
    if(goal){if(us)usGoals++;else opGoals++;add(minute+3,'goal',side,taker,(us?'GOL! ':'GOL '+opp+'! ')+(taker?.player_name||opp)+' disegna una punizione perfetta e trova la rete!',{xg,shotOnTarget:true});return}
    if(onTarget){add(minute+3,'shot_saved',side,taker,'Il portiere vola sulla traiettoria e respinge la punizione.',{xg,shotOnTarget:true});return}
    add(minute+3,'shot_missed',side,taker,'La punizione supera la barriera ma finisce fuori dallo specchio.',{xg,shotOnTarget:false});
+ };
+ const resolveAttack=(us:boolean,minute:number,shotter:Starter|null,creator:Starter|null,contextBoost=0,context="l'azione",insideChance=.24)=>{
+   const own=us?ps:oppPs,other=us?oppPs:ps,side=us?'user':'opp',outcome=rnd();
+   if(outcome<.64){finish(us,minute,shotter,creator,contextBoost,context);return}
+   if(outcome<.86){const defender=choose(other,'defender','D');add(minute,'duel',us?'opp':'user',defender,(defender?.player_name||"Il difensore")+' legge la giocata, chiude lo spazio e ferma l’azione prima del tiro.');return}
+   const defender=choose(other,'defender','D'),inArea=rnd()<insideChance;
+   add(minute,'foul',side,defender,(defender?.player_name||"Il difensore")+' arriva in ritardo sul portatore di palla e commette fallo.');
+   if(inArea)penaltyChain(us,minute+1);else freeKickChain(us,minute+1);
  };
  const possessionChain=(us:boolean,minute:number)=>{
    const own=us?ps:oppPs;if(!own.length)return;const d=choose(own,'defender','D'),m1=choose(own,'creator','C'),m2=choose(own,'creator','C'),a=choose(own,'shot','A');
@@ -69,24 +77,23 @@ export function buildMatchEvents(run:string,round:number,style:string,opp:string
    add(minute,'possession',us?'user':'opp',m1,(m1?.player_name||"Il centrocampista")+' viene incontro, riceve tra le linee di pressione e gira il gioco con un tocco.');
    if(rnd()<.28){add(minute+1,'duel',us?'opp':'user',null,'La pressione avversaria arriva in tempo e forza una giocata sporca: il possesso cambia padrone.');return}
    add(minute+1,'action',us?'user':'opp',m2,(m2?.player_name||"Un altro centrocampista")+' trova spazio tra le linee e punta la zona centrale.');
-   if(rnd()<clamp(.55+((style==='Possesso'&&us) ? .12 : 0)+((style==='Verticale'&&us) ? .05 : 0),.4,.75)){add(minute+1,'action',us?'user':'opp',a,(a?.player_name||"L'attaccante")+' viene incontro, appoggia di prima e poi attacca subito lo spazio alle spalle del centrale.');add(minute+2,'transition',us?'user':'opp',m2,(m2?.player_name||"Il centrocampista")+' legge il movimento, chiude l’uno-due e infila il pallone nello spazio.');add(minute+2,'action',us?'user':'opp',a,(a?.player_name||"L'attaccante")+' si inserisce alle spalle dei difensori e riceve in corsa, con la porta davanti.');finish(us,minute+3,a,m2,.035,"la manovra costruita")}else add(minute+2,'possession',us?'user':'opp',m2,(m2?.player_name||"Il centrocampista")+' non trova il varco e preferisce ricominciare, mantenendo il possesso.');
+   if(rnd()<clamp(.55+((style==='Possesso'&&us) ? .12 : 0)+((style==='Verticale'&&us) ? .05 : 0),.4,.75)){add(minute+1,'action',us?'user':'opp',a,(a?.player_name||"L'attaccante")+' viene incontro, appoggia di prima e poi attacca subito lo spazio alle spalle del centrale.');add(minute+2,'transition',us?'user':'opp',m2,(m2?.player_name||"Il centrocampista")+' legge il movimento, chiude l’uno-due e infila il pallone nello spazio.');add(minute+2,'action',us?'user':'opp',a,(a?.player_name||"L'attaccante")+' si inserisce alle spalle dei difensori e riceve in corsa, con la porta davanti.');resolveAttack(us,minute+3,a,m2,.035,"la manovra costruita",.24)}else add(minute+2,'possession',us?'user':'opp',m2,(m2?.player_name||"Il centrocampista")+' non trova il varco e preferisce ricominciare, mantenendo il possesso.');
  };
  const pressChain=(us:boolean,minute:number)=>{
    const own=us?ps:oppPs,other=us?oppPs:ps;if(!own.length)return;const presser=choose(own,'creator','C'),victim=choose(other,'defender','D'),att=choose(own,'shot','A');
    add(minute,'possession',us?'opp':'user',victim,(victim?.player_name||sideName(!us))+' riceve vicino alla propria area e prova a uscire palla al piede.');
    add(minute,'press',us?'user':'opp',presser,(presser?.player_name||sideName(us))+' accorcia forte e chiude la linea di passaggio.');
-   if(rnd()<clamp(.48+((style==='Pressing'&&us) ? .18 : 0)+(quality(presser)-1)*.35,.32,.75)){add(minute,'transition',us?'user':'opp',presser,(presser?.player_name||"Il centrocampista")+' ruba palla in zona alta e serve immediatamente '+(att?.player_name||"l'attaccante")+' dentro l’area.');finish(us,minute+1,att,presser,.075,"il recupero alto")}
+   if(rnd()<clamp(.48+((style==='Pressing'&&us) ? .18 : 0)+(quality(presser)-1)*.35,.32,.75)){add(minute,'transition',us?'user':'opp',presser,(presser?.player_name||"Il centrocampista")+' ruba palla in zona alta e serve immediatamente '+(att?.player_name||"l'attaccante")+' dentro l’area.');resolveAttack(us,minute+1,att,presser,.075,"il recupero alto",.30)}
    else{add(minute+1,'action',us?'opp':'user',victim,(victim?.player_name||sideName(!us))+' resiste alla pressione, protegge palla e trova l’uomo libero per uscire.');if(rnd()<.18)add(minute+1,'yellow',us?'user':'opp',presser,(presser?.player_name||"Il giocatore in pressione")+' arriva un attimo in ritardo nel tentativo di recuperare: fallo netto e cartellino giallo.')}
  };
  while(m<88){
    m+=3+Math.floor(rnd()*3);if(m>=90)break;if(m>43&&m<48)m=48;
    const trailing=usGoals<opGoals,leading=usGoals>opGoals,late=m>70,attackShare=usShare+(late&&trailing?.045:0)-(late&&leading?.02:0),us=rnd()<attackShare;
-   const special=rnd();if(special<.012){penaltyChain(us,m);continue}if(special<.062){freeKickChain(us,m);continue}
    const r=rnd(),mindAttack=us&&mentality==='attack',mindDefend=us&&mentality==='defend',counterChance=((style==='Contropiede'&&us) ? .34 : .20)+((style==='Verticale'&&us) ? .08 : 0)+(mindAttack ? .05 : 0),pressChance=((style==='Pressing'&&us) ? .27 : .15)+(mindAttack ? .05 : 0)-(mindDefend ? .04 : 0),possessionChance=((style==='Possesso'&&us) ? .38 : .25)+(mindDefend ? .08 : 0);
    if(r<counterChance)counterChain(us,m);
    else if(r<counterChance+pressChance)pressChain(us,m);
    else if(r<counterChance+pressChance+possessionChance)possessionChain(us,m);
-   else{const own=us?ps:oppPs,other=us?oppPs:ps,creator=choose(own,'creator','C'),shotter=choose(own,'shot','A');add(m,'action',us?'user':'opp',creator,(creator?.player_name||sideName(us))+' riceve tra le linee, porta palla in avanti e cerca un compagno nell’ultimo terzo.');if(rnd()<.56)finish(us,m+1,shotter,creator,.015,"l'azione");else{const defender=choose(other,'defender','D');add(m+1,'duel',us?'opp':'user',defender,(defender?.player_name||"Il difensore")+' legge l’ultimo passaggio, esce in anticipo e interrompe la giocata.');if(rnd()<.19)add(m+2,'yellow',us?'opp':'user',defender,(defender?.player_name||"Il difensore")+' trattiene l’avversario per evitare che riparta subito: l’arbitro estrae il cartellino giallo.')}}
+   else{const own=us?ps:oppPs,other=us?oppPs:ps,creator=choose(own,'creator','C'),shotter=choose(own,'shot','A');add(m,'action',us?'user':'opp',creator,(creator?.player_name||sideName(us))+' riceve tra le linee, porta palla in avanti e cerca un compagno nell’ultimo terzo.');if(rnd()<.56)resolveAttack(us,m+1,shotter,creator,.015,"l'azione",.20);else{const defender=choose(other,'defender','D');add(m+1,'duel',us?'opp':'user',defender,(defender?.player_name||"Il difensore")+' legge l’ultimo passaggio, esce in anticipo e interrompe la giocata.');if(rnd()<.19)add(m+2,'yellow',us?'opp':'user',defender,(defender?.player_name||"Il difensore")+' trattiene l’avversario per evitare che riparta subito: l’arbitro estrae il cartellino giallo.')}}
    if(injuryCount<1&&rnd()<.006){const injurySide=rnd()<.64?'user':'opp',pool=injurySide==='user'?ps:oppPs,inj=pool.length?pool[Math.floor(rnd()*pool.length)]:null;if(inj){const sev=rnd(),weeks=sev<.20?0:sev<.90?(rnd()<.62?1:2):(rnd()<.5?3:4),label=weeks===0?"trauma lieve":weeks===1?"problema muscolare lieve":weeks===2?"lesione di media entità":weeks===3?"infortunio serio":"infortunio importante",detail=weeks===0?"Lo staff lo accompagna fuori per precauzione: potrebbe recuperare già per la prossima gara.":weeks===1?"Lo staff teme uno stop breve: la prossima partita è a forte rischio.":weeks===2?"Il gesto è doloroso: serviranno verosimilmente un paio di giornate di recupero.":"I segnali non sono buoni: si prospetta uno stop di diverse settimane.";add(m+2,'injury',injurySide,inj,inj.player_name+' si ferma dopo un contrasto e chiede subito il cambio. '+detail,{injuryWeeks:weeks,injuryLabel:label});injuryCount++}}
  }
  add(45,'phase','user',null,'INTERVALLO — il primo tempo entra nell’analisi dello staff.');
