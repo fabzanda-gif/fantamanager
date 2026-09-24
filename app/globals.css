@@ -1271,3 +1271,161 @@ body{padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-ri
   .seasonPage>.reportPage .reportScore .reportLogo{width:38px!important;height:38px!important}
   .seasonPage>.reportPage .reportScore strong{font-size:8.5px!important}
 }
+
+
+/* 90M mobile scoreboard structural fix
+   Keep the score as real CSS seven-segment geometry instead of font fallback.
+   This intentionally comes last because older scoreboard/mobile rules overlap. */
+@media(max-width:750px){
+  .livePage .scoreboard{
+    width:100%!important;
+    max-width:none!important;
+    margin:38px 0 10px!important;
+    border-radius:12px!important;
+    overflow:hidden!important;
+  }
+  .livePage .scoreTop{
+    height:40px!important;
+    padding:0 10px!important;
+    margin:0!important;
+    display:flex!important;
+    justify-content:center!important;
+    gap:9px!important;
+  }
+  .livePage .scoreBody{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr) 132px minmax(0,1fr)!important;
+    gap:7px!important;
+    width:100%!important;
+    min-width:0!important;
+    min-height:148px!important;
+    padding:14px 9px!important;
+    margin:0!important;
+    box-sizing:border-box!important;
+    align-items:center!important;
+  }
+  .livePage .scoreTeam{
+    min-width:0!important;
+    width:100%!important;
+    align-items:center!important;
+    justify-content:center!important;
+    text-align:center!important;
+    gap:5px!important;
+    overflow:hidden!important;
+  }
+  .livePage .scoreTeam.home,
+  .livePage .scoreTeam.away{
+    align-items:center!important;
+    text-align:center!important;
+  }
+  .livePage .scoreTeam small{font-size:5.5px!important;letter-spacing:1.2px!important}
+  .livePage .scoreTeam .scoreLogo{
+    width:48px!important;
+    height:48px!important;
+    max-width:48px!important;
+    object-fit:contain!important;
+    margin:0 auto!important;
+  }
+  .livePage .scoreTeam b{
+    width:100%!important;
+    min-width:0!important;
+    font-size:12px!important;
+    line-height:1.1!important;
+    letter-spacing:0!important;
+    white-space:nowrap!important;
+    overflow:hidden!important;
+    text-overflow:ellipsis!important;
+    text-align:center!important;
+  }
+  .livePage .scoreScorers{
+    width:100%!important;
+    max-height:24px!important;
+    min-height:12px!important;
+    overflow:hidden!important;
+    font-size:5.5px!important;
+    line-height:1.25!important;
+    text-align:center!important;
+  }
+
+  .livePage .digitalScore{
+    width:132px!important;
+    min-width:132px!important;
+    height:98px!important;
+    padding:0!important;
+    margin:0 auto!important;
+    box-sizing:border-box!important;
+    overflow:hidden!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+  }
+  .livePage .segmentScore{
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    width:100%!important;
+    height:62px!important;
+    gap:10px!important;
+    transform:none!important;
+  }
+  .livePage .sevenDigit{
+    position:relative!important;
+    display:inline-block!important;
+    flex:0 0 32px!important;
+    width:32px!important;
+    height:54px!important;
+    transform:none!important;
+  }
+  .livePage .sevenDigit .seg-a,
+  .livePage .sevenDigit .seg-d,
+  .livePage .sevenDigit .seg-g{
+    left:5px!important;
+    width:22px!important;
+    height:5px!important;
+  }
+  .livePage .sevenDigit .seg-a{top:0!important}
+  .livePage .sevenDigit .seg-g{top:24.5px!important}
+  .livePage .sevenDigit .seg-d{top:auto!important;bottom:0!important}
+  .livePage .sevenDigit .seg-b,
+  .livePage .sevenDigit .seg-c,
+  .livePage .sevenDigit .seg-e,
+  .livePage .sevenDigit .seg-f{
+    width:5px!important;
+    height:22px!important;
+  }
+  .livePage .sevenDigit .seg-b{right:0!important;top:3px!important}
+  .livePage .sevenDigit .seg-c{right:0!important;top:auto!important;bottom:3px!important}
+  .livePage .sevenDigit .seg-f{left:0!important;top:3px!important}
+  .livePage .sevenDigit .seg-e{left:0!important;top:auto!important;bottom:3px!important}
+  .livePage .segmentDash{
+    flex:0 0 13px!important;
+    width:13px!important;
+    height:4px!important;
+  }
+}
+
+@media(max-width:420px){
+  .livePage .scoreBody{
+    grid-template-columns:minmax(0,1fr) 112px minmax(0,1fr)!important;
+    gap:4px!important;
+    padding:12px 6px!important;
+  }
+  .livePage .digitalScore{width:112px!important;min-width:112px!important;height:88px!important}
+  .livePage .segmentScore{height:56px!important;gap:8px!important}
+  .livePage .sevenDigit{flex-basis:28px!important;width:28px!important;height:48px!important}
+  .livePage .sevenDigit .seg-a,
+  .livePage .sevenDigit .seg-d,
+  .livePage .sevenDigit .seg-g{left:4px!important;width:20px!important;height:4px!important}
+  .livePage .sevenDigit .seg-g{top:22px!important}
+  .livePage .sevenDigit .seg-b,
+  .livePage .sevenDigit .seg-c,
+  .livePage .sevenDigit .seg-e,
+  .livePage .sevenDigit .seg-f{width:4px!important;height:20px!important}
+  .livePage .sevenDigit .seg-b,
+  .livePage .sevenDigit .seg-f{top:2px!important}
+  .livePage .sevenDigit .seg-c,
+  .livePage .sevenDigit .seg-e{bottom:2px!important}
+  .livePage .segmentDash{flex-basis:11px!important;width:11px!important;height:4px!important}
+  .livePage .scoreTeam .scoreLogo{width:40px!important;height:40px!important;max-width:40px!important}
+  .livePage .scoreTeam b{font-size:10px!important}
+}
