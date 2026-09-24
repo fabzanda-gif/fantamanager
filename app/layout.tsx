@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     title: "90 MINUTES",
-    statusBarStyle: "black-translucent",
+    statusBarStyle: "black",
   },
 };
 
@@ -21,7 +21,7 @@ export const viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
-  themeColor: "#24e39a",
+  themeColor: "#242829",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
