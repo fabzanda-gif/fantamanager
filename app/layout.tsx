@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import AudioSystem from "./components/AudioSystem";
 import PWARegister from "./components/PWARegister";
-import compact90 from "./assets/logos/Compact 90 symbol iconfavicon.jpg";
+import compact90 from "./assets/logos/SidebarPNG.png";
 
 export const metadata: Metadata = {
   title: "90 MINUTES",
