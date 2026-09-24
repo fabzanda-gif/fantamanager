@@ -931,3 +931,113 @@ body{padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-ri
 @media(max-width:390px){
   .seasonNav a{flex-basis:58px!important;min-width:58px!important;font-size:5.3px!important}
 }
+
+
+/* 90M mobile responsive pass 2026-09-24 */
+@media(max-width:800px){
+  html,body{max-width:100%;overflow-x:hidden}
+  body{padding-bottom:calc(92px + env(safe-area-inset-bottom))}
+  .seasonPage,.calendarPage,.standPage,.matchStatsPage,.squadPage,.prepPage,.livePage,.evePage,.reportPage{min-width:0!important;width:100%!important;overflow-x:hidden!important}
+  .seasonMain,.content{padding-left:16px!important;padding-right:16px!important}
+  .seasonNav{
+    display:flex!important;position:sticky!important;top:0!important;z-index:500!important;height:auto!important;
+    flex-direction:row!important;align-items:stretch!important;gap:0!important;overflow-x:auto!important;overflow-y:hidden!important;
+    padding:0!important;border-right:0!important;border-bottom:1px solid #20312e!important;background:rgba(5,13,10,.97)!important;
+    -webkit-overflow-scrolling:touch;scrollbar-width:none
+  }
+  .seasonNav::-webkit-scrollbar{display:none}
+  .seasonNav .seasonBrand,.seasonNav>b,.seasonNav>small,.seasonNav>span{display:none!important}
+  .seasonNav a{
+    flex:0 0 106px!important;min-height:72px!important;padding:9px 7px!important;display:flex!important;flex-direction:column!important;
+    justify-content:center!important;align-items:center!important;gap:5px!important;font-size:8px!important;letter-spacing:.2px!important;text-align:center!important;
+    border:0!important;border-right:1px solid #172822!important;border-bottom:3px solid transparent!important;white-space:nowrap!important
+  }
+  .seasonNav a.active{border-bottom-color:var(--green)!important;background:#0d211a!important}
+  .seasonNav svg{width:21px!important;height:21px!important}
+  .seasonHeader{margin-top:22px!important;align-items:flex-start!important}
+  .seasonHeader h1{font-size:36px!important;line-height:1!important}
+  .seasonGrid{grid-template-columns:1fr!important;margin-top:18px!important}
+  .seasonGrid>*{grid-column:1!important;min-width:0!important}
+  .seasonMetric,.seasonSquad,.playerPulse,.staffHub,.nextMatchCard,.seasonBrief{width:100%!important}
+  .hubScore{height:36px!important;overflow:hidden!important}
+  .hubScore .segmentScore{transform:scale(.82);transform-origin:left center;white-space:nowrap!important;flex-wrap:nowrap!important}
+  .playerPulseGrid{grid-template-columns:1fr!important}
+  .playerPulseCard{border-right:0!important;border-bottom:1px solid var(--line)!important;min-height:150px!important}
+  .playerPulsePhoto{min-height:150px!important}
+
+  .prepPage{padding:20px 14px calc(120px + env(safe-area-inset-bottom))!important}
+  .prepPage .newTop{margin-bottom:16px!important}
+  .prepHero{margin:28px 0 20px!important;display:block!important;max-width:none!important}
+  .prepHero .eyebrow{margin-bottom:10px!important}
+  .prepHero h1{font-size:clamp(42px,14vw,58px)!important;line-height:.92!important;letter-spacing:-2px!important;margin:0!important;max-width:7.2ch!important}
+  .prepHero>p:last-child{font-size:11px!important;line-height:1.55!important;max-width:32ch!important;margin:14px 0 0!important}
+  .prepGrid{grid-template-columns:1fr!important;width:100%!important;max-width:none!important;gap:12px!important}
+  .prepPanel{min-width:0!important;width:100%!important;padding:14px!important}
+  .formationTabs{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:6px!important}
+  .formationTabs button{min-width:0!important;padding:10px 6px!important}
+  .pitch{width:100%!important;min-width:0!important;min-height:610px!important;padding:22px 8px!important;overflow:hidden!important}
+  .pitchLine{display:flex!important;width:100%!important;justify-content:center!important;gap:6px!important;flex-wrap:nowrap!important}
+  .pitchSlot{width:auto!important;min-width:0!important;flex:1 1 0!important;max-width:102px!important;min-height:88px!important;padding:6px 3px!important}
+  .pitchSlot .prepFace{width:38px!important;height:38px!important}
+  .pitchSlot>span:not(.prepFace){font-size:7px!important;max-width:100%!important;overflow:hidden!important;text-overflow:ellipsis!important;white-space:nowrap!important}
+  .pitchSlot small{font-size:5.5px!important;white-space:nowrap!important}
+  .rosterPick{margin-top:0!important}
+  .captainBar{margin-left:0!important;margin-right:0!important}
+  .goMatch{margin-left:0!important;margin-right:0!important}
+
+  .livePage{padding-bottom:calc(112px + env(safe-area-inset-bottom))!important}
+  .livePage .newTop{padding:16px 16px 0!important}
+  .scoreboard{margin:28px 14px 12px!important;border-radius:18px!important}
+  .scoreBody{grid-template-columns:minmax(0,1fr) 132px minmax(0,1fr)!important;padding:16px 8px!important;min-height:160px!important}
+  .scoreTeam{min-width:0!important;gap:6px!important}
+  .scoreTeam .scoreLogo{width:52px!important;height:52px!important;margin:0 auto!important}
+  .scoreTeam b{font-size:14px!important;max-width:100%!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
+  .digitalScore{height:108px!important}
+  .digitalScore strong{font-size:38px!important;letter-spacing:0!important;transform:none!important;white-space:nowrap!important}
+  .livePossession{grid-template-columns:72px minmax(0,1fr) 72px!important;padding:13px 10px!important;gap:6px!important}
+  .livePossessionSide{min-width:0!important}
+  .livePossessionSide span{font-size:6px!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
+  .livePossessionSide b{font-size:18px!important}
+  .liveEventCard{margin:0!important}
+  .liveTabs{grid-template-columns:repeat(3,minmax(0,1fr))!important;margin:0 14px 12px!important}
+  .liveTabs button{min-height:58px!important;font-size:7px!important;padding:8px 3px!important}
+  .liveGrid{grid-template-columns:1fr!important;margin:0 14px!important;gap:12px!important}
+  .liveMain,.liveSide,.commentary,.livePanel{min-width:0!important;width:100%!important}
+  .commentary article{grid-template-columns:44px minmax(0,1fr)!important;padding:12px 10px!important}
+  .commentaryCopy p{font-size:10px!important;line-height:1.5!important;overflow-wrap:anywhere!important}
+  .liveTactics{padding:18px!important;overflow:hidden!important}
+  .liveTactics>div,.liveTactics .touchlineShouts{width:100%!important;max-width:100%!important;min-width:0!important}
+  .liveTactics .touchlineShouts>div{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+  .liveTactics .touchlineShouts button{padding:0 5px!important;font-size:7px!important;min-width:0!important}
+  .lineupLiveButton{width:100%!important}
+  .halfPhase .liveSide{padding:16px!important}
+  .halfPhase .lockerGrid{grid-template-columns:1fr!important}
+  .halfPhase .tacticalPitch{min-height:auto!important;padding:14px 10px!important}
+  .halfPhase .pitchBand{display:block!important;min-height:0!important;margin-bottom:14px!important}
+  .halfPhase .pitchBandLabel{writing-mode:horizontal-tb!important;transform:none!important;display:block!important;margin:0 0 7px!important}
+  .halfPhase .pitchBandPlayers{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:7px!important}
+  .halfPhase .pitchBand .faceToken{width:auto!important;min-width:0!important;min-height:102px!important;padding:7px 4px!important}
+  .halfPhase .faceWrap{width:48px!important;height:48px!important}
+
+  .audioDock{
+    left:50%!important;right:auto!important;bottom:calc(10px + env(safe-area-inset-bottom))!important;transform:translateX(-50%)!important;
+    width:min(340px,calc(100vw - 24px))!important;padding:6px!important;box-shadow:0 12px 36px rgba(0,0,0,.52)!important
+  }
+  .audioCompact{display:grid!important;grid-template-columns:repeat(4,1fr)!important;gap:6px!important;width:100%!important}
+  .audioDock button{height:40px!important;padding:0!important}
+  .audioLabel{display:none!important}
+  .audioMixer{width:100%!important;min-width:0!important}
+}
+@media(max-width:520px){
+  .prepHero h1{font-size:46px!important}
+  .formationTabs{grid-template-columns:repeat(5,minmax(0,1fr))!important;overflow-x:auto!important}
+  .formationTabs button{font-size:7px!important;padding:9px 4px!important}
+  .pitch{min-height:570px!important}
+  .pitchSlot{min-height:82px!important}
+  .pitchSlot .prepFace{width:34px!important;height:34px!important}
+  .livePossession{grid-template-columns:62px minmax(0,1fr) 62px!important}
+  .scoreBody{grid-template-columns:minmax(0,1fr) 118px minmax(0,1fr)!important}
+  .scoreTeam .scoreLogo{width:46px!important;height:46px!important}
+  .liveTactics .touchlineShouts>div{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+  .halfPhase .pitchBandPlayers{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
