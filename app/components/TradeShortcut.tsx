@@ -12,7 +12,11 @@ export default function TradeShortcut(){
   const[run,setRun]=useState("");
 
   useEffect(()=>{
-    setRun(new URLSearchParams(window.location.search).get("run")||"");
+    const queryRun=new URLSearchParams(window.location.search).get("run")||"";
+    if(queryRun){setRun(queryRun);return}
+    const keys=Object.keys(window.localStorage).filter(k=>k.startsWith("fm_run_"));
+    const stored=keys.length?window.localStorage.getItem(keys[0])||"":"";
+    setRun(stored);
   },[path]);
 
   if(!SEASON_PATHS.has(path)||!run)return null;
