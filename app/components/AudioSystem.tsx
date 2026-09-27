@@ -16,6 +16,7 @@ const MUSIC=[
   "/assets/audio/ES_1AM OMW - Ballpoint.mp3",
   "/assets/audio/ES_Dark Princess - ELFL.mp3",
   "/assets/audio/ES_Neo Dreams - The Big Let Down.mp3",
+  "/assets/audio/ES_Give Me a Chance - The Basic Game.mp3",
 ];
 const SFX={click:"/assets/audio/Pulsante premuto.mp3",hover:"/assets/audio/Hover-PassaggioCursore.mp3",pressRelease:"/assets/audio/Press-Release.mp3",confirm:"/assets/audio/Conferma.mp3",report:"/assets/audio/Apri Report.mp3",cancel:"/assets/audio/Errore:Annulla.mp3",interaction:"/assets/audio/Nuova Interazione.mp3"};
 const MATCH_AUDIO={pre:"/assets/audio/match/Pre-Match.mp3",stadium:"/assets/audio/match/Match.mp3",post:"/assets/audio/Post Partita.mp3",injury:"/assets/audio/match/Injury.mp3",start:"/assets/audio/match/StartOfTheMatch.mp3",end:"/assets/audio/match/EndOfTheMatch.mp3",whistle:"/assets/audio/match/Whistle.mp3",homeGoal:"/assets/audio/match/GolSegnatoCasa.mp3",awayGoal:"/assets/audio/match/Gol against.mp3"};
