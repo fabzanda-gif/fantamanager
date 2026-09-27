@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import AudioSystem from "./components/AudioSystem";
 import PWARegister from "./components/PWARegister";
+import PitchMotionEnhancer from "./components/PitchMotionEnhancer";
 import compact90 from "./assets/logos/SidebarPNG.png";
 
 export const metadata: Metadata = {
@@ -31,6 +32,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         {children}
         <AudioSystem />
         <PWARegister />
+        <PitchMotionEnhancer />
       </body>
     </html>
   );
