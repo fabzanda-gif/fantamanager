@@ -3,7 +3,6 @@ import "./globals.css";
 import AudioSystem from "./components/AudioSystem";
 import PWARegister from "./components/PWARegister";
 import PitchMotionEnhancer from "./components/PitchMotionEnhancer";
-import StaffVideoEnhancer from "./components/StaffVideoEnhancer";
 import TradeShortcut from "./components/TradeShortcut";
 import compact90 from "./assets/logos/SidebarPNG.png";
 
@@ -36,7 +35,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <AudioSystem />
         <PWARegister />
         <PitchMotionEnhancer />
-        <StaffVideoEnhancer />
       </body>
     </html>
   );
