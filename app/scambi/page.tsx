@@ -1,5 +1,5 @@
 "use client";
-import Link from"next/link";import{useEffect,useMemo,useState}from"react";import{ArrowLeftRight,BarChart3,Users,CalendarDays,Activity,Check,ShieldAlert}from"lucide-react";import{createClient}from"@supabase/supabase-js";import brand90 from"../assets/logos/SidebarPNG.png";import{ClubLogo,clubName}from"../lib/clubLogos";
+import"./scambi.css";import Link from"next/link";import{useEffect,useMemo,useState}from"react";import{ArrowLeftRight,BarChart3,Users,CalendarDays,Activity,Check,ShieldAlert}from"lucide-react";import{createClient}from"@supabase/supabase-js";import brand90 from"../assets/logos/SidebarPNG.png";import{ClubLogo,clubName}from"../lib/clubLogos";
 const supabase=createClient("https://fqngllsmfqatgwzezuus.supabase.co","sb_publishable_JfPi6jdFfg8l51Z7SG3IYw_kK5J0x4L");
 const CLUBS=["ATA","BOL","CAG","COM","FIO","FRO","GEN","INT","JUV","LAZ","LEC","MIL","MON","NAP","PAR","ROM","SAS","TOR","UDI","VEN"];
 type Mine={player_id:string;player_name:string;role:string;strength:number;source_club:string};type Target={id:string;name:string;role:string;team_nfl:string;fvm_fc:number|null;quotazione_fc:number|null};
