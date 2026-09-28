@@ -1,5 +1,5 @@
 "use client";
-import Link from"next/link";import{useEffect,useMemo,useState}from"react";import{Users,Shield,Brain,HeartPulse,Dumbbell,Handshake,Star,AlertTriangle,BarChart3}from"lucide-react";import{createClient}from"@supabase/supabase-js";import brand90 from"../assets/logos/SidebarPNG.png";
+import"./staff.css";import Link from"next/link";import{useEffect,useMemo,useState}from"react";import{Users,Shield,Brain,HeartPulse,Dumbbell,Handshake,Star,AlertTriangle,BarChart3}from"lucide-react";import{createClient}from"@supabase/supabase-js";import brand90 from"../assets/logos/SidebarPNG.png";
 const sb=createClient("https://fqngllsmfqatgwzezuus.supabase.co","sb_publishable_JfPi6jdFfg8l51Z7SG3IYw_kK5J0x4L");
 const CANDIDATES=[
  {key:"vice_stabile",role:"vice",name:"Marco Bellini",level:3,cost:16,loyalty:88,ambition:36,reputation:54,specialty:"Gestione del gruppo",release:8},
