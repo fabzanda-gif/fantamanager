@@ -5,6 +5,7 @@ import PWARegister from "./components/PWARegister";
 import PitchMotionEnhancer from "./components/PitchMotionEnhancer";
 import StaffVideoEnhancer from "./components/StaffVideoEnhancer";
 import TradeShortcut from "./components/TradeShortcut";
+import LiveStaffAdvice from "./components/LiveStaffAdvice";
 import compact90 from "./assets/logos/SidebarPNG.png";
 
 export const metadata: Metadata = {
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <PWARegister />
         <PitchMotionEnhancer />
         <StaffVideoEnhancer />
+        <LiveStaffAdvice />
       </body>
     </html>
   );
