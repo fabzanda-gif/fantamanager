@@ -1,11 +1,11 @@
 "use client";
 import Link from"next/link";
-import{BriefcaseBusiness,Users}from"lucide-react";
+import{BriefcaseBusiness,Users,WalletCards}from"lucide-react";
 import{usePathname}from"next/navigation";
 import{useEffect,useState}from"react";
 import styles from"./TradeShortcut.module.css";
 
-const SEASON_PATHS=new Set(["/stagione","/rosa","/calendario","/classifica","/statistiche-stagione","/vigilia","/prepara","/scambi","/staff","/ds"]);
+const SEASON_PATHS=new Set(["/stagione","/rosa","/calendario","/classifica","/statistiche-stagione","/vigilia","/prepara","/scambi","/staff","/ds","/gestione-rosa"]);
 
 export default function TradeShortcut(){
   const path=usePathname();
@@ -22,5 +22,6 @@ export default function TradeShortcut(){
   return <div className={styles.stack}>
     <Link className={styles.shortcut} href={"/staff?run="+run}><Users size={15}/><span>STAFF</span></Link>
     <Link className={styles.shortcut} href={"/ds?run="+run}><BriefcaseBusiness size={15}/><span>DIREZIONE SPORTIVA</span></Link>
+    <Link className={styles.shortcut} href={"/gestione-rosa?run="+run}><WalletCards size={15}/><span>GESTIONE ROSA</span></Link>
   </div>;
 }
