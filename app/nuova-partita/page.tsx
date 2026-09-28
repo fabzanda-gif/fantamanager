@@ -33,10 +33,11 @@ export default function NewGame() {
     const roster=await supabase.from("players")
       .select("id,name,role,team_nfl,fvm_fc,quotazione_fc,list_price,status_titolarita")
       .eq("team_nfl",selected)
+      .in("status_titolarita",["Titolare","Ballottaggio"])
       .in("role",["P","D","C","A"]);
     if(roster.error){setError(roster.error.message);setBusy(false);return}
     const players=(roster.data||[]).filter((p:any)=>p.id&&p.name);
-    if(players.length<11){setError(`La rosa ${club[1]} nel database contiene solo ${players.length} giocatori. Non creo una carriera incompleta.`);setBusy(false);return}
+    if(players.length<11){setError(`La rosa ${club[1]} nel database contiene solo ${players.length} giocatori di prima squadra. Non creo una carriera incompleta.`);setBusy(false);return}
 
     const run=await supabase.from("game_runs").insert({user_id:session.user.id,club_code:selected,status:"active",current_round:0,squad_size:players.length}).select("id").single();
     if(run.error||!run.data?.id){setError(run.error?.message||"Errore nella creazione della carriera.");setBusy(false);return}
@@ -52,7 +53,7 @@ export default function NewGame() {
       confidence:50,
       manager_trust:50,
       squad_status:"accepted",
-      squad_status_role:p.status_titolarita==="Titolare"?"starter":p.status_titolarita==="Ballottaggio"?"rotation":"squad",
+      squad_status_role:p.status_titolarita==="Titolare"?"starter":"rotation",
       fitness:100,
       availability:"available",
       decided_at:new Date().toISOString()
@@ -93,7 +94,7 @@ export default function NewGame() {
         <div className="selectionCrest">{selected.slice(0,2)}</div>
         <p className="eyebrow">CLUB SELEZIONATO</p>
         <h2>{club[1]}</h2>
-        <div className="rule"><Shield size={17}/><div><strong>Rosa del club</strong><span>La carriera parte dai giocatori già presenti nel club, senza draft iniziale.</span></div></div>
+        <div className="rule"><Shield size={17}/><div><strong>Rosa del club</strong><span>La carriera parte dai giocatori di prima squadra già presenti nel club, senza draft iniziale.</span></div></div>
         <div className="rule"><BriefcaseBusiness size={17}/><div><strong>Tu sei l'allenatore</strong><span>Definisci esigenze e priorità. Sarà il DS a cercare, trattare, vendere e rinnovare.</span></div></div>
         <div className="selectionNote">Verrà creata una nuova carriera separata dalle altre run già concluse o in corso.</div>
         {error&&<div className="matrixError">{error}</div>}
